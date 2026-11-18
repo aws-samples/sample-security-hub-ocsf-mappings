@@ -1,0 +1,4033 @@
+{
+  "ocsf_version": "1.8.0",
+  "aws_extension_version": "1.1.0",
+  "class_uid": 2004,
+  "class_name": "Detection Finding",
+  "mappings": [
+    {
+      "area": "Finding",
+      "guardduty_field": "accountId",
+      "ocsf_field": "cloud.account.uid",
+      "ocsf_type": "string_t",
+      "transform": "direct"
+    },
+    {
+      "area": "Finding",
+      "guardduty_field": "partition",
+      "ocsf_field": "cloud.cloud_partition",
+      "ocsf_type": "string_t",
+      "transform": "direct"
+    },
+    {
+      "area": "Finding",
+      "guardduty_field": "region",
+      "ocsf_field": "cloud.region",
+      "ocsf_type": "string_t",
+      "transform": "direct"
+    },
+    {
+      "area": "Finding",
+      "guardduty_field": "service.archived",
+      "ocsf_field": "activity_id",
+      "ocsf_type": "integer_t",
+      "transform": "converted"
+    },
+    {
+      "area": "Finding",
+      "guardduty_field": "service.count",
+      "ocsf_field": "activity_id",
+      "ocsf_type": "integer_t",
+      "transform": "converted"
+    },
+    {
+      "area": "Finding",
+      "guardduty_field": "service.archived",
+      "ocsf_field": "activity_name",
+      "ocsf_type": "string_t",
+      "transform": "converted"
+    },
+    {
+      "area": "Finding",
+      "guardduty_field": "service.count",
+      "ocsf_field": "activity_name",
+      "ocsf_type": "string_t",
+      "transform": "converted"
+    },
+    {
+      "area": "Finding",
+      "guardduty_field": "service.count",
+      "ocsf_field": "count",
+      "ocsf_type": "integer_t",
+      "transform": "direct"
+    },
+    {
+      "area": "Finding",
+      "guardduty_field": "severity",
+      "ocsf_field": "severity_id",
+      "ocsf_type": "integer_t",
+      "transform": "converted"
+    },
+    {
+      "area": "Finding",
+      "guardduty_field": "severity",
+      "ocsf_field": "severity",
+      "ocsf_type": "string_t",
+      "transform": "converted"
+    },
+    {
+      "area": "Finding",
+      "guardduty_field": "updatedAt",
+      "ocsf_field": "time",
+      "ocsf_type": "timestamp_t",
+      "transform": "direct"
+    },
+    {
+      "area": "Finding",
+      "guardduty_field": "type",
+      "ocsf_field": "remediation.references[]",
+      "ocsf_type": "string_t",
+      "transform": "converted"
+    },
+    {
+      "area": "Finding",
+      "guardduty_field": "type",
+      "ocsf_field": "remediation.desc",
+      "ocsf_type": "string_t",
+      "transform": "converted"
+    },
+    {
+      "area": "Finding",
+      "guardduty_field": "service.action.dnsRequestAction.blocked",
+      "ocsf_field": "disposition_id",
+      "ocsf_type": "integer_t",
+      "transform": "converted"
+    },
+    {
+      "area": "Finding",
+      "guardduty_field": "service.action.dnsRequestAction.blocked",
+      "ocsf_field": "disposition",
+      "ocsf_type": "string_t",
+      "transform": "converted"
+    },
+    {
+      "area": "Finding",
+      "guardduty_field": "resource.bedrockGuardrailDetails.guardrailAction",
+      "ocsf_field": "disposition_id",
+      "ocsf_type": "integer_t",
+      "transform": "converted"
+    },
+    {
+      "area": "Finding",
+      "guardduty_field": "resource.bedrockGuardrailDetails.guardrailAction",
+      "ocsf_field": "disposition",
+      "ocsf_type": "string_t",
+      "transform": "converted"
+    },
+    {
+      "area": "Finding Info",
+      "guardduty_field": "arn",
+      "ocsf_field": "finding_info.uid",
+      "ocsf_type": "string_t",
+      "transform": "direct"
+    },
+    {
+      "area": "Finding Info",
+      "guardduty_field": "createdAt",
+      "ocsf_field": "finding_info.created_time",
+      "ocsf_type": "timestamp_t",
+      "transform": "direct"
+    },
+    {
+      "area": "Finding Info",
+      "guardduty_field": "updatedAt",
+      "ocsf_field": "finding_info.modified_time",
+      "ocsf_type": "timestamp_t",
+      "transform": "direct"
+    },
+    {
+      "area": "Finding Info",
+      "guardduty_field": "service.eventFirstSeen",
+      "ocsf_field": "finding_info.first_seen_time",
+      "ocsf_type": "timestamp_t",
+      "transform": "direct"
+    },
+    {
+      "area": "Finding Info",
+      "guardduty_field": "service.eventLastSeen",
+      "ocsf_field": "finding_info.last_seen_time",
+      "ocsf_type": "timestamp_t",
+      "transform": "direct"
+    },
+    {
+      "area": "Finding Info",
+      "guardduty_field": "service.detection.sequence.uid",
+      "ocsf_field": "finding_info.uid_alt",
+      "ocsf_type": "string_t",
+      "transform": "direct"
+    },
+    {
+      "area": "Finding Info",
+      "guardduty_field": "id",
+      "ocsf_field": "finding_info.uid_alt",
+      "ocsf_type": "string_t",
+      "transform": "direct"
+    },
+    {
+      "area": "Finding Info",
+      "guardduty_field": "service.detection.sequence.description",
+      "ocsf_field": "finding_info.desc",
+      "ocsf_type": "string_t",
+      "transform": "direct"
+    },
+    {
+      "area": "Finding Info",
+      "guardduty_field": "title",
+      "ocsf_field": "finding_info.title",
+      "ocsf_type": "string_t",
+      "transform": "direct"
+    },
+    {
+      "area": "Finding Info",
+      "guardduty_field": "description",
+      "ocsf_field": "finding_info.desc",
+      "ocsf_type": "string_t",
+      "transform": "direct"
+    },
+    {
+      "area": "Finding Info",
+      "guardduty_field": "type",
+      "ocsf_field": "finding_info.types[]",
+      "ocsf_type": "string_t",
+      "transform": "direct"
+    },
+    {
+      "area": "Finding Info",
+      "guardduty_field": "service.detection.sequence.additionalSequenceTypes[]",
+      "ocsf_field": "finding_info.types[]",
+      "ocsf_type": "string_t",
+      "transform": "direct"
+    },
+    {
+      "area": "Finding Info",
+      "guardduty_field": "service.detectorId",
+      "ocsf_field": "finding_info.product.uid",
+      "ocsf_type": "string_t",
+      "transform": "direct"
+    },
+    {
+      "area": "Finding Info",
+      "guardduty_field": "service.detectorId",
+      "ocsf_field": "finding_info.analytic.uid",
+      "ocsf_type": "string_t",
+      "transform": "direct"
+    },
+    {
+      "area": "Finding Info",
+      "guardduty_field": "type",
+      "ocsf_field": "finding_info.analytic.type_id",
+      "ocsf_type": "integer_t",
+      "transform": "converted"
+    },
+    {
+      "area": "Finding Info",
+      "guardduty_field": "type",
+      "ocsf_field": "finding_info.analytic.type",
+      "ocsf_type": "string_t",
+      "transform": "converted"
+    },
+    {
+      "area": "Finding Info",
+      "guardduty_field": "customDetectionRuleName",
+      "ocsf_field": "finding_info.analytic.name",
+      "ocsf_type": "string_t",
+      "transform": "direct"
+    },
+    {
+      "area": "Finding Info",
+      "guardduty_field": "customDetectionRuleName",
+      "ocsf_field": "finding_info.analytic.category",
+      "ocsf_type": "string_t",
+      "transform": "converted"
+    },
+    {
+      "area": "Attack Sequence",
+      "guardduty_field": "service.detection.sequence.sequenceIndicators[].values[]",
+      "ocsf_field": "finding_info.attacks[].tactic.name",
+      "ocsf_type": "string_t",
+      "transform": "direct"
+    },
+    {
+      "area": "Attack Sequence",
+      "guardduty_field": "service.detection.sequence.sequenceIndicators[].values[]",
+      "ocsf_field": "finding_info.attacks[].technique.name",
+      "ocsf_type": "string_t",
+      "transform": "direct"
+    },
+    {
+      "area": "Attack Sequence",
+      "guardduty_field": "service.detection.sequence.sequenceIndicators[].key",
+      "ocsf_field": "finding_info.traits[].name",
+      "ocsf_type": "string_t",
+      "transform": "direct"
+    },
+    {
+      "area": "Attack Sequence",
+      "guardduty_field": "service.detection.sequence.sequenceIndicators[].values[]",
+      "ocsf_field": "finding_info.traits[].values[]",
+      "ocsf_type": "string_t",
+      "transform": "direct"
+    },
+    {
+      "area": "Attack Sequence",
+      "guardduty_field": "service.detection.sequence.signals[].uid",
+      "ocsf_field": "finding_info.related_events[].uid",
+      "ocsf_type": "string_t",
+      "transform": "direct"
+    },
+    {
+      "area": "Attack Sequence",
+      "guardduty_field": "service.detection.sequence.signals[].type",
+      "ocsf_field": "finding_info.related_events[].type",
+      "ocsf_type": "string_t",
+      "transform": "direct"
+    },
+    {
+      "area": "Attack Sequence",
+      "guardduty_field": "service.detection.sequence.signals[].name",
+      "ocsf_field": "finding_info.related_events[].title",
+      "ocsf_type": "string_t",
+      "transform": "direct"
+    },
+    {
+      "area": "Attack Sequence",
+      "guardduty_field": "service.detection.sequence.signals[].description",
+      "ocsf_field": "finding_info.related_events[].desc",
+      "ocsf_type": "string_t",
+      "transform": "direct"
+    },
+    {
+      "area": "Attack Sequence",
+      "guardduty_field": "service.detection.sequence.signals[].count",
+      "ocsf_field": "finding_info.related_events[].count",
+      "ocsf_type": "integer_t",
+      "transform": "direct"
+    },
+    {
+      "area": "Attack Sequence",
+      "guardduty_field": "service.detection.sequence.signals[].severity",
+      "ocsf_field": "finding_info.related_events[].severity_id",
+      "ocsf_type": "integer_t",
+      "transform": "converted"
+    },
+    {
+      "area": "Attack Sequence",
+      "guardduty_field": "service.detection.sequence.signals[].severity",
+      "ocsf_field": "finding_info.related_events[].severity",
+      "ocsf_type": "string_t",
+      "transform": "converted"
+    },
+    {
+      "area": "Attack Sequence",
+      "guardduty_field": "service.detection.sequence.signals[].createdAt",
+      "ocsf_field": "finding_info.related_events[].created_time",
+      "ocsf_type": "timestamp_t",
+      "transform": "direct"
+    },
+    {
+      "area": "Attack Sequence",
+      "guardduty_field": "service.detection.sequence.signals[].firstSeenAt",
+      "ocsf_field": "finding_info.related_events[].first_seen_time",
+      "ocsf_type": "timestamp_t",
+      "transform": "direct"
+    },
+    {
+      "area": "Attack Sequence",
+      "guardduty_field": "service.detection.sequence.signals[].lastSeenAt",
+      "ocsf_field": "finding_info.related_events[].last_seen_time",
+      "ocsf_type": "timestamp_t",
+      "transform": "direct"
+    },
+    {
+      "area": "Attack Sequence",
+      "guardduty_field": "service.detection.sequence.signals[].updatedAt",
+      "ocsf_field": "finding_info.related_events[].modified_time",
+      "ocsf_type": "timestamp_t",
+      "transform": "direct"
+    },
+    {
+      "area": "Attack Sequence",
+      "guardduty_field": "service.detection.sequence.signals[].signalIndicators[].values[]",
+      "ocsf_field": "finding_info.related_events[].attacks[].tactic.name",
+      "ocsf_type": "string_t",
+      "transform": "direct"
+    },
+    {
+      "area": "Attack Sequence",
+      "guardduty_field": "service.detection.sequence.signals[].signalIndicators[].values[]",
+      "ocsf_field": "finding_info.related_events[].attacks[].technique.name",
+      "ocsf_type": "string_t",
+      "transform": "direct"
+    },
+    {
+      "area": "Attack Sequence",
+      "guardduty_field": "service.detection.sequence.signals[].signalIndicators[].key",
+      "ocsf_field": "finding_info.related_events[].traits[].name",
+      "ocsf_type": "string_t",
+      "transform": "direct"
+    },
+    {
+      "area": "Attack Sequence",
+      "guardduty_field": "service.detection.sequence.signals[].signalIndicators[].values[]",
+      "ocsf_field": "finding_info.related_events[].traits[].values[]",
+      "ocsf_type": "string_t",
+      "transform": "direct"
+    },
+    {
+      "area": "Attack Sequence",
+      "guardduty_field": "service.detection.sequence.signals[].actorIds[]",
+      "ocsf_field": "finding_info.related_events[].observables[].value",
+      "ocsf_type": "string_t",
+      "transform": "converted"
+    },
+    {
+      "area": "Attack Sequence",
+      "guardduty_field": "service.detection.sequence.signals[].endpointIds[]",
+      "ocsf_field": "finding_info.related_events[].observables[].value",
+      "ocsf_type": "string_t",
+      "transform": "converted"
+    },
+    {
+      "area": "Attack Sequence",
+      "guardduty_field": "service.detection.sequence.signals[].resourceUids[]",
+      "ocsf_field": "finding_info.related_events[].observables[].value",
+      "ocsf_type": "string_t",
+      "transform": "converted"
+    },
+    {
+      "area": "Threat Intelligence",
+      "guardduty_field": "service.evidence.threatIntelligenceDetails[].threatListName",
+      "ocsf_field": "osint[].name",
+      "ocsf_type": "string_t",
+      "transform": "direct"
+    },
+    {
+      "area": "Threat Intelligence",
+      "guardduty_field": "service.evidence.threatIntelligenceDetails[].threatNames[]",
+      "ocsf_field": "osint[].value",
+      "ocsf_type": "string_t",
+      "transform": "direct"
+    },
+    {
+      "area": "Runtime Monitoring",
+      "guardduty_field": "service.runtimeDetails.context.fileSystemType",
+      "ocsf_field": "observables[].value",
+      "ocsf_type": "string_t",
+      "transform": "converted"
+    },
+    {
+      "area": "Runtime Monitoring",
+      "guardduty_field": "service.runtimeDetails.context.flags[]",
+      "ocsf_field": "observables[].value",
+      "ocsf_type": "string_t",
+      "transform": "converted"
+    },
+    {
+      "area": "Runtime Monitoring",
+      "guardduty_field": "service.runtimeDetails.context.mountSource",
+      "ocsf_field": "observables[].value",
+      "ocsf_type": "string_t",
+      "transform": "converted"
+    },
+    {
+      "area": "Runtime Monitoring",
+      "guardduty_field": "service.runtimeDetails.context.mountTarget",
+      "ocsf_field": "observables[].value",
+      "ocsf_type": "string_t",
+      "transform": "converted"
+    },
+    {
+      "area": "Runtime Monitoring",
+      "guardduty_field": "service.runtimeDetails.context.toolCategory",
+      "ocsf_field": "observables[].value",
+      "ocsf_type": "string_t",
+      "transform": "converted"
+    },
+    {
+      "area": "Runtime Monitoring",
+      "guardduty_field": "service.runtimeDetails.context.toolName",
+      "ocsf_field": "observables[].value",
+      "ocsf_type": "string_t",
+      "transform": "converted"
+    },
+    {
+      "area": "Runtime Monitoring",
+      "guardduty_field": "service.runtimeDetails.context.commandLineExample",
+      "ocsf_field": "observables[].value",
+      "ocsf_type": "string_t",
+      "transform": "converted"
+    },
+    {
+      "area": "Metadata",
+      "guardduty_field": "service.featureName",
+      "ocsf_field": "metadata.product.feature.name",
+      "ocsf_type": "string_t",
+      "transform": "direct"
+    },
+    {
+      "area": "Metadata",
+      "guardduty_field": "associatedAttackSequenceArn",
+      "ocsf_field": "metadata.correlation_uid",
+      "ocsf_type": "string_t",
+      "transform": "direct"
+    },
+    {
+      "area": "Metadata",
+      "guardduty_field": "service.additionalInfo.value.sample",
+      "ocsf_field": "metadata.labels[]",
+      "ocsf_type": "string_t",
+      "transform": "converted"
+    },
+    {
+      "area": "Attack Sequence Resources",
+      "guardduty_field": "service.detection.sequence.resources[].name",
+      "ocsf_field": "resources[].uid",
+      "ocsf_type": "resource_uid_t",
+      "transform": "direct"
+    },
+    {
+      "area": "Attack Sequence Resources",
+      "guardduty_field": "service.detection.sequence.resources[].uid",
+      "ocsf_field": "resources[].uid",
+      "ocsf_type": "resource_uid_t",
+      "transform": "direct"
+    },
+    {
+      "area": "Attack Sequence Resources",
+      "guardduty_field": "service.detection.sequence.resources[].resourceType",
+      "ocsf_field": "resources[].type",
+      "ocsf_type": "string_t",
+      "transform": "converted"
+    },
+    {
+      "area": "Attack Sequence Resources",
+      "guardduty_field": "service.detection.sequence.resources[].cloudPartition",
+      "ocsf_field": "resources[].cloud_partition",
+      "ocsf_type": "string_t",
+      "transform": "direct"
+    },
+    {
+      "area": "Attack Sequence Resources",
+      "guardduty_field": "service.detection.sequence.resources[].region",
+      "ocsf_field": "resources[].region",
+      "ocsf_type": "string_t",
+      "transform": "direct"
+    },
+    {
+      "area": "Attack Sequence Resources",
+      "guardduty_field": "service.detection.sequence.resources[].accountId",
+      "ocsf_field": "resources[].owner.account.uid",
+      "ocsf_type": "string_t",
+      "transform": "direct"
+    },
+    {
+      "area": "Attack Sequence Actors",
+      "guardduty_field": "service.detection.sequence.actors[].user.uid",
+      "ocsf_field": "resources[].uid",
+      "ocsf_type": "resource_uid_t",
+      "transform": "direct"
+    },
+    {
+      "area": "Attack Sequence Actors",
+      "guardduty_field": "service.detection.sequence.actors[].user.name",
+      "ocsf_field": "resources[].name",
+      "ocsf_type": "string_t",
+      "transform": "direct"
+    },
+    {
+      "area": "Attack Sequence Actors",
+      "guardduty_field": "service.detection.sequence.actors[].user.type",
+      "ocsf_field": "resources[].type",
+      "ocsf_type": "string_t",
+      "transform": "converted"
+    },
+    {
+      "area": "Attack Sequence Actors",
+      "guardduty_field": "service.detection.sequence.actors[].user.uid",
+      "ocsf_field": "resources[].user.uid",
+      "ocsf_type": "string_t",
+      "transform": "direct"
+    },
+    {
+      "area": "Attack Sequence Actors",
+      "guardduty_field": "service.detection.sequence.actors[].user.name",
+      "ocsf_field": "resources[].user.name",
+      "ocsf_type": "username_t",
+      "transform": "direct"
+    },
+    {
+      "area": "Attack Sequence Actors",
+      "guardduty_field": "service.detection.sequence.actors[].user.credentialUid",
+      "ocsf_field": "resources[].user.programmatic_credentials[].uid",
+      "ocsf_type": "string_t",
+      "transform": "direct"
+    },
+    {
+      "area": "Attack Sequence Actors",
+      "guardduty_field": "service.detection.sequence.actors[].user.account.uid",
+      "ocsf_field": "resources[].user.account.uid",
+      "ocsf_type": "string_t",
+      "transform": "direct"
+    },
+    {
+      "area": "Attack Sequence Actors",
+      "guardduty_field": "service.detection.sequence.actors[].user.type",
+      "ocsf_field": "resources[].user.type_id",
+      "ocsf_type": "integer_t",
+      "transform": "converted"
+    },
+    {
+      "area": "Attack Sequence Actors",
+      "guardduty_field": "service.detection.sequence.actors[].user.type",
+      "ocsf_field": "resources[].user.type",
+      "ocsf_type": "string_t",
+      "transform": "converted"
+    },
+    {
+      "area": "Attack Sequence Actors",
+      "guardduty_field": "service.detection.sequence.actors[].user.account.uid",
+      "ocsf_field": "resources[].owner.account.uid",
+      "ocsf_type": "string_t",
+      "transform": "direct"
+    },
+    {
+      "area": "Attack Sequence Actors",
+      "guardduty_field": "region",
+      "ocsf_field": "resources[].region",
+      "ocsf_type": "string_t",
+      "transform": "direct"
+    },
+    {
+      "area": "Attack Sequence Actors",
+      "guardduty_field": "partition",
+      "ocsf_field": "resources[].cloud_partition",
+      "ocsf_type": "string_t",
+      "transform": "direct"
+    },
+    {
+      "area": "IAM Identity",
+      "guardduty_field": "resource.accessKeyDetails.userName",
+      "ocsf_field": "resources[].name",
+      "ocsf_type": "string_t",
+      "transform": "direct"
+    },
+    {
+      "area": "IAM Identity",
+      "guardduty_field": "resource.accessKeyDetails.principalId",
+      "ocsf_field": "resources[].uid",
+      "ocsf_type": "resource_uid_t",
+      "transform": "converted"
+    },
+    {
+      "area": "IAM Identity",
+      "guardduty_field": "resource.accessKeyDetails.userType",
+      "ocsf_field": "resources[].type",
+      "ocsf_type": "string_t",
+      "transform": "converted"
+    },
+    {
+      "area": "IAM Identity",
+      "guardduty_field": "accountId",
+      "ocsf_field": "resources[].owner.account.uid",
+      "ocsf_type": "string_t",
+      "transform": "direct"
+    },
+    {
+      "area": "Resource (all types)",
+      "guardduty_field": "service.resourceRole",
+      "ocsf_field": "resources[].role_id",
+      "ocsf_type": "integer_t",
+      "transform": "converted"
+    },
+    {
+      "area": "Resource (all types)",
+      "guardduty_field": "service.resourceRole",
+      "ocsf_field": "resources[].role",
+      "ocsf_type": "string_t",
+      "transform": "converted"
+    },
+    {
+      "area": "Access Key",
+      "guardduty_field": "resource.accessKeyDetails.accessKeyId",
+      "ocsf_field": "resources[].uid",
+      "ocsf_type": "resource_uid_t",
+      "transform": "direct"
+    },
+    {
+      "area": "Access Key",
+      "guardduty_field": "resource.accessKeyDetails.userName",
+      "ocsf_field": "resources[].user.name",
+      "ocsf_type": "username_t",
+      "transform": "direct"
+    },
+    {
+      "area": "Access Key",
+      "guardduty_field": "resource.accessKeyDetails.principalId",
+      "ocsf_field": "resources[].user.uid_alt",
+      "ocsf_type": "string_t",
+      "transform": "direct"
+    },
+    {
+      "area": "Access Key",
+      "guardduty_field": "resource.accessKeyDetails.accessKeyId",
+      "ocsf_field": "resources[].user.programmatic_credentials[].uid",
+      "ocsf_type": "string_t",
+      "transform": "direct"
+    },
+    {
+      "area": "Access Key",
+      "guardduty_field": "resource.accessKeyDetails.userType",
+      "ocsf_field": "resources[].user.type_id",
+      "ocsf_type": "integer_t",
+      "transform": "converted"
+    },
+    {
+      "area": "Access Key",
+      "guardduty_field": "resource.accessKeyDetails.userType",
+      "ocsf_field": "resources[].user.type",
+      "ocsf_type": "string_t",
+      "transform": "converted"
+    },
+    {
+      "area": "Container",
+      "guardduty_field": "resource.containerDetails.id",
+      "ocsf_field": "resources[].uid",
+      "ocsf_type": "resource_uid_t",
+      "transform": "direct"
+    },
+    {
+      "area": "Container",
+      "guardduty_field": "resource.containerDetails.name",
+      "ocsf_field": "resources[].name",
+      "ocsf_type": "string_t",
+      "transform": "direct"
+    },
+    {
+      "area": "Container",
+      "guardduty_field": "resource.containerDetails.id",
+      "ocsf_field": "resources[].device.uid",
+      "ocsf_type": "string_t",
+      "transform": "direct"
+    },
+    {
+      "area": "Container",
+      "guardduty_field": "resource.containerDetails.name",
+      "ocsf_field": "resources[].device.name",
+      "ocsf_type": "string_t",
+      "transform": "direct"
+    },
+    {
+      "area": "Container",
+      "guardduty_field": "resource.containerDetails.id",
+      "ocsf_field": "resources[].device.container.uid",
+      "ocsf_type": "string_t",
+      "transform": "direct"
+    },
+    {
+      "area": "Container",
+      "guardduty_field": "resource.containerDetails.name",
+      "ocsf_field": "resources[].device.container.name",
+      "ocsf_type": "string_t",
+      "transform": "direct"
+    },
+    {
+      "area": "Container",
+      "guardduty_field": "resource.containerDetails.containerRuntime",
+      "ocsf_field": "resources[].device.container.runtime",
+      "ocsf_type": "string_t",
+      "transform": "direct"
+    },
+    {
+      "area": "Container",
+      "guardduty_field": "resource.containerDetails.image",
+      "ocsf_field": "resources[].device.container.image.name",
+      "ocsf_type": "string_t",
+      "transform": "direct"
+    },
+    {
+      "area": "EBS Volume",
+      "guardduty_field": "resource.ebsVolumeDetails.scannedVolumeDetails[].volumeArn",
+      "ocsf_field": "resources[].uid",
+      "ocsf_type": "resource_uid_t",
+      "transform": "converted"
+    },
+    {
+      "area": "EBS Volume",
+      "guardduty_field": "resource.ebsVolumeDetails.skippedVolumeDetails[].volumeArn",
+      "ocsf_field": "resources[].uid",
+      "ocsf_type": "resource_uid_t",
+      "transform": "converted"
+    },
+    {
+      "area": "EBS Volume",
+      "guardduty_field": "resource.ebsVolumeDetails.scannedVolumeDetails[].volumeArn",
+      "ocsf_field": "resources[].uid_alt",
+      "ocsf_type": "resource_uid_t",
+      "transform": "direct"
+    },
+    {
+      "area": "EBS Volume",
+      "guardduty_field": "resource.ebsVolumeDetails.skippedVolumeDetails[].volumeArn",
+      "ocsf_field": "resources[].uid_alt",
+      "ocsf_type": "resource_uid_t",
+      "transform": "direct"
+    },
+    {
+      "area": "EBS Volume",
+      "guardduty_field": "resource.ebsVolumeDetails.scannedVolumeDetails[].volumeArn",
+      "ocsf_field": "resources[].storage_device.uid_alt",
+      "ocsf_type": "string_t",
+      "transform": "direct"
+    },
+    {
+      "area": "EBS Volume",
+      "guardduty_field": "resource.ebsVolumeDetails.skippedVolumeDetails[].volumeArn",
+      "ocsf_field": "resources[].storage_device.uid_alt",
+      "ocsf_type": "string_t",
+      "transform": "direct"
+    },
+    {
+      "area": "EBS Volume",
+      "guardduty_field": "resource.ebsVolumeDetails.scannedVolumeDetails[].deviceName",
+      "ocsf_field": "resources[].name",
+      "ocsf_type": "string_t",
+      "transform": "direct"
+    },
+    {
+      "area": "EBS Volume",
+      "guardduty_field": "resource.ebsVolumeDetails.skippedVolumeDetails[].deviceName",
+      "ocsf_field": "resources[].name",
+      "ocsf_type": "string_t",
+      "transform": "direct"
+    },
+    {
+      "area": "EBS Volume",
+      "guardduty_field": "resource.ebsVolumeDetails.scannedVolumeDetails[].deviceName",
+      "ocsf_field": "resources[].storage_device.name",
+      "ocsf_type": "string_t",
+      "transform": "direct"
+    },
+    {
+      "area": "EBS Volume",
+      "guardduty_field": "resource.ebsVolumeDetails.skippedVolumeDetails[].deviceName",
+      "ocsf_field": "resources[].storage_device.name",
+      "ocsf_type": "string_t",
+      "transform": "direct"
+    },
+    {
+      "area": "EBS Volume",
+      "guardduty_field": "resource.ebsVolumeDetails.scannedVolumeDetails[].encryptionType",
+      "ocsf_field": "resources[].storage_device.encryption_details.type",
+      "ocsf_type": "string_t",
+      "transform": "direct"
+    },
+    {
+      "area": "EBS Volume",
+      "guardduty_field": "resource.ebsVolumeDetails.skippedVolumeDetails[].encryptionType",
+      "ocsf_field": "resources[].storage_device.encryption_details.type",
+      "ocsf_type": "string_t",
+      "transform": "direct"
+    },
+    {
+      "area": "EBS Volume",
+      "guardduty_field": "resource.ebsVolumeDetails.scannedVolumeDetails[].kmsKeyArn",
+      "ocsf_field": "resources[].storage_device.encryption_details.key_uid",
+      "ocsf_type": "string_t",
+      "transform": "direct"
+    },
+    {
+      "area": "EBS Volume",
+      "guardduty_field": "resource.ebsVolumeDetails.skippedVolumeDetails[].kmsKeyArn",
+      "ocsf_field": "resources[].storage_device.encryption_details.key_uid",
+      "ocsf_type": "string_t",
+      "transform": "direct"
+    },
+    {
+      "area": "EBS Volume",
+      "guardduty_field": "resource.ebsVolumeDetails.scannedVolumeDetails[].encryptionType",
+      "ocsf_field": "resources[].storage_device.is_encrypted",
+      "ocsf_type": "boolean_t",
+      "transform": "converted"
+    },
+    {
+      "area": "EBS Volume",
+      "guardduty_field": "resource.ebsVolumeDetails.scannedVolumeDetails[].kmsKeyArn",
+      "ocsf_field": "resources[].storage_device.is_encrypted",
+      "ocsf_type": "boolean_t",
+      "transform": "converted"
+    },
+    {
+      "area": "EBS Volume",
+      "guardduty_field": "resource.ebsVolumeDetails.skippedVolumeDetails[].encryptionType",
+      "ocsf_field": "resources[].storage_device.is_encrypted",
+      "ocsf_type": "boolean_t",
+      "transform": "converted"
+    },
+    {
+      "area": "EBS Volume",
+      "guardduty_field": "resource.ebsVolumeDetails.skippedVolumeDetails[].kmsKeyArn",
+      "ocsf_field": "resources[].storage_device.is_encrypted",
+      "ocsf_type": "boolean_t",
+      "transform": "converted"
+    },
+    {
+      "area": "EBS Volume",
+      "guardduty_field": "resource.ebsVolumeDetails.scannedVolumeDetails[].snapshotArn",
+      "ocsf_field": "resources[].storage_device.snapshot_id",
+      "ocsf_type": "string_t",
+      "transform": "direct"
+    },
+    {
+      "area": "EBS Volume",
+      "guardduty_field": "resource.ebsVolumeDetails.skippedVolumeDetails[].snapshotArn",
+      "ocsf_field": "resources[].storage_device.snapshot_id",
+      "ocsf_type": "string_t",
+      "transform": "direct"
+    },
+    {
+      "area": "EBS Snapshot",
+      "guardduty_field": "resource.ebsSnapshotDetails.snapshotArn",
+      "ocsf_field": "resources[].uid",
+      "ocsf_type": "resource_uid_t",
+      "transform": "converted"
+    },
+    {
+      "area": "EBS Snapshot",
+      "guardduty_field": "resource.ebsSnapshotDetails.snapshotArn",
+      "ocsf_field": "resources[].uid_alt",
+      "ocsf_type": "resource_uid_t",
+      "transform": "direct"
+    },
+    {
+      "area": "ECS Cluster",
+      "guardduty_field": "resource.ecsClusterDetails.name",
+      "ocsf_field": "resources[].name",
+      "ocsf_type": "string_t",
+      "transform": "direct"
+    },
+    {
+      "area": "ECS Cluster",
+      "guardduty_field": "resource.ecsClusterDetails.arn",
+      "ocsf_field": "resources[].uid",
+      "ocsf_type": "resource_uid_t",
+      "transform": "converted"
+    },
+    {
+      "area": "ECS Cluster",
+      "guardduty_field": "resource.ecsClusterDetails.arn",
+      "ocsf_field": "resources[].uid_alt",
+      "ocsf_type": "resource_uid_t",
+      "transform": "direct"
+    },
+    {
+      "area": "ECS Cluster",
+      "guardduty_field": "resource.ecsClusterDetails.tags[].key",
+      "ocsf_field": "resources[].tags[].name",
+      "ocsf_type": "string_t",
+      "transform": "direct"
+    },
+    {
+      "area": "ECS Cluster",
+      "guardduty_field": "resource.ecsClusterDetails.tags[].value",
+      "ocsf_field": "resources[].tags[].value",
+      "ocsf_type": "string_t",
+      "transform": "direct"
+    },
+    {
+      "area": "ECS Task",
+      "guardduty_field": "resource.ecsClusterDetails.taskDetails.arn",
+      "ocsf_field": "resources[].uid",
+      "ocsf_type": "resource_uid_t",
+      "transform": "converted"
+    },
+    {
+      "area": "ECS Task",
+      "guardduty_field": "resource.ecsClusterDetails.taskDetails.createdAt",
+      "ocsf_field": "resources[].created_time",
+      "ocsf_type": "timestamp_t",
+      "transform": "converted"
+    },
+    {
+      "area": "ECS Task",
+      "guardduty_field": "resource.ecsClusterDetails.taskDetails.createdAt",
+      "ocsf_field": "resources[].created_time_dt",
+      "ocsf_type": "datetime_t",
+      "transform": "direct"
+    },
+    {
+      "area": "ECS Task",
+      "guardduty_field": "resource.ecsClusterDetails.taskDetails.group",
+      "ocsf_field": "resources[].group.name",
+      "ocsf_type": "string_t",
+      "transform": "direct"
+    },
+    {
+      "area": "ECS Task",
+      "guardduty_field": "resource.ecsClusterDetails.taskDetails.version",
+      "ocsf_field": "resources[].version",
+      "ocsf_type": "string_t",
+      "transform": "direct"
+    },
+    {
+      "area": "ECS Task",
+      "guardduty_field": "resource.ecsClusterDetails.taskDetails.tags[].key",
+      "ocsf_field": "resources[].tags[].name",
+      "ocsf_type": "string_t",
+      "transform": "direct"
+    },
+    {
+      "area": "ECS Task",
+      "guardduty_field": "resource.ecsClusterDetails.taskDetails.tags[].value",
+      "ocsf_field": "resources[].tags[].value",
+      "ocsf_type": "string_t",
+      "transform": "direct"
+    },
+    {
+      "area": "ECS Task Definition",
+      "guardduty_field": "resource.ecsClusterDetails.taskDetails.definitionArn",
+      "ocsf_field": "resources[].uid",
+      "ocsf_type": "resource_uid_t",
+      "transform": "converted"
+    },
+    {
+      "area": "ECS Task Definition",
+      "guardduty_field": "resource.ecsClusterDetails.taskDetails.definitionArn",
+      "ocsf_field": "resources[].uid_alt",
+      "ocsf_type": "resource_uid_t",
+      "transform": "direct"
+    },
+    {
+      "area": "EKS Cluster",
+      "guardduty_field": "resource.eksClusterDetails.name",
+      "ocsf_field": "resources[].name",
+      "ocsf_type": "string_t",
+      "transform": "direct"
+    },
+    {
+      "area": "EKS Cluster",
+      "guardduty_field": "resource.eksClusterDetails.arn",
+      "ocsf_field": "resources[].uid",
+      "ocsf_type": "resource_uid_t",
+      "transform": "converted"
+    },
+    {
+      "area": "EKS Cluster",
+      "guardduty_field": "resource.eksClusterDetails.arn",
+      "ocsf_field": "resources[].uid_alt",
+      "ocsf_type": "resource_uid_t",
+      "transform": "direct"
+    },
+    {
+      "area": "EKS Cluster",
+      "guardduty_field": "resource.eksClusterDetails.createdAt",
+      "ocsf_field": "resources[].created_time",
+      "ocsf_type": "timestamp_t",
+      "transform": "direct"
+    },
+    {
+      "area": "EKS Cluster",
+      "guardduty_field": "resource.eksClusterDetails.createdAt",
+      "ocsf_field": "resources[].created_time_dt",
+      "ocsf_type": "datetime_t",
+      "transform": "converted"
+    },
+    {
+      "area": "EKS Cluster",
+      "guardduty_field": "resource.eksClusterDetails.vpcId",
+      "ocsf_field": "resources[].vpc_uid",
+      "ocsf_type": "string_t",
+      "transform": "direct"
+    },
+    {
+      "area": "EKS Cluster",
+      "guardduty_field": "resource.eksClusterDetails.tags[].key",
+      "ocsf_field": "resources[].tags[].name",
+      "ocsf_type": "string_t",
+      "transform": "direct"
+    },
+    {
+      "area": "EKS Cluster",
+      "guardduty_field": "resource.eksClusterDetails.tags[].value",
+      "ocsf_field": "resources[].tags[].value",
+      "ocsf_type": "string_t",
+      "transform": "direct"
+    },
+    {
+      "area": "EC2 Instance",
+      "guardduty_field": "resource.instanceDetails.instanceId",
+      "ocsf_field": "resources[].uid",
+      "ocsf_type": "resource_uid_t",
+      "transform": "direct"
+    },
+    {
+      "area": "EC2 Instance",
+      "guardduty_field": "resource.instanceDetails.availabilityZone",
+      "ocsf_field": "resources[].zone",
+      "ocsf_type": "string_t",
+      "transform": "direct"
+    },
+    {
+      "area": "EC2 Instance",
+      "guardduty_field": "resource.instanceDetails.tags[].key",
+      "ocsf_field": "resources[].tags[].name",
+      "ocsf_type": "string_t",
+      "transform": "direct"
+    },
+    {
+      "area": "EC2 Instance",
+      "guardduty_field": "resource.instanceDetails.tags[].value",
+      "ocsf_field": "resources[].tags[].value",
+      "ocsf_type": "string_t",
+      "transform": "direct"
+    },
+    {
+      "area": "EC2 Instance",
+      "guardduty_field": "resource.instanceDetails.instanceId",
+      "ocsf_field": "resources[].device.uid",
+      "ocsf_type": "string_t",
+      "transform": "direct"
+    },
+    {
+      "area": "EC2 Instance",
+      "guardduty_field": "resource.instanceDetails.instanceType",
+      "ocsf_field": "resources[].device.model",
+      "ocsf_type": "string_t",
+      "transform": "direct"
+    },
+    {
+      "area": "EC2 Instance",
+      "guardduty_field": "resource.instanceDetails.launchTime",
+      "ocsf_field": "resources[].device.launch_time",
+      "ocsf_type": "timestamp_t",
+      "transform": "direct"
+    },
+    {
+      "area": "EC2 Instance",
+      "guardduty_field": "resource.instanceDetails.launchTime",
+      "ocsf_field": "resources[].device.launch_time_dt",
+      "ocsf_type": "datetime_t",
+      "transform": "converted"
+    },
+    {
+      "area": "EC2 Instance",
+      "guardduty_field": "resource.instanceDetails.imageId",
+      "ocsf_field": "resources[].device.image.uid",
+      "ocsf_type": "string_t",
+      "transform": "direct"
+    },
+    {
+      "area": "EC2 Instance",
+      "guardduty_field": "resource.instanceDetails.iamInstanceProfile.id",
+      "ocsf_field": "resources[].device.instance_profile.uid",
+      "ocsf_type": "string_t",
+      "transform": "direct"
+    },
+    {
+      "area": "EC2 Instance",
+      "guardduty_field": "resource.instanceDetails.iamInstanceProfile.arn",
+      "ocsf_field": "resources[].device.instance_profile.uid_alt",
+      "ocsf_type": "string_t",
+      "transform": "direct"
+    },
+    {
+      "area": "EC2 Instance",
+      "guardduty_field": "resource.instanceDetails.platform",
+      "ocsf_field": "resources[].device.os.name",
+      "ocsf_type": "string_t",
+      "transform": "direct"
+    },
+    {
+      "area": "EC2 Instance",
+      "guardduty_field": "resource.instanceDetails.platform",
+      "ocsf_field": "resources[].device.os.type_id",
+      "ocsf_type": "integer_t",
+      "transform": "converted"
+    },
+    {
+      "area": "EC2 Instance",
+      "guardduty_field": "resource.instanceDetails.platform",
+      "ocsf_field": "resources[].device.os.type",
+      "ocsf_type": "string_t",
+      "transform": "converted"
+    },
+    {
+      "area": "EC2 Instance",
+      "guardduty_field": "resource.instanceDetails.networkInterfaces[].networkInterfaceId",
+      "ocsf_field": "resources[].device.network_interfaces[].uid",
+      "ocsf_type": "string_t",
+      "transform": "direct"
+    },
+    {
+      "area": "EC2 Instance",
+      "guardduty_field": "resource.instanceDetails.networkInterfaces[].publicIp",
+      "ocsf_field": "resources[].device.network_interfaces[].ip",
+      "ocsf_type": "ip_t",
+      "transform": "direct"
+    },
+    {
+      "area": "EC2 Instance",
+      "guardduty_field": "resource.instanceDetails.networkInterfaces[].securityGroups[].groupId",
+      "ocsf_field": "resources[].device.network_interfaces[].security_groups[].uid",
+      "ocsf_type": "string_t",
+      "transform": "direct"
+    },
+    {
+      "area": "EC2 Instance",
+      "guardduty_field": "resource.instanceDetails.networkInterfaces[].securityGroups[].groupName",
+      "ocsf_field": "resources[].device.network_interfaces[].security_groups[].name",
+      "ocsf_type": "string_t",
+      "transform": "direct"
+    },
+    {
+      "area": "Kubernetes Workload",
+      "guardduty_field": "resource.kubernetesDetails.kubernetesWorkloadDetails.uid",
+      "ocsf_field": "resources[].uid",
+      "ocsf_type": "resource_uid_t",
+      "transform": "direct"
+    },
+    {
+      "area": "Kubernetes Workload",
+      "guardduty_field": "resource.kubernetesDetails.kubernetesWorkloadDetails.name",
+      "ocsf_field": "resources[].name",
+      "ocsf_type": "string_t",
+      "transform": "direct"
+    },
+    {
+      "area": "Kubernetes Workload",
+      "guardduty_field": "resource.kubernetesDetails.kubernetesWorkloadDetails.namespace",
+      "ocsf_field": "resources[].namespace",
+      "ocsf_type": "string_t",
+      "transform": "direct"
+    },
+    {
+      "area": "Kubernetes Workload",
+      "guardduty_field": "resource.kubernetesDetails.kubernetesUserDetails.uid",
+      "ocsf_field": "resources[].user.uid",
+      "ocsf_type": "string_t",
+      "transform": "direct"
+    },
+    {
+      "area": "Kubernetes Workload",
+      "guardduty_field": "resource.kubernetesDetails.kubernetesUserDetails.username",
+      "ocsf_field": "resources[].user.name",
+      "ocsf_type": "username_t",
+      "transform": "direct"
+    },
+    {
+      "area": "Lambda Function",
+      "guardduty_field": "resource.lambdaDetails.functionArn",
+      "ocsf_field": "resources[].uid",
+      "ocsf_type": "resource_uid_t",
+      "transform": "converted"
+    },
+    {
+      "area": "Lambda Function",
+      "guardduty_field": "resource.lambdaDetails.functionArn",
+      "ocsf_field": "resources[].uid_alt",
+      "ocsf_type": "resource_uid_t",
+      "transform": "direct"
+    },
+    {
+      "area": "Lambda Function",
+      "guardduty_field": "resource.lambdaDetails.functionName",
+      "ocsf_field": "resources[].name",
+      "ocsf_type": "string_t",
+      "transform": "direct"
+    },
+    {
+      "area": "Lambda Function",
+      "guardduty_field": "resource.lambdaDetails.functionVersion",
+      "ocsf_field": "resources[].version",
+      "ocsf_type": "string_t",
+      "transform": "direct"
+    },
+    {
+      "area": "Lambda Function",
+      "guardduty_field": "resource.lambdaDetails.lastModifiedAt",
+      "ocsf_field": "resources[].modified_time",
+      "ocsf_type": "timestamp_t",
+      "transform": "direct"
+    },
+    {
+      "area": "Lambda Function",
+      "guardduty_field": "resource.lambdaDetails.lastModifiedAt",
+      "ocsf_field": "resources[].modified_time_dt",
+      "ocsf_type": "datetime_t",
+      "transform": "converted"
+    },
+    {
+      "area": "Lambda Function",
+      "guardduty_field": "resource.lambdaDetails.tags[].key",
+      "ocsf_field": "resources[].tags[].name",
+      "ocsf_type": "string_t",
+      "transform": "direct"
+    },
+    {
+      "area": "Lambda Function",
+      "guardduty_field": "resource.lambdaDetails.tags[].value",
+      "ocsf_field": "resources[].tags[].value",
+      "ocsf_type": "string_t",
+      "transform": "direct"
+    },
+    {
+      "area": "Lambda Function",
+      "guardduty_field": "resource.lambdaDetails.functionArn",
+      "ocsf_field": "resources[].cloud_function.uid_alt",
+      "ocsf_type": "string_t",
+      "transform": "direct"
+    },
+    {
+      "area": "Lambda Function",
+      "guardduty_field": "resource.lambdaDetails.functionName",
+      "ocsf_field": "resources[].cloud_function.name",
+      "ocsf_type": "string_t",
+      "transform": "direct"
+    },
+    {
+      "area": "Lambda Function",
+      "guardduty_field": "resource.lambdaDetails.functionVersion",
+      "ocsf_field": "resources[].cloud_function.version",
+      "ocsf_type": "string_t",
+      "transform": "direct"
+    },
+    {
+      "area": "Lambda Function",
+      "guardduty_field": "resource.lambdaDetails.vpcConfig.securityGroups[].groupId",
+      "ocsf_field": "resources[].cloud_function.security_groups[].uid",
+      "ocsf_type": "string_t",
+      "transform": "direct"
+    },
+    {
+      "area": "Lambda Function",
+      "guardduty_field": "resource.lambdaDetails.vpcConfig.securityGroups[].groupName",
+      "ocsf_field": "resources[].cloud_function.security_groups[].name",
+      "ocsf_type": "string_t",
+      "transform": "direct"
+    },
+    {
+      "area": "Lambda Function",
+      "guardduty_field": "resource.lambdaDetails.vpcConfig.subnetIds[]",
+      "ocsf_field": "resources[].cloud_function.subnet_info_list[].uid",
+      "ocsf_type": "string_t",
+      "transform": "direct"
+    },
+    {
+      "area": "Lambda Function",
+      "guardduty_field": "resource.lambdaDetails.vpcConfig.vpcId",
+      "ocsf_field": "resources[].cloud_function.vpc_uid",
+      "ocsf_type": "string_t",
+      "transform": "direct"
+    },
+    {
+      "area": "S3 Bucket",
+      "guardduty_field": "resource.s3BucketDetails[].name",
+      "ocsf_field": "resources[].uid",
+      "ocsf_type": "resource_uid_t",
+      "transform": "direct"
+    },
+    {
+      "area": "S3 Bucket",
+      "guardduty_field": "resource.s3BucketDetails[].name",
+      "ocsf_field": "resources[].name",
+      "ocsf_type": "string_t",
+      "transform": "direct"
+    },
+    {
+      "area": "S3 Bucket",
+      "guardduty_field": "resource.s3BucketDetails[].arn",
+      "ocsf_field": "resources[].uid_alt",
+      "ocsf_type": "resource_uid_t",
+      "transform": "direct"
+    },
+    {
+      "area": "S3 Bucket",
+      "guardduty_field": "resource.s3BucketDetails[].createdAt",
+      "ocsf_field": "resources[].created_time",
+      "ocsf_type": "timestamp_t",
+      "transform": "direct"
+    },
+    {
+      "area": "S3 Bucket",
+      "guardduty_field": "resource.s3BucketDetails[].createdAt",
+      "ocsf_field": "resources[].created_time_dt",
+      "ocsf_type": "datetime_t",
+      "transform": "converted"
+    },
+    {
+      "area": "S3 Bucket",
+      "guardduty_field": "resource.s3BucketDetails[].name",
+      "ocsf_field": "resources[].databucket.name",
+      "ocsf_type": "string_t",
+      "transform": "direct"
+    },
+    {
+      "area": "S3 Bucket",
+      "guardduty_field": "resource.s3BucketDetails[].arn",
+      "ocsf_field": "resources[].databucket.uid_alt",
+      "ocsf_type": "resource_uid_t",
+      "transform": "direct"
+    },
+    {
+      "area": "S3 Bucket",
+      "guardduty_field": "resource.s3BucketDetails[].defaultServerSideEncryption.encryptionType",
+      "ocsf_field": "resources[].databucket.encryption_details.type",
+      "ocsf_type": "string_t",
+      "transform": "direct"
+    },
+    {
+      "area": "S3 Bucket",
+      "guardduty_field": "resource.s3BucketDetails[].defaultServerSideEncryption.kmsMasterKeyArn",
+      "ocsf_field": "resources[].databucket.encryption_details.key_uid",
+      "ocsf_type": "string_t",
+      "transform": "direct"
+    },
+    {
+      "area": "S3 Bucket",
+      "guardduty_field": "resource.s3BucketDetails[].owner.id",
+      "ocsf_field": "resources[].databucket.owner.uid",
+      "ocsf_type": "string_t",
+      "transform": "direct"
+    },
+    {
+      "area": "S3 Bucket",
+      "guardduty_field": "resource.s3BucketDetails[].publicAccess.effectivePermission",
+      "ocsf_field": "resources[].databucket.is_public",
+      "ocsf_type": "boolean_t",
+      "transform": "converted"
+    },
+    {
+      "area": "S3 Bucket",
+      "guardduty_field": "resource.s3BucketDetails[].tags[].key",
+      "ocsf_field": "resources[].databucket.tags[].name",
+      "ocsf_type": "string_t",
+      "transform": "direct"
+    },
+    {
+      "area": "S3 Bucket",
+      "guardduty_field": "resource.s3BucketDetails[].tags[].value",
+      "ocsf_field": "resources[].databucket.tags[].value",
+      "ocsf_type": "string_t",
+      "transform": "direct"
+    },
+    {
+      "area": "S3 Bucket",
+      "guardduty_field": "resource.s3BucketDetails[].s3ObjectDetails[].key",
+      "ocsf_field": "resources[].databucket.file.name",
+      "ocsf_type": "file_name_t",
+      "transform": "direct"
+    },
+    {
+      "area": "S3 Bucket",
+      "guardduty_field": "resource.s3BucketDetails[].s3ObjectDetails[].objectArn",
+      "ocsf_field": "resources[].databucket.file.uid",
+      "ocsf_type": "string_t",
+      "transform": "direct"
+    },
+    {
+      "area": "S3 Bucket",
+      "guardduty_field": "resource.s3BucketDetails[].s3ObjectDetails[].versionId",
+      "ocsf_field": "resources[].databucket.file.version",
+      "ocsf_type": "string_t",
+      "transform": "direct"
+    },
+    {
+      "area": "S3 Bucket",
+      "guardduty_field": "resource.s3BucketDetails[].s3ObjectDetails[].hash",
+      "ocsf_field": "resources[].databucket.file.hashes[].value",
+      "ocsf_type": "file_hash_t",
+      "transform": "direct"
+    },
+    {
+      "area": "S3 Bucket",
+      "guardduty_field": "resource.s3BucketDetails[].s3ObjectDetails[].eTag",
+      "ocsf_field": "resources[].databucket.file.hashes[].value",
+      "ocsf_type": "file_hash_t",
+      "transform": "direct"
+    },
+    {
+      "area": "RDS DB Instance",
+      "guardduty_field": "resource.rdsDbInstanceDetails.dbiResourceId",
+      "ocsf_field": "resources[].uid",
+      "ocsf_type": "resource_uid_t",
+      "transform": "direct"
+    },
+    {
+      "area": "RDS DB Instance",
+      "guardduty_field": "resource.rdsDbInstanceDetails.dbInstanceIdentifier",
+      "ocsf_field": "resources[].uid",
+      "ocsf_type": "resource_uid_t",
+      "transform": "direct"
+    },
+    {
+      "area": "RDS DB Instance",
+      "guardduty_field": "resource.rdsDbInstanceDetails.dbInstanceArn",
+      "ocsf_field": "resources[].uid_alt",
+      "ocsf_type": "resource_uid_t",
+      "transform": "direct"
+    },
+    {
+      "area": "RDS DB Instance",
+      "guardduty_field": "resource.rdsDbInstanceDetails.tags[].key",
+      "ocsf_field": "resources[].tags[].name",
+      "ocsf_type": "string_t",
+      "transform": "direct"
+    },
+    {
+      "area": "RDS DB Instance",
+      "guardduty_field": "resource.rdsDbInstanceDetails.tags[].value",
+      "ocsf_field": "resources[].tags[].value",
+      "ocsf_type": "string_t",
+      "transform": "direct"
+    },
+    {
+      "area": "RDS DB Instance",
+      "guardduty_field": "resource.rdsDbInstanceDetails.dbInstanceIdentifier",
+      "ocsf_field": "resources[].database.uid",
+      "ocsf_type": "string_t",
+      "transform": "direct"
+    },
+    {
+      "area": "RDS DB Instance",
+      "guardduty_field": "resource.rdsDbInstanceDetails.dbInstanceArn",
+      "ocsf_field": "resources[].database.uid_alt",
+      "ocsf_type": "string_t",
+      "transform": "direct"
+    },
+    {
+      "area": "RDS DB Instance",
+      "guardduty_field": "resource.rdsDbInstanceDetails.dbClusterIdentifier",
+      "ocsf_field": "resources[].database.cluster_uid",
+      "ocsf_type": "string_t",
+      "transform": "direct"
+    },
+    {
+      "area": "RDS DB Instance",
+      "guardduty_field": "resource.rdsDbInstanceDetails.engine",
+      "ocsf_field": "resources[].database.engine",
+      "ocsf_type": "string_t",
+      "transform": "direct"
+    },
+    {
+      "area": "RDS DB Instance",
+      "guardduty_field": "resource.rdsDbInstanceDetails.engineVersion",
+      "ocsf_field": "resources[].database.version",
+      "ocsf_type": "string_t",
+      "transform": "direct"
+    },
+    {
+      "area": "RDS DB Instance",
+      "guardduty_field": "resource.rdsDbUserDetails.user",
+      "ocsf_field": "resources[].database.user.name",
+      "ocsf_type": "username_t",
+      "transform": "direct"
+    },
+    {
+      "area": "RDS Limitless DB",
+      "guardduty_field": "resource.rdsLimitlessDbDetails.dbClusterIdentifier",
+      "ocsf_field": "resources[].uid",
+      "ocsf_type": "resource_uid_t",
+      "transform": "direct"
+    },
+    {
+      "area": "RDS Limitless DB",
+      "guardduty_field": "resource.rdsLimitlessDbDetails.dbClusterIdentifier",
+      "ocsf_field": "resources[].name",
+      "ocsf_type": "string_t",
+      "transform": "direct"
+    },
+    {
+      "area": "RDS Limitless DB",
+      "guardduty_field": "resource.rdsLimitlessDbDetails.tags[].key",
+      "ocsf_field": "resources[].tags[].name",
+      "ocsf_type": "string_t",
+      "transform": "direct"
+    },
+    {
+      "area": "RDS Limitless DB",
+      "guardduty_field": "resource.rdsLimitlessDbDetails.tags[].value",
+      "ocsf_field": "resources[].tags[].value",
+      "ocsf_type": "string_t",
+      "transform": "direct"
+    },
+    {
+      "area": "RDS Limitless DB",
+      "guardduty_field": "resource.rdsLimitlessDbDetails.dbClusterIdentifier",
+      "ocsf_field": "resources[].database.cluster_uid",
+      "ocsf_type": "string_t",
+      "transform": "direct"
+    },
+    {
+      "area": "RDS Limitless DB",
+      "guardduty_field": "resource.rdsLimitlessDbDetails.dbClusterIdentifier",
+      "ocsf_field": "resources[].database.uid_alt",
+      "ocsf_type": "string_t",
+      "transform": "direct"
+    },
+    {
+      "area": "RDS Limitless DB",
+      "guardduty_field": "resource.rdsLimitlessDbDetails.engine",
+      "ocsf_field": "resources[].database.engine",
+      "ocsf_type": "string_t",
+      "transform": "direct"
+    },
+    {
+      "area": "RDS Limitless DB",
+      "guardduty_field": "resource.rdsLimitlessDbDetails.engineVersion",
+      "ocsf_field": "resources[].database.version",
+      "ocsf_type": "string_t",
+      "transform": "direct"
+    },
+    {
+      "area": "EC2 Image",
+      "guardduty_field": "resource.ec2ImageDetails.imageArn",
+      "ocsf_field": "resources[].uid",
+      "ocsf_type": "resource_uid_t",
+      "transform": "converted"
+    },
+    {
+      "area": "EC2 Image",
+      "guardduty_field": "resource.ec2ImageDetails.imageArn",
+      "ocsf_field": "resources[].uid_alt",
+      "ocsf_type": "resource_uid_t",
+      "transform": "direct"
+    },
+    {
+      "area": "Backup Recovery Point",
+      "guardduty_field": "resource.recoveryPointDetails.backupVaultName",
+      "ocsf_field": "resources[].uid",
+      "ocsf_type": "resource_uid_t",
+      "transform": "converted"
+    },
+    {
+      "area": "Backup Recovery Point",
+      "guardduty_field": "resource.recoveryPointDetails.recoveryPointArn",
+      "ocsf_field": "resources[].uid",
+      "ocsf_type": "resource_uid_t",
+      "transform": "converted"
+    },
+    {
+      "area": "Backup Recovery Point",
+      "guardduty_field": "resource.recoveryPointDetails.recoveryPointArn",
+      "ocsf_field": "resources[].uid_alt",
+      "ocsf_type": "resource_uid_t",
+      "transform": "direct"
+    },
+    {
+      "area": "Bedrock Guardrail",
+      "guardduty_field": "resource.bedrockGuardrailDetails.guardrails[].arn",
+      "ocsf_field": "resources[].uid_alt",
+      "ocsf_type": "resource_uid_t",
+      "transform": "direct"
+    },
+    {
+      "area": "Bedrock Guardrail",
+      "guardduty_field": "resource.bedrockGuardrailDetails.guardrails[].version",
+      "ocsf_field": "resources[].version",
+      "ocsf_type": "string_t",
+      "transform": "direct"
+    },
+    {
+      "area": "Bedrock Guardrail",
+      "guardduty_field": "resource.bedrockGuardrailDetails.guardrailArn",
+      "ocsf_field": "resources[].uid_alt",
+      "ocsf_type": "resource_uid_t",
+      "transform": "direct"
+    },
+    {
+      "area": "Bedrock Guardrail",
+      "guardduty_field": "resource.bedrockGuardrailDetails.guardrailVersion",
+      "ocsf_field": "resources[].version",
+      "ocsf_type": "string_t",
+      "transform": "direct"
+    },
+    {
+      "area": "Bedrock Guardrail",
+      "guardduty_field": "resource.bedrockGuardrailDetails.guardrailArn",
+      "ocsf_field": "resources[].uid",
+      "ocsf_type": "resource_uid_t",
+      "transform": "converted"
+    },
+    {
+      "area": "Bedrock Model",
+      "guardduty_field": "resource.modelDetails[].modelId",
+      "ocsf_field": "resources[].uid",
+      "ocsf_type": "resource_uid_t",
+      "transform": "direct"
+    },
+    {
+      "area": "Bedrock Model",
+      "guardduty_field": "resource.modelDetails[].modelId",
+      "ocsf_field": "resources[].uid_alt",
+      "ocsf_type": "resource_uid_t",
+      "transform": "direct"
+    },
+    {
+      "area": "Attack Sequence Resources",
+      "guardduty_field": "service.detection.sequence.resources[].data.accessKey.principalId",
+      "ocsf_field": "resources[].user.uid_alt",
+      "ocsf_type": "string_t",
+      "transform": "direct"
+    },
+    {
+      "area": "Attack Sequence Resources",
+      "guardduty_field": "service.detection.sequence.resources[].data.accessKey.userName",
+      "ocsf_field": "resources[].user.name",
+      "ocsf_type": "username_t",
+      "transform": "direct"
+    },
+    {
+      "area": "Attack Sequence Resources",
+      "guardduty_field": "service.detection.sequence.resources[].data.accessKey.userType",
+      "ocsf_field": "resources[].user.type_id",
+      "ocsf_type": "integer_t",
+      "transform": "converted"
+    },
+    {
+      "area": "Attack Sequence Resources",
+      "guardduty_field": "service.detection.sequence.resources[].data.accessKey.userType",
+      "ocsf_field": "resources[].user.type",
+      "ocsf_type": "string_t",
+      "transform": "converted"
+    },
+    {
+      "area": "Attack Sequence Resources",
+      "guardduty_field": "service.detection.sequence.resources[].data.ec2LaunchTemplate.version",
+      "ocsf_field": "resources[].version",
+      "ocsf_type": "string_t",
+      "transform": "direct"
+    },
+    {
+      "area": "Attack Sequence Resources",
+      "guardduty_field": "service.detection.sequence.resources[].name",
+      "ocsf_field": "resources[].device.uid",
+      "ocsf_type": "string_t",
+      "transform": "direct"
+    },
+    {
+      "area": "Attack Sequence Resources",
+      "guardduty_field": "service.detection.sequence.resources[].data.ec2Instance.availabilityZone",
+      "ocsf_field": "resources[].zone",
+      "ocsf_type": "string_t",
+      "transform": "direct"
+    },
+    {
+      "area": "Attack Sequence Resources",
+      "guardduty_field": "service.detection.sequence.resources[].data.ec2Instance.instanceType",
+      "ocsf_field": "resources[].device.model",
+      "ocsf_type": "string_t",
+      "transform": "direct"
+    },
+    {
+      "area": "Attack Sequence Resources",
+      "guardduty_field": "service.detection.sequence.resources[].data.ec2Instance.iamInstanceProfile.id",
+      "ocsf_field": "resources[].device.instance_profile.uid",
+      "ocsf_type": "string_t",
+      "transform": "direct"
+    },
+    {
+      "area": "Attack Sequence Resources",
+      "guardduty_field": "service.detection.sequence.resources[].data.ec2Instance.iamInstanceProfile.arn",
+      "ocsf_field": "resources[].device.instance_profile.uid_alt",
+      "ocsf_type": "string_t",
+      "transform": "direct"
+    },
+    {
+      "area": "Attack Sequence Resources",
+      "guardduty_field": "service.detection.sequence.resources[].data.ec2Instance.platform",
+      "ocsf_field": "resources[].device.os.name",
+      "ocsf_type": "string_t",
+      "transform": "direct"
+    },
+    {
+      "area": "Attack Sequence Resources",
+      "guardduty_field": "service.detection.sequence.resources[].data.ec2Instance.platform",
+      "ocsf_field": "resources[].device.os.type_id",
+      "ocsf_type": "integer_t",
+      "transform": "converted"
+    },
+    {
+      "area": "Attack Sequence Resources",
+      "guardduty_field": "service.detection.sequence.resources[].data.ec2Instance.platform",
+      "ocsf_field": "resources[].device.os.type",
+      "ocsf_type": "string_t",
+      "transform": "converted"
+    },
+    {
+      "area": "Attack Sequence Resources",
+      "guardduty_field": "service.detection.sequence.resources[].data.ec2Instance.ec2NetworkInterfaceUids[]",
+      "ocsf_field": "resources[].device.network_interfaces[].uid",
+      "ocsf_type": "string_t",
+      "transform": "direct"
+    },
+    {
+      "area": "Attack Sequence Resources",
+      "guardduty_field": "service.detection.sequence.resources[].name",
+      "ocsf_field": "resources[].device.network_interfaces[].uid",
+      "ocsf_type": "string_t",
+      "transform": "direct"
+    },
+    {
+      "area": "Attack Sequence Resources",
+      "guardduty_field": "service.detection.sequence.resources[].data.ec2NetworkInterface.publicIp",
+      "ocsf_field": "resources[].device.network_interfaces[].ip",
+      "ocsf_type": "ip_t",
+      "transform": "direct"
+    },
+    {
+      "area": "Attack Sequence Resources",
+      "guardduty_field": "service.detection.sequence.resources[].data.ec2NetworkInterface.securityGroups[].groupId",
+      "ocsf_field": "resources[].device.network_interfaces[].security_groups[].uid",
+      "ocsf_type": "string_t",
+      "transform": "direct"
+    },
+    {
+      "area": "Attack Sequence Resources",
+      "guardduty_field": "service.detection.sequence.resources[].data.ec2NetworkInterface.securityGroups[].groupName",
+      "ocsf_field": "resources[].device.network_interfaces[].security_groups[].name",
+      "ocsf_type": "string_t",
+      "transform": "direct"
+    },
+    {
+      "area": "Attack Sequence Resources",
+      "guardduty_field": "service.detection.sequence.resources[].name",
+      "ocsf_field": "resources[].device.container.uid",
+      "ocsf_type": "string_t",
+      "transform": "direct"
+    },
+    {
+      "area": "Attack Sequence Resources",
+      "guardduty_field": "service.detection.sequence.resources[].data.container.image",
+      "ocsf_field": "resources[].device.container.image.name",
+      "ocsf_type": "string_t",
+      "transform": "direct"
+    },
+    {
+      "area": "Attack Sequence Resources",
+      "guardduty_field": "service.detection.sequence.resources[].data.container.imageUid",
+      "ocsf_field": "resources[].device.container.image.uid",
+      "ocsf_type": "string_t",
+      "transform": "direct"
+    },
+    {
+      "area": "Attack Sequence Resources",
+      "guardduty_field": "service.detection.sequence.resources[].data.eksCluster.arn",
+      "ocsf_field": "resources[].uid_alt",
+      "ocsf_type": "resource_uid_t",
+      "transform": "direct"
+    },
+    {
+      "area": "Attack Sequence Resources",
+      "guardduty_field": "service.detection.sequence.resources[].data.eksCluster.createdAt",
+      "ocsf_field": "resources[].created_time",
+      "ocsf_type": "timestamp_t",
+      "transform": "direct"
+    },
+    {
+      "area": "Attack Sequence Resources",
+      "guardduty_field": "service.detection.sequence.resources[].data.eksCluster.vpcId",
+      "ocsf_field": "resources[].vpc_uid",
+      "ocsf_type": "string_t",
+      "transform": "direct"
+    },
+    {
+      "area": "Attack Sequence Resources",
+      "guardduty_field": "service.detection.sequence.resources[].data.kubernetesWorkload.namespace",
+      "ocsf_field": "resources[].namespace",
+      "ocsf_type": "string_t",
+      "transform": "direct"
+    },
+    {
+      "area": "Attack Sequence Resources",
+      "guardduty_field": "service.detection.sequence.resources[].data.s3Bucket.createdAt",
+      "ocsf_field": "resources[].created_time",
+      "ocsf_type": "timestamp_t",
+      "transform": "direct"
+    },
+    {
+      "area": "Attack Sequence Resources",
+      "guardduty_field": "service.detection.sequence.resources[].name",
+      "ocsf_field": "resources[].databucket.uid",
+      "ocsf_type": "resource_uid_t",
+      "transform": "direct"
+    },
+    {
+      "area": "Attack Sequence Resources",
+      "guardduty_field": "service.detection.sequence.resources[].data.s3Bucket.effectivePermission",
+      "ocsf_field": "resources[].databucket.is_public",
+      "ocsf_type": "boolean_t",
+      "transform": "converted"
+    },
+    {
+      "area": "Attack Sequence Resources",
+      "guardduty_field": "service.detection.sequence.resources[].data.s3Bucket.encryptionKeyArn",
+      "ocsf_field": "resources[].databucket.encryption_details.key_uid",
+      "ocsf_type": "string_t",
+      "transform": "direct"
+    },
+    {
+      "area": "Attack Sequence Resources",
+      "guardduty_field": "service.detection.sequence.resources[].data.s3Bucket.encryptionType",
+      "ocsf_field": "resources[].databucket.encryption_details.type",
+      "ocsf_type": "string_t",
+      "transform": "direct"
+    },
+    {
+      "area": "Attack Sequence Resources",
+      "guardduty_field": "service.detection.sequence.resources[].data.s3Bucket.ownerId",
+      "ocsf_field": "resources[].owner.uid",
+      "ocsf_type": "string_t",
+      "transform": "direct"
+    },
+    {
+      "area": "Attack Sequence Resources",
+      "guardduty_field": "service.detection.sequence.resources[].data.s3Object.key",
+      "ocsf_field": "resources[].databucket.file.name",
+      "ocsf_type": "file_name_t",
+      "transform": "direct"
+    },
+    {
+      "area": "Attack Sequence Resources",
+      "guardduty_field": "service.detection.sequence.resources[].data.s3Object.versionId",
+      "ocsf_field": "resources[].databucket.file.version",
+      "ocsf_type": "string_t",
+      "transform": "direct"
+    },
+    {
+      "area": "Action (all types)",
+      "guardduty_field": "service.action.actionType",
+      "ocsf_field": "evidences[].name",
+      "ocsf_type": "string_t",
+      "transform": "direct"
+    },
+    {
+      "area": "AWS API Call",
+      "guardduty_field": "service.action.awsApiCallAction.api",
+      "ocsf_field": "evidences[].api.operation",
+      "ocsf_type": "string_t",
+      "transform": "direct"
+    },
+    {
+      "area": "AWS API Call",
+      "guardduty_field": "service.action.awsApiCallAction.serviceName",
+      "ocsf_field": "evidences[].api.service.name",
+      "ocsf_type": "string_t",
+      "transform": "direct"
+    },
+    {
+      "area": "AWS API Call",
+      "guardduty_field": "service.action.awsApiCallAction.errorCode",
+      "ocsf_field": "evidences[].api.response.error_message",
+      "ocsf_type": "string_t",
+      "transform": "direct"
+    },
+    {
+      "area": "AWS API Call",
+      "guardduty_field": "service.action.awsApiCallAction.remoteIpDetails.ipAddressV4",
+      "ocsf_field": "evidences[].src_endpoint.ip",
+      "ocsf_type": "ip_t",
+      "transform": "direct"
+    },
+    {
+      "area": "AWS API Call",
+      "guardduty_field": "service.action.awsApiCallAction.remoteIpDetails.ipAddressV6",
+      "ocsf_field": "evidences[].src_endpoint.ip",
+      "ocsf_type": "ip_t",
+      "transform": "direct"
+    },
+    {
+      "area": "AWS API Call",
+      "guardduty_field": "service.action.awsApiCallAction.remoteIpDetails.city.cityName",
+      "ocsf_field": "evidences[].src_endpoint.location.city",
+      "ocsf_type": "string_t",
+      "transform": "direct"
+    },
+    {
+      "area": "AWS API Call",
+      "guardduty_field": "service.action.awsApiCallAction.remoteIpDetails.country.countryName",
+      "ocsf_field": "evidences[].src_endpoint.location.country",
+      "ocsf_type": "string_t",
+      "transform": "direct"
+    },
+    {
+      "area": "AWS API Call",
+      "guardduty_field": "service.action.awsApiCallAction.remoteIpDetails.geoLocation.lat",
+      "ocsf_field": "evidences[].src_endpoint.location.lat",
+      "ocsf_type": "float_t",
+      "transform": "direct"
+    },
+    {
+      "area": "AWS API Call",
+      "guardduty_field": "service.action.awsApiCallAction.remoteIpDetails.geoLocation.lon",
+      "ocsf_field": "evidences[].src_endpoint.location.long",
+      "ocsf_type": "float_t",
+      "transform": "direct"
+    },
+    {
+      "area": "AWS API Call",
+      "guardduty_field": "service.action.awsApiCallAction.remoteIpDetails.organization.asn",
+      "ocsf_field": "evidences[].src_endpoint.autonomous_system.number",
+      "ocsf_type": "integer_t",
+      "transform": "direct"
+    },
+    {
+      "area": "AWS API Call",
+      "guardduty_field": "service.action.awsApiCallAction.remoteIpDetails.organization.asnOrg",
+      "ocsf_field": "evidences[].src_endpoint.autonomous_system.name",
+      "ocsf_type": "string_t",
+      "transform": "direct"
+    },
+    {
+      "area": "AWS API Call",
+      "guardduty_field": "service.action.awsApiCallAction.remoteIpDetails.organization.isp",
+      "ocsf_field": "evidences[].src_endpoint.isp",
+      "ocsf_type": "string_t",
+      "transform": "direct"
+    },
+    {
+      "area": "AWS API Call",
+      "guardduty_field": "service.action.awsApiCallAction.remoteIpDetails.organization.org",
+      "ocsf_field": "evidences[].src_endpoint.isp_org",
+      "ocsf_type": "string_t",
+      "transform": "direct"
+    },
+    {
+      "area": "AWS API Call",
+      "guardduty_field": "service.action.awsApiCallAction.domainDetails.domain",
+      "ocsf_field": "evidences[].src_endpoint.domain",
+      "ocsf_type": "string_t",
+      "transform": "direct"
+    },
+    {
+      "area": "AWS API Call",
+      "guardduty_field": "service.action.awsApiCallAction.remoteAccountDetails.awsServiceName",
+      "ocsf_field": "evidences[].src_endpoint.svc_name",
+      "ocsf_type": "string_t",
+      "transform": "direct"
+    },
+    {
+      "area": "AWS API Call",
+      "guardduty_field": "service.resourceRole",
+      "ocsf_field": "evidences[].data.resource_role",
+      "ocsf_type": "json_t",
+      "transform": "direct"
+    },
+    {
+      "area": "AWS API Call",
+      "guardduty_field": "service.action.awsApiCallAction.affectedResources",
+      "ocsf_field": "evidences[].data.affected_resource",
+      "ocsf_type": "json_t",
+      "transform": "direct"
+    },
+    {
+      "area": "Kubernetes API Call",
+      "guardduty_field": "service.action.kubernetesApiCallAction.verb",
+      "ocsf_field": "evidences[].api.operation",
+      "ocsf_type": "string_t",
+      "transform": "direct"
+    },
+    {
+      "area": "Kubernetes API Call",
+      "guardduty_field": "service.action.kubernetesApiCallAction.requestUri",
+      "ocsf_field": "evidences[].api.request.data.request_uri",
+      "ocsf_type": "json_t",
+      "transform": "direct"
+    },
+    {
+      "area": "Kubernetes API Call",
+      "guardduty_field": "service.action.kubernetesApiCallAction.userAgent",
+      "ocsf_field": "evidences[].api.request.data.user_agent",
+      "ocsf_type": "json_t",
+      "transform": "direct"
+    },
+    {
+      "area": "Kubernetes API Call",
+      "guardduty_field": "service.action.kubernetesApiCallAction.statusCode",
+      "ocsf_field": "evidences[].api.response.code",
+      "ocsf_type": "integer_t",
+      "transform": "direct"
+    },
+    {
+      "area": "Kubernetes API Call",
+      "guardduty_field": "service.action.kubernetesApiCallAction.remoteIpDetails.ipAddressV4",
+      "ocsf_field": "evidences[].src_endpoint.ip",
+      "ocsf_type": "ip_t",
+      "transform": "direct"
+    },
+    {
+      "area": "Kubernetes API Call",
+      "guardduty_field": "service.action.kubernetesApiCallAction.remoteIpDetails.ipAddressV6",
+      "ocsf_field": "evidences[].src_endpoint.ip",
+      "ocsf_type": "ip_t",
+      "transform": "direct"
+    },
+    {
+      "area": "Kubernetes API Call",
+      "guardduty_field": "service.action.kubernetesApiCallAction.remoteIpDetails.city.cityName",
+      "ocsf_field": "evidences[].src_endpoint.location.city",
+      "ocsf_type": "string_t",
+      "transform": "direct"
+    },
+    {
+      "area": "Kubernetes API Call",
+      "guardduty_field": "service.action.kubernetesApiCallAction.remoteIpDetails.country.countryName",
+      "ocsf_field": "evidences[].src_endpoint.location.country",
+      "ocsf_type": "string_t",
+      "transform": "direct"
+    },
+    {
+      "area": "Kubernetes API Call",
+      "guardduty_field": "service.action.kubernetesApiCallAction.remoteIpDetails.geoLocation.lat",
+      "ocsf_field": "evidences[].src_endpoint.location.lat",
+      "ocsf_type": "float_t",
+      "transform": "direct"
+    },
+    {
+      "area": "Kubernetes API Call",
+      "guardduty_field": "service.action.kubernetesApiCallAction.remoteIpDetails.geoLocation.lon",
+      "ocsf_field": "evidences[].src_endpoint.location.long",
+      "ocsf_type": "float_t",
+      "transform": "direct"
+    },
+    {
+      "area": "Kubernetes API Call",
+      "guardduty_field": "service.action.kubernetesApiCallAction.remoteIpDetails.organization.asn",
+      "ocsf_field": "evidences[].src_endpoint.autonomous_system.number",
+      "ocsf_type": "integer_t",
+      "transform": "direct"
+    },
+    {
+      "area": "Kubernetes API Call",
+      "guardduty_field": "service.action.kubernetesApiCallAction.remoteIpDetails.organization.asnOrg",
+      "ocsf_field": "evidences[].src_endpoint.autonomous_system.name",
+      "ocsf_type": "string_t",
+      "transform": "direct"
+    },
+    {
+      "area": "Kubernetes API Call",
+      "guardduty_field": "service.action.kubernetesApiCallAction.remoteIpDetails.organization.isp",
+      "ocsf_field": "evidences[].src_endpoint.isp",
+      "ocsf_type": "string_t",
+      "transform": "direct"
+    },
+    {
+      "area": "Kubernetes API Call",
+      "guardduty_field": "service.action.kubernetesApiCallAction.remoteIpDetails.organization.org",
+      "ocsf_field": "evidences[].src_endpoint.isp_org",
+      "ocsf_type": "string_t",
+      "transform": "direct"
+    },
+    {
+      "area": "Kubernetes API Call",
+      "guardduty_field": "service.action.kubernetesApiCallAction.sourceIPs[]",
+      "ocsf_field": "evidences[].src_endpoint.intermediate_ips[]",
+      "ocsf_type": "ip_t",
+      "transform": "direct"
+    },
+    {
+      "area": "AWS API Call / Kubernetes API Call",
+      "guardduty_field": "service.additionalInfo.value.authenticationMethod",
+      "ocsf_field": "evidences[].data.additional_info.authentication_method",
+      "ocsf_type": "json_t",
+      "transform": "direct"
+    },
+    {
+      "area": "AWS API Call / Kubernetes API Call",
+      "guardduty_field": "service.additionalInfo.value.containers",
+      "ocsf_field": "evidences[].data.additional_info.containers",
+      "ocsf_type": "json_t",
+      "transform": "direct"
+    },
+    {
+      "area": "AWS API Call / Kubernetes API Call",
+      "guardduty_field": "service.additionalInfo.value.context",
+      "ocsf_field": "evidences[].data.additional_info.context",
+      "ocsf_type": "json_t",
+      "transform": "direct"
+    },
+    {
+      "area": "AWS API Call / Kubernetes API Call",
+      "guardduty_field": "service.additionalInfo.value.inBytes",
+      "ocsf_field": "evidences[].data.additional_info.in_bytes",
+      "ocsf_type": "json_t",
+      "transform": "direct"
+    },
+    {
+      "area": "AWS API Call / Kubernetes API Call",
+      "guardduty_field": "service.additionalInfo.value.localNetworkInterfaceOwner",
+      "ocsf_field": "evidences[].data.additional_info.local_network_interface_owner",
+      "ocsf_type": "json_t",
+      "transform": "direct"
+    },
+    {
+      "area": "AWS API Call / Kubernetes API Call",
+      "guardduty_field": "service.additionalInfo.value.localPort",
+      "ocsf_field": "evidences[].data.additional_info.local_port",
+      "ocsf_type": "json_t",
+      "transform": "direct"
+    },
+    {
+      "area": "AWS API Call / Kubernetes API Call",
+      "guardduty_field": "service.additionalInfo.value.outBytes",
+      "ocsf_field": "evidences[].data.additional_info.out_bytes",
+      "ocsf_type": "json_t",
+      "transform": "direct"
+    },
+    {
+      "area": "AWS API Call / Kubernetes API Call",
+      "guardduty_field": "service.additionalInfo.value.policyArn",
+      "ocsf_field": "evidences[].data.additional_info.policy_arn",
+      "ocsf_type": "json_t",
+      "transform": "direct"
+    },
+    {
+      "area": "AWS API Call / Kubernetes API Call",
+      "guardduty_field": "service.additionalInfo.value.policyName",
+      "ocsf_field": "evidences[].data.additional_info.policy_name",
+      "ocsf_type": "json_t",
+      "transform": "direct"
+    },
+    {
+      "area": "AWS API Call / Kubernetes API Call",
+      "guardduty_field": "service.additionalInfo.value.portsScannedSample",
+      "ocsf_field": "evidences[].data.additional_info.ports_scanned_sample",
+      "ocsf_type": "json_t",
+      "transform": "direct"
+    },
+    {
+      "area": "AWS API Call / Kubernetes API Call",
+      "guardduty_field": "service.additionalInfo.value.recentApiCalls",
+      "ocsf_field": "evidences[].data.additional_info.recent_api_calls",
+      "ocsf_type": "json_t",
+      "transform": "direct"
+    },
+    {
+      "area": "AWS API Call / Kubernetes API Call",
+      "guardduty_field": "service.additionalInfo.value.recentCredentials",
+      "ocsf_field": "evidences[].data.additional_info.recent_credentials",
+      "ocsf_type": "json_t",
+      "transform": "direct"
+    },
+    {
+      "area": "AWS API Call / Kubernetes API Call",
+      "guardduty_field": "service.additionalInfo.value.remotePort",
+      "ocsf_field": "evidences[].data.additional_info.remote_port",
+      "ocsf_type": "json_t",
+      "transform": "direct"
+    },
+    {
+      "area": "AWS API Call / Kubernetes API Call",
+      "guardduty_field": "service.additionalInfo.value.sample",
+      "ocsf_field": "evidences[].data.additional_info.sample",
+      "ocsf_type": "json_t",
+      "transform": "direct"
+    },
+    {
+      "area": "AWS API Call / Kubernetes API Call",
+      "guardduty_field": "service.additionalInfo.value.scannedPort",
+      "ocsf_field": "evidences[].data.additional_info.scanned_port",
+      "ocsf_type": "json_t",
+      "transform": "direct"
+    },
+    {
+      "area": "AWS API Call / Kubernetes API Call",
+      "guardduty_field": "service.additionalInfo.value.threatFileSha256",
+      "ocsf_field": "evidences[].data.additional_info.threat_file_sha256",
+      "ocsf_type": "json_t",
+      "transform": "direct"
+    },
+    {
+      "area": "AWS API Call / Kubernetes API Call",
+      "guardduty_field": "service.additionalInfo.value.threatListName",
+      "ocsf_field": "evidences[].data.additional_info.threat_list_name",
+      "ocsf_type": "json_t",
+      "transform": "direct"
+    },
+    {
+      "area": "AWS API Call / Kubernetes API Call",
+      "guardduty_field": "service.additionalInfo.value.threatName",
+      "ocsf_field": "evidences[].data.additional_info.threat_name",
+      "ocsf_type": "json_t",
+      "transform": "direct"
+    },
+    {
+      "area": "AWS API Call / Kubernetes API Call",
+      "guardduty_field": "service.additionalInfo.value.unusual",
+      "ocsf_field": "evidences[].data.additional_info.unusual",
+      "ocsf_type": "json_t",
+      "transform": "direct"
+    },
+    {
+      "area": "AWS API Call / Kubernetes API Call",
+      "guardduty_field": "service.additionalInfo.value.unusualProtocol",
+      "ocsf_field": "evidences[].data.additional_info.unusual_protocol",
+      "ocsf_type": "json_t",
+      "transform": "direct"
+    },
+    {
+      "area": "AWS API Call / Kubernetes API Call",
+      "guardduty_field": "service.additionalInfo.value.userAgent",
+      "ocsf_field": "evidences[].data.additional_info.user_agent",
+      "ocsf_type": "json_t",
+      "transform": "direct"
+    },
+    {
+      "area": "DNS Request",
+      "guardduty_field": "service.action.dnsRequestAction",
+      "ocsf_field": "evidences[].data",
+      "ocsf_type": "json_t",
+      "transform": "direct"
+    },
+    {
+      "area": "DNS Request",
+      "guardduty_field": "service.action.dnsRequestAction.domainWithSuffix",
+      "ocsf_field": "evidences[].query.hostname",
+      "ocsf_type": "hostname_t",
+      "transform": "direct"
+    },
+    {
+      "area": "DNS Request",
+      "guardduty_field": "service.action.dnsRequestAction.protocol",
+      "ocsf_field": "evidences[].connection_info.protocol_name",
+      "ocsf_type": "string_t",
+      "transform": "direct"
+    },
+    {
+      "area": "Network Connection",
+      "guardduty_field": "service.action.networkConnectionAction.connectionDirection",
+      "ocsf_field": "evidences[].connection_info.direction_id",
+      "ocsf_type": "integer_t",
+      "transform": "converted"
+    },
+    {
+      "area": "Network Connection",
+      "guardduty_field": "service.action.networkConnectionAction.protocol",
+      "ocsf_field": "evidences[].connection_info.protocol_name",
+      "ocsf_type": "string_t",
+      "transform": "direct"
+    },
+    {
+      "area": "Network Connection",
+      "guardduty_field": "service.action.networkConnectionAction.localIpDetails.ipAddressV4",
+      "ocsf_field": "evidences[].src_endpoint.ip",
+      "ocsf_type": "ip_t",
+      "transform": "direct"
+    },
+    {
+      "area": "Network Connection",
+      "guardduty_field": "service.action.networkConnectionAction.localIpDetails.ipAddressV6",
+      "ocsf_field": "evidences[].src_endpoint.ip",
+      "ocsf_type": "ip_t",
+      "transform": "direct"
+    },
+    {
+      "area": "Network Connection",
+      "guardduty_field": "service.action.networkConnectionAction.localPortDetails.port",
+      "ocsf_field": "evidences[].src_endpoint.port",
+      "ocsf_type": "port_t",
+      "transform": "direct"
+    },
+    {
+      "area": "Network Connection",
+      "guardduty_field": "service.action.networkConnectionAction.localPortDetails.portName",
+      "ocsf_field": "evidences[].src_endpoint.name",
+      "ocsf_type": "string_t",
+      "transform": "direct"
+    },
+    {
+      "area": "Network Connection",
+      "guardduty_field": "service.action.networkConnectionAction.remoteIpDetails.ipAddressV4",
+      "ocsf_field": "evidences[].dst_endpoint.ip",
+      "ocsf_type": "ip_t",
+      "transform": "direct"
+    },
+    {
+      "area": "Network Connection",
+      "guardduty_field": "service.action.networkConnectionAction.remoteIpDetails.ipAddressV6",
+      "ocsf_field": "evidences[].dst_endpoint.ip",
+      "ocsf_type": "ip_t",
+      "transform": "direct"
+    },
+    {
+      "area": "Network Connection",
+      "guardduty_field": "service.action.networkConnectionAction.remoteIpDetails.city.cityName",
+      "ocsf_field": "evidences[].dst_endpoint.location.city",
+      "ocsf_type": "string_t",
+      "transform": "direct"
+    },
+    {
+      "area": "Network Connection",
+      "guardduty_field": "service.action.networkConnectionAction.remoteIpDetails.country.countryName",
+      "ocsf_field": "evidences[].dst_endpoint.location.country",
+      "ocsf_type": "string_t",
+      "transform": "direct"
+    },
+    {
+      "area": "Network Connection",
+      "guardduty_field": "service.action.networkConnectionAction.remoteIpDetails.geoLocation.lat",
+      "ocsf_field": "evidences[].dst_endpoint.location.lat",
+      "ocsf_type": "float_t",
+      "transform": "direct"
+    },
+    {
+      "area": "Network Connection",
+      "guardduty_field": "service.action.networkConnectionAction.remoteIpDetails.geoLocation.lon",
+      "ocsf_field": "evidences[].dst_endpoint.location.long",
+      "ocsf_type": "float_t",
+      "transform": "direct"
+    },
+    {
+      "area": "Network Connection",
+      "guardduty_field": "service.action.networkConnectionAction.remoteIpDetails.organization.asn",
+      "ocsf_field": "evidences[].dst_endpoint.autonomous_system.number",
+      "ocsf_type": "integer_t",
+      "transform": "direct"
+    },
+    {
+      "area": "Network Connection",
+      "guardduty_field": "service.action.networkConnectionAction.remoteIpDetails.organization.asnOrg",
+      "ocsf_field": "evidences[].dst_endpoint.autonomous_system.name",
+      "ocsf_type": "string_t",
+      "transform": "direct"
+    },
+    {
+      "area": "Network Connection",
+      "guardduty_field": "service.action.networkConnectionAction.remoteIpDetails.organization.isp",
+      "ocsf_field": "evidences[].dst_endpoint.isp",
+      "ocsf_type": "string_t",
+      "transform": "direct"
+    },
+    {
+      "area": "Network Connection",
+      "guardduty_field": "service.action.networkConnectionAction.remoteIpDetails.organization.org",
+      "ocsf_field": "evidences[].dst_endpoint.isp_org",
+      "ocsf_type": "string_t",
+      "transform": "direct"
+    },
+    {
+      "area": "Network Connection",
+      "guardduty_field": "service.action.networkConnectionAction.remotePortDetails.port",
+      "ocsf_field": "evidences[].dst_endpoint.port",
+      "ocsf_type": "port_t",
+      "transform": "direct"
+    },
+    {
+      "area": "Network Connection",
+      "guardduty_field": "service.action.networkConnectionAction.remotePortDetails.portName",
+      "ocsf_field": "evidences[].dst_endpoint.name",
+      "ocsf_type": "string_t",
+      "transform": "direct"
+    },
+    {
+      "area": "Port Probe",
+      "guardduty_field": "service.action.portProbeAction.portProbeDetails[]",
+      "ocsf_field": "evidences[].data",
+      "ocsf_type": "json_t",
+      "transform": "direct"
+    },
+    {
+      "area": "Port Probe",
+      "guardduty_field": "service.action.portProbeAction.portProbeDetails[].localIpDetails.ipAddressV4",
+      "ocsf_field": "evidences[].dst_endpoint.ip",
+      "ocsf_type": "ip_t",
+      "transform": "direct"
+    },
+    {
+      "area": "Port Probe",
+      "guardduty_field": "service.action.portProbeAction.portProbeDetails[].localIpDetails.ipAddressV6",
+      "ocsf_field": "evidences[].dst_endpoint.ip",
+      "ocsf_type": "ip_t",
+      "transform": "direct"
+    },
+    {
+      "area": "Port Probe",
+      "guardduty_field": "service.action.portProbeAction.portProbeDetails[].localPortDetails.port",
+      "ocsf_field": "evidences[].dst_endpoint.port",
+      "ocsf_type": "port_t",
+      "transform": "direct"
+    },
+    {
+      "area": "Port Probe",
+      "guardduty_field": "service.action.portProbeAction.portProbeDetails[].localPortDetails.portName",
+      "ocsf_field": "evidences[].dst_endpoint.name",
+      "ocsf_type": "string_t",
+      "transform": "direct"
+    },
+    {
+      "area": "Port Probe",
+      "guardduty_field": "service.action.portProbeAction.portProbeDetails[].remoteIpDetails.ipAddressV4",
+      "ocsf_field": "evidences[].src_endpoint.ip",
+      "ocsf_type": "ip_t",
+      "transform": "direct"
+    },
+    {
+      "area": "Port Probe",
+      "guardduty_field": "service.action.portProbeAction.portProbeDetails[].remoteIpDetails.ipAddressV6",
+      "ocsf_field": "evidences[].src_endpoint.ip",
+      "ocsf_type": "ip_t",
+      "transform": "direct"
+    },
+    {
+      "area": "Port Probe",
+      "guardduty_field": "service.action.portProbeAction.portProbeDetails[].remoteIpDetails.city.cityName",
+      "ocsf_field": "evidences[].src_endpoint.location.city",
+      "ocsf_type": "string_t",
+      "transform": "direct"
+    },
+    {
+      "area": "Port Probe",
+      "guardduty_field": "service.action.portProbeAction.portProbeDetails[].remoteIpDetails.country.countryName",
+      "ocsf_field": "evidences[].src_endpoint.location.country",
+      "ocsf_type": "string_t",
+      "transform": "direct"
+    },
+    {
+      "area": "Port Probe",
+      "guardduty_field": "service.action.portProbeAction.portProbeDetails[].remoteIpDetails.geoLocation.lat",
+      "ocsf_field": "evidences[].src_endpoint.location.lat",
+      "ocsf_type": "float_t",
+      "transform": "direct"
+    },
+    {
+      "area": "Port Probe",
+      "guardduty_field": "service.action.portProbeAction.portProbeDetails[].remoteIpDetails.geoLocation.lon",
+      "ocsf_field": "evidences[].src_endpoint.location.long",
+      "ocsf_type": "float_t",
+      "transform": "direct"
+    },
+    {
+      "area": "Port Probe",
+      "guardduty_field": "service.action.portProbeAction.portProbeDetails[].remoteIpDetails.organization.asn",
+      "ocsf_field": "evidences[].src_endpoint.autonomous_system.number",
+      "ocsf_type": "integer_t",
+      "transform": "direct"
+    },
+    {
+      "area": "Port Probe",
+      "guardduty_field": "service.action.portProbeAction.portProbeDetails[].remoteIpDetails.organization.asnOrg",
+      "ocsf_field": "evidences[].src_endpoint.autonomous_system.name",
+      "ocsf_type": "string_t",
+      "transform": "direct"
+    },
+    {
+      "area": "Port Probe",
+      "guardduty_field": "service.action.portProbeAction.portProbeDetails[].remoteIpDetails.organization.isp",
+      "ocsf_field": "evidences[].src_endpoint.isp",
+      "ocsf_type": "string_t",
+      "transform": "direct"
+    },
+    {
+      "area": "Port Probe",
+      "guardduty_field": "service.action.portProbeAction.portProbeDetails[].remoteIpDetails.organization.org",
+      "ocsf_field": "evidences[].src_endpoint.isp_org",
+      "ocsf_type": "string_t",
+      "transform": "direct"
+    },
+    {
+      "area": "RDS Login Attempt",
+      "guardduty_field": "service.action.rdsLoginAttemptAction.remoteIpDetails.ipAddressV4",
+      "ocsf_field": "evidences[].src_endpoint.ip",
+      "ocsf_type": "ip_t",
+      "transform": "direct"
+    },
+    {
+      "area": "RDS Login Attempt",
+      "guardduty_field": "service.action.rdsLoginAttemptAction.remoteIpDetails.ipAddressV6",
+      "ocsf_field": "evidences[].src_endpoint.ip",
+      "ocsf_type": "ip_t",
+      "transform": "direct"
+    },
+    {
+      "area": "RDS Login Attempt",
+      "guardduty_field": "service.action.rdsLoginAttemptAction.remoteIpDetails.city.cityName",
+      "ocsf_field": "evidences[].src_endpoint.location.city",
+      "ocsf_type": "string_t",
+      "transform": "direct"
+    },
+    {
+      "area": "RDS Login Attempt",
+      "guardduty_field": "service.action.rdsLoginAttemptAction.remoteIpDetails.country.countryName",
+      "ocsf_field": "evidences[].src_endpoint.location.country",
+      "ocsf_type": "string_t",
+      "transform": "direct"
+    },
+    {
+      "area": "RDS Login Attempt",
+      "guardduty_field": "service.action.rdsLoginAttemptAction.remoteIpDetails.geoLocation.lat",
+      "ocsf_field": "evidences[].src_endpoint.location.lat",
+      "ocsf_type": "float_t",
+      "transform": "direct"
+    },
+    {
+      "area": "RDS Login Attempt",
+      "guardduty_field": "service.action.rdsLoginAttemptAction.remoteIpDetails.geoLocation.lon",
+      "ocsf_field": "evidences[].src_endpoint.location.long",
+      "ocsf_type": "float_t",
+      "transform": "direct"
+    },
+    {
+      "area": "RDS Login Attempt",
+      "guardduty_field": "service.action.rdsLoginAttemptAction.remoteIpDetails.organization.asn",
+      "ocsf_field": "evidences[].src_endpoint.autonomous_system.number",
+      "ocsf_type": "integer_t",
+      "transform": "direct"
+    },
+    {
+      "area": "RDS Login Attempt",
+      "guardduty_field": "service.action.rdsLoginAttemptAction.remoteIpDetails.organization.asnOrg",
+      "ocsf_field": "evidences[].src_endpoint.autonomous_system.name",
+      "ocsf_type": "string_t",
+      "transform": "direct"
+    },
+    {
+      "area": "RDS Login Attempt",
+      "guardduty_field": "service.action.rdsLoginAttemptAction.remoteIpDetails.organization.isp",
+      "ocsf_field": "evidences[].src_endpoint.isp",
+      "ocsf_type": "string_t",
+      "transform": "direct"
+    },
+    {
+      "area": "RDS Login Attempt",
+      "guardduty_field": "service.action.rdsLoginAttemptAction.remoteIpDetails.organization.org",
+      "ocsf_field": "evidences[].src_endpoint.isp_org",
+      "ocsf_type": "string_t",
+      "transform": "direct"
+    },
+    {
+      "area": "Attack Sequence Actors",
+      "guardduty_field": "service.detection.sequence.actors[].session.uid",
+      "ocsf_field": "evidences[].actor.session.uid",
+      "ocsf_type": "string_t",
+      "transform": "direct"
+    },
+    {
+      "area": "Attack Sequence Actors",
+      "guardduty_field": "service.detection.sequence.actors[].session.createdTime",
+      "ocsf_field": "evidences[].actor.session.created_time",
+      "ocsf_type": "timestamp_t",
+      "transform": "direct"
+    },
+    {
+      "area": "Attack Sequence Actors",
+      "guardduty_field": "service.detection.sequence.actors[].session.mfaStatus",
+      "ocsf_field": "evidences[].actor.session.is_mfa",
+      "ocsf_type": "boolean_t",
+      "transform": "converted"
+    },
+    {
+      "area": "Attack Sequence Actors",
+      "guardduty_field": "service.detection.sequence.actors[].id",
+      "ocsf_field": "evidences[].actor.user.uid",
+      "ocsf_type": "string_t",
+      "transform": "direct"
+    },
+    {
+      "area": "Attack Sequence Actors",
+      "guardduty_field": "service.detection.sequence.actors[].user.name",
+      "ocsf_field": "evidences[].actor.user.name",
+      "ocsf_type": "username_t",
+      "transform": "direct"
+    },
+    {
+      "area": "Attack Sequence Actors",
+      "guardduty_field": "service.detection.sequence.actors[].user.credentialUid",
+      "ocsf_field": "evidences[].actor.user.credential_uid",
+      "ocsf_type": "string_t",
+      "transform": "direct"
+    },
+    {
+      "area": "Attack Sequence Actors",
+      "guardduty_field": "service.detection.sequence.actors[].user.credentialUid",
+      "ocsf_field": "evidences[].actor.user.programmatic_credentials[].uid",
+      "ocsf_type": "string_t",
+      "transform": "direct"
+    },
+    {
+      "area": "Attack Sequence Actors",
+      "guardduty_field": "service.detection.sequence.actors[].process.name",
+      "ocsf_field": "evidences[].actor.process.name",
+      "ocsf_type": "process_name_t",
+      "transform": "direct"
+    },
+    {
+      "area": "Attack Sequence Actors",
+      "guardduty_field": "service.detection.sequence.actors[].process.path",
+      "ocsf_field": "evidences[].actor.process.path",
+      "ocsf_type": "string_t",
+      "transform": "direct"
+    },
+    {
+      "area": "Attack Sequence Endpoints",
+      "guardduty_field": "service.detection.sequence.endpoints[].connection.direction",
+      "ocsf_field": "evidences[].connection_info.direction_id",
+      "ocsf_type": "integer_t",
+      "transform": "converted"
+    },
+    {
+      "area": "Attack Sequence Endpoints",
+      "guardduty_field": "service.detection.sequence.endpoints[].id",
+      "ocsf_field": "evidences[].src_endpoint.uid",
+      "ocsf_type": "string_t",
+      "transform": "direct"
+    },
+    {
+      "area": "Attack Sequence Endpoints",
+      "guardduty_field": "service.detection.sequence.endpoints[].ip",
+      "ocsf_field": "evidences[].src_endpoint.ip",
+      "ocsf_type": "ip_t",
+      "transform": "direct"
+    },
+    {
+      "area": "Attack Sequence Endpoints",
+      "guardduty_field": "service.detection.sequence.endpoints[].domain",
+      "ocsf_field": "evidences[].src_endpoint.domain",
+      "ocsf_type": "string_t",
+      "transform": "direct"
+    },
+    {
+      "area": "Attack Sequence Endpoints",
+      "guardduty_field": "service.detection.sequence.endpoints[].port",
+      "ocsf_field": "evidences[].src_endpoint.port",
+      "ocsf_type": "port_t",
+      "transform": "direct"
+    },
+    {
+      "area": "Attack Sequence Endpoints",
+      "guardduty_field": "service.detection.sequence.endpoints[].autonomousSystem.name",
+      "ocsf_field": "evidences[].src_endpoint.autonomous_system.name",
+      "ocsf_type": "string_t",
+      "transform": "direct"
+    },
+    {
+      "area": "Attack Sequence Endpoints",
+      "guardduty_field": "service.detection.sequence.endpoints[].autonomousSystem.number",
+      "ocsf_field": "evidences[].src_endpoint.autonomous_system.number",
+      "ocsf_type": "integer_t",
+      "transform": "direct"
+    },
+    {
+      "area": "Attack Sequence Endpoints",
+      "guardduty_field": "service.detection.sequence.endpoints[].location.city",
+      "ocsf_field": "evidences[].src_endpoint.location.city",
+      "ocsf_type": "string_t",
+      "transform": "direct"
+    },
+    {
+      "area": "Attack Sequence Endpoints",
+      "guardduty_field": "service.detection.sequence.endpoints[].location.country",
+      "ocsf_field": "evidences[].src_endpoint.location.country",
+      "ocsf_type": "string_t",
+      "transform": "direct"
+    },
+    {
+      "area": "Attack Sequence Endpoints",
+      "guardduty_field": "service.detection.sequence.endpoints[].location.lat",
+      "ocsf_field": "evidences[].src_endpoint.location.lat",
+      "ocsf_type": "float_t",
+      "transform": "direct"
+    },
+    {
+      "area": "Attack Sequence Endpoints",
+      "guardduty_field": "service.detection.sequence.endpoints[].location.lon",
+      "ocsf_field": "evidences[].src_endpoint.location.long",
+      "ocsf_type": "float_t",
+      "transform": "direct"
+    },
+    {
+      "area": "Runtime Process",
+      "guardduty_field": "service.runtimeDetails.process.name",
+      "ocsf_field": "evidences[].actor.process.name",
+      "ocsf_type": "process_name_t",
+      "transform": "direct"
+    },
+    {
+      "area": "Runtime Process",
+      "guardduty_field": "service.runtimeDetails.process.pid",
+      "ocsf_field": "evidences[].actor.process.pid",
+      "ocsf_type": "integer_t",
+      "transform": "direct"
+    },
+    {
+      "area": "Runtime Process",
+      "guardduty_field": "service.runtimeDetails.process.uuid",
+      "ocsf_field": "evidences[].actor.process.uid",
+      "ocsf_type": "string_t",
+      "transform": "direct"
+    },
+    {
+      "area": "Runtime Process",
+      "guardduty_field": "service.runtimeDetails.process.pwd",
+      "ocsf_field": "evidences[].actor.process.working_directory",
+      "ocsf_type": "string_t",
+      "transform": "direct"
+    },
+    {
+      "area": "Runtime Process",
+      "guardduty_field": "service.runtimeDetails.process.startTime",
+      "ocsf_field": "evidences[].actor.process.created_time",
+      "ocsf_type": "timestamp_t",
+      "transform": "converted"
+    },
+    {
+      "area": "Runtime Process",
+      "guardduty_field": "service.runtimeDetails.process.executablePath",
+      "ocsf_field": "evidences[].actor.process.file.path",
+      "ocsf_type": "file_path_t",
+      "transform": "direct"
+    },
+    {
+      "area": "Runtime Process",
+      "guardduty_field": "service.runtimeDetails.process.name",
+      "ocsf_field": "evidences[].actor.process.file.name",
+      "ocsf_type": "file_name_t",
+      "transform": "direct"
+    },
+    {
+      "area": "Runtime Process",
+      "guardduty_field": "service.runtimeDetails.process.executableSha256",
+      "ocsf_field": "evidences[].actor.process.file.hashes[].value",
+      "ocsf_type": "file_hash_t",
+      "transform": "direct"
+    },
+    {
+      "area": "Runtime Process",
+      "guardduty_field": "service.runtimeDetails.process.user",
+      "ocsf_field": "evidences[].actor.user.name",
+      "ocsf_type": "username_t",
+      "transform": "direct"
+    },
+    {
+      "area": "Runtime Process",
+      "guardduty_field": "service.runtimeDetails.process.euid",
+      "ocsf_field": "evidences[].actor.user.uid",
+      "ocsf_type": "string_t",
+      "transform": "direct"
+    },
+    {
+      "area": "Runtime Process",
+      "guardduty_field": "service.runtimeDetails.process.userId",
+      "ocsf_field": "evidences[].actor.user.uid_alt",
+      "ocsf_type": "string_t",
+      "transform": "direct"
+    },
+    {
+      "area": "Runtime Process",
+      "guardduty_field": "service.runtimeDetails.process.lineage[].name",
+      "ocsf_field": "evidences[].actor.process.ancestry[].name",
+      "ocsf_type": "process_name_t",
+      "transform": "direct"
+    },
+    {
+      "area": "Runtime Process",
+      "guardduty_field": "service.runtimeDetails.process.lineage[].pid",
+      "ocsf_field": "evidences[].actor.process.ancestry[].pid",
+      "ocsf_type": "integer_t",
+      "transform": "direct"
+    },
+    {
+      "area": "Runtime Process",
+      "guardduty_field": "service.runtimeDetails.process.lineage[].executablePath",
+      "ocsf_field": "evidences[].actor.process.ancestry[].path",
+      "ocsf_type": "string_t",
+      "transform": "direct"
+    },
+    {
+      "area": "Runtime Process",
+      "guardduty_field": "service.runtimeDetails.process.lineage[].euid",
+      "ocsf_field": "evidences[].actor.process.ancestry[].uid",
+      "ocsf_type": "string_t",
+      "transform": "direct"
+    },
+    {
+      "area": "Runtime Process",
+      "guardduty_field": "service.runtimeDetails.process.lineage[].startTime",
+      "ocsf_field": "evidences[].actor.process.ancestry[].created_time",
+      "ocsf_type": "timestamp_t",
+      "transform": "converted"
+    },
+    {
+      "area": "Runtime Process",
+      "guardduty_field": "service.runtimeDetails.process.lineage[0].uuid",
+      "ocsf_field": "evidences[].actor.process.parent_process.uid",
+      "ocsf_type": "string_t",
+      "transform": "direct"
+    },
+    {
+      "area": "Runtime Process",
+      "guardduty_field": "service.runtimeDetails.process.parentUuid",
+      "ocsf_field": "evidences[].actor.process.parent_process.uid",
+      "ocsf_type": "string_t",
+      "transform": "direct"
+    },
+    {
+      "area": "Runtime Process",
+      "guardduty_field": "service.runtimeDetails.process.lineage[0].name",
+      "ocsf_field": "evidences[].actor.process.parent_process.name",
+      "ocsf_type": "process_name_t",
+      "transform": "direct"
+    },
+    {
+      "area": "Runtime Process",
+      "guardduty_field": "service.runtimeDetails.process.lineage[0].pid",
+      "ocsf_field": "evidences[].actor.process.parent_process.pid",
+      "ocsf_type": "integer_t",
+      "transform": "direct"
+    },
+    {
+      "area": "Runtime Process",
+      "guardduty_field": "service.runtimeDetails.process.lineage[0].startTime",
+      "ocsf_field": "evidences[].actor.process.parent_process.created_time",
+      "ocsf_type": "timestamp_t",
+      "transform": "converted"
+    },
+    {
+      "area": "Runtime Process",
+      "guardduty_field": "service.runtimeDetails.process.lineage[0].executablePath",
+      "ocsf_field": "evidences[].actor.process.parent_process.file.path",
+      "ocsf_type": "file_path_t",
+      "transform": "direct"
+    },
+    {
+      "area": "Runtime Process",
+      "guardduty_field": "service.runtimeDetails.process.lineage[0].name",
+      "ocsf_field": "evidences[].actor.process.parent_process.file.name",
+      "ocsf_type": "file_name_t",
+      "transform": "direct"
+    },
+    {
+      "area": "Runtime Process",
+      "guardduty_field": "service.runtimeDetails.process.lineage[0].parentUuid",
+      "ocsf_field": "evidences[].actor.process.parent_process.parent_process.uid",
+      "ocsf_type": "string_t",
+      "transform": "direct"
+    },
+    {
+      "area": "Runtime Process",
+      "guardduty_field": "service.runtimeDetails.process.lineage[0].euid",
+      "ocsf_field": "evidences[].actor.process.parent_process.user.uid",
+      "ocsf_type": "string_t",
+      "transform": "direct"
+    },
+    {
+      "area": "Runtime Process",
+      "guardduty_field": "service.runtimeDetails.process.lineage[0].userId",
+      "ocsf_field": "evidences[].actor.process.parent_process.user.uid_alt",
+      "ocsf_type": "string_t",
+      "transform": "direct"
+    },
+    {
+      "area": "Runtime Context",
+      "guardduty_field": "service.runtimeDetails.context.modifyingProcess.name",
+      "ocsf_field": "evidences[].process.name",
+      "ocsf_type": "process_name_t",
+      "transform": "direct"
+    },
+    {
+      "area": "Runtime Context",
+      "guardduty_field": "service.runtimeDetails.context.modifyingProcess.pid",
+      "ocsf_field": "evidences[].process.pid",
+      "ocsf_type": "integer_t",
+      "transform": "direct"
+    },
+    {
+      "area": "Runtime Context",
+      "guardduty_field": "service.runtimeDetails.context.modifyingProcess.uuid",
+      "ocsf_field": "evidences[].process.uid",
+      "ocsf_type": "string_t",
+      "transform": "direct"
+    },
+    {
+      "area": "Runtime Context",
+      "guardduty_field": "service.runtimeDetails.context.modifyingProcess.pwd",
+      "ocsf_field": "evidences[].process.working_directory",
+      "ocsf_type": "string_t",
+      "transform": "direct"
+    },
+    {
+      "area": "Runtime Context",
+      "guardduty_field": "service.runtimeDetails.context.modifyingProcess.executablePath",
+      "ocsf_field": "evidences[].process.file.path",
+      "ocsf_type": "file_path_t",
+      "transform": "direct"
+    },
+    {
+      "area": "Runtime Context",
+      "guardduty_field": "service.runtimeDetails.context.modifyingProcess.startTime",
+      "ocsf_field": "evidences[].process.created_time",
+      "ocsf_type": "timestamp_t",
+      "transform": "converted"
+    },
+    {
+      "area": "Runtime Context",
+      "guardduty_field": "service.runtimeDetails.context.modifyingProcess.executableSha256",
+      "ocsf_field": "evidences[].process.file.hashes[].value",
+      "ocsf_type": "file_hash_t",
+      "transform": "direct"
+    },
+    {
+      "area": "Runtime Context",
+      "guardduty_field": "service.runtimeDetails.context.modifyingProcess.user",
+      "ocsf_field": "evidences[].process.user.name",
+      "ocsf_type": "username_t",
+      "transform": "direct"
+    },
+    {
+      "area": "Runtime Context",
+      "guardduty_field": "service.runtimeDetails.context.modifyingProcess.euid",
+      "ocsf_field": "evidences[].process.user.uid",
+      "ocsf_type": "string_t",
+      "transform": "direct"
+    },
+    {
+      "area": "Runtime Context",
+      "guardduty_field": "service.runtimeDetails.context.modifyingProcess.userId",
+      "ocsf_field": "evidences[].process.user.uid_alt",
+      "ocsf_type": "string_t",
+      "transform": "direct"
+    },
+    {
+      "area": "Runtime Context",
+      "guardduty_field": "service.runtimeDetails.context.modifyingProcess.parentUuid",
+      "ocsf_field": "evidences[].process.parent_process.uid",
+      "ocsf_type": "string_t",
+      "transform": "direct"
+    },
+    {
+      "area": "Runtime Context",
+      "guardduty_field": "service.runtimeDetails.context.targetProcess.name",
+      "ocsf_field": "evidences[].process.name",
+      "ocsf_type": "process_name_t",
+      "transform": "direct"
+    },
+    {
+      "area": "Runtime Context",
+      "guardduty_field": "service.runtimeDetails.context.targetProcess.pid",
+      "ocsf_field": "evidences[].process.pid",
+      "ocsf_type": "integer_t",
+      "transform": "direct"
+    },
+    {
+      "area": "Runtime Context",
+      "guardduty_field": "service.runtimeDetails.context.targetProcess.uuid",
+      "ocsf_field": "evidences[].process.uid",
+      "ocsf_type": "string_t",
+      "transform": "direct"
+    },
+    {
+      "area": "Runtime Context",
+      "guardduty_field": "service.runtimeDetails.context.targetProcess.pwd",
+      "ocsf_field": "evidences[].process.working_directory",
+      "ocsf_type": "string_t",
+      "transform": "direct"
+    },
+    {
+      "area": "Runtime Context",
+      "guardduty_field": "service.runtimeDetails.context.targetProcess.executablePath",
+      "ocsf_field": "evidences[].process.file.path",
+      "ocsf_type": "file_path_t",
+      "transform": "direct"
+    },
+    {
+      "area": "Runtime Context",
+      "guardduty_field": "service.runtimeDetails.context.targetProcess.startTime",
+      "ocsf_field": "evidences[].process.created_time",
+      "ocsf_type": "timestamp_t",
+      "transform": "converted"
+    },
+    {
+      "area": "Runtime Context",
+      "guardduty_field": "service.runtimeDetails.context.targetProcess.executableSha256",
+      "ocsf_field": "evidences[].process.file.hashes[].value",
+      "ocsf_type": "file_hash_t",
+      "transform": "direct"
+    },
+    {
+      "area": "Runtime Context",
+      "guardduty_field": "service.runtimeDetails.context.targetProcess.user",
+      "ocsf_field": "evidences[].process.user.name",
+      "ocsf_type": "username_t",
+      "transform": "direct"
+    },
+    {
+      "area": "Runtime Context",
+      "guardduty_field": "service.runtimeDetails.context.targetProcess.euid",
+      "ocsf_field": "evidences[].process.user.uid",
+      "ocsf_type": "string_t",
+      "transform": "direct"
+    },
+    {
+      "area": "Runtime Context",
+      "guardduty_field": "service.runtimeDetails.context.targetProcess.userId",
+      "ocsf_field": "evidences[].process.user.uid_alt",
+      "ocsf_type": "string_t",
+      "transform": "direct"
+    },
+    {
+      "area": "Runtime Context",
+      "guardduty_field": "service.runtimeDetails.context.targetProcess.parentUuid",
+      "ocsf_field": "evidences[].process.parent_process.uid",
+      "ocsf_type": "string_t",
+      "transform": "direct"
+    },
+    {
+      "area": "Runtime Context",
+      "guardduty_field": "service.runtimeDetails.context.modifiedAt",
+      "ocsf_field": "evidences[].file.modified_time",
+      "ocsf_type": "timestamp_t",
+      "transform": "direct"
+    },
+    {
+      "area": "Runtime Context",
+      "guardduty_field": "service.runtimeDetails.context.socketPath",
+      "ocsf_field": "evidences[].file.path",
+      "ocsf_type": "file_path_t",
+      "transform": "direct"
+    },
+    {
+      "area": "Runtime Context",
+      "guardduty_field": "service.runtimeDetails.context.runcBinaryPath",
+      "ocsf_field": "evidences[].file.path",
+      "ocsf_type": "file_path_t",
+      "transform": "direct"
+    },
+    {
+      "area": "Runtime Context",
+      "guardduty_field": "service.runtimeDetails.context.releaseAgentPath",
+      "ocsf_field": "evidences[].file.path",
+      "ocsf_type": "file_path_t",
+      "transform": "direct"
+    },
+    {
+      "area": "Runtime Context",
+      "guardduty_field": "service.runtimeDetails.context.threatFilePath",
+      "ocsf_field": "evidences[].file.path",
+      "ocsf_type": "file_path_t",
+      "transform": "direct"
+    },
+    {
+      "area": "Runtime Context",
+      "guardduty_field": "service.runtimeDetails.context.libraryPath",
+      "ocsf_field": "evidences[].file.path",
+      "ocsf_type": "file_path_t",
+      "transform": "direct"
+    },
+    {
+      "area": "Runtime Context",
+      "guardduty_field": "service.runtimeDetails.context.moduleName",
+      "ocsf_field": "evidences[].file.name",
+      "ocsf_type": "file_name_t",
+      "transform": "direct"
+    },
+    {
+      "area": "Runtime Context",
+      "guardduty_field": "service.runtimeDetails.context.moduleFilePath",
+      "ocsf_field": "evidences[].file.path",
+      "ocsf_type": "file_path_t",
+      "transform": "direct"
+    },
+    {
+      "area": "Runtime Context",
+      "guardduty_field": "service.runtimeDetails.context.moduleSha256",
+      "ocsf_field": "evidences[].file.hashes[].value",
+      "ocsf_type": "file_hash_t",
+      "transform": "direct"
+    },
+    {
+      "area": "Runtime Context",
+      "guardduty_field": "service.runtimeDetails.context.relatedFilePaths[]",
+      "ocsf_field": "evidences[].file.path",
+      "ocsf_type": "file_path_t",
+      "transform": "direct"
+    },
+    {
+      "area": "Runtime Context",
+      "guardduty_field": "service.runtimeDetails.context.filePath",
+      "ocsf_field": "evidences[].file.path",
+      "ocsf_type": "file_path_t",
+      "transform": "direct"
+    },
+    {
+      "area": "Runtime Context",
+      "guardduty_field": "service.runtimeDetails.context.relatedFilePaths[]",
+      "ocsf_field": "evidences[].file.name",
+      "ocsf_type": "file_name_t",
+      "transform": "converted"
+    },
+    {
+      "area": "Runtime Context",
+      "guardduty_field": "service.runtimeDetails.context.filePath",
+      "ocsf_field": "evidences[].file.name",
+      "ocsf_type": "file_name_t",
+      "transform": "converted"
+    },
+    {
+      "area": "Runtime Context",
+      "guardduty_field": "service.runtimeDetails.context.fileOperation",
+      "ocsf_field": "evidences[].api.operation",
+      "ocsf_type": "string_t",
+      "transform": "direct"
+    },
+    {
+      "area": "Malware Protection (S3, EC2, Backup)",
+      "guardduty_field": "service.malwareScanDetails.scanId",
+      "ocsf_field": "malware_scan_info.uid",
+      "ocsf_type": "string_t",
+      "transform": "direct"
+    },
+    {
+      "area": "Malware Protection (S3, EC2, Backup)",
+      "guardduty_field": "service.malwareScanDetails.scanCategory",
+      "ocsf_field": "malware_scan_info.name",
+      "ocsf_type": "string_t",
+      "transform": "direct"
+    },
+    {
+      "area": "Malware Protection (S3, EC2, Backup)",
+      "guardduty_field": "service.malwareScanDetails.scanType",
+      "ocsf_field": "malware_scan_info.type_id",
+      "ocsf_type": "integer_t",
+      "transform": "converted"
+    },
+    {
+      "area": "Malware Protection (S3, EC2, Backup)",
+      "guardduty_field": "service.malwareScanDetails.scanType",
+      "ocsf_field": "malware_scan_info.type",
+      "ocsf_type": "string_t",
+      "transform": "converted"
+    },
+    {
+      "area": "Malware Protection (S3, EC2, Backup)",
+      "guardduty_field": "service.malwareScanDetails.uniqueThreatCount",
+      "ocsf_field": "malware_scan_info.unique_malware_count",
+      "ocsf_type": "integer_t",
+      "transform": "direct"
+    },
+    {
+      "area": "Malware Protection (S3, EC2, Backup)",
+      "guardduty_field": "service.malwareScanDetails.threats[].name",
+      "ocsf_field": "malware[].name",
+      "ocsf_type": "string_t",
+      "transform": "direct"
+    },
+    {
+      "area": "Malware Protection (S3, EC2, Backup)",
+      "guardduty_field": "service.malwareScanDetails.threats[].source",
+      "ocsf_field": "malware[].provider",
+      "ocsf_type": "string_t",
+      "transform": "direct"
+    },
+    {
+      "area": "Malware Protection (S3, EC2, Backup)",
+      "guardduty_field": "service.malwareScanDetails.threats[].count",
+      "ocsf_field": "malware[].num_infected",
+      "ocsf_type": "integer_t",
+      "transform": "direct"
+    },
+    {
+      "area": "Malware Protection (S3, EC2, Backup)",
+      "guardduty_field": "service.malwareScanDetails.threats[].itemPaths[].hash",
+      "ocsf_field": "malware[].files[].hashes[].value",
+      "ocsf_type": "file_hash_t",
+      "transform": "direct"
+    },
+    {
+      "area": "Malware Protection (S3, EC2, Backup)",
+      "guardduty_field": "service.malwareScanDetails.threats[].itemPaths[].nestedItemPath",
+      "ocsf_field": "malware[].files[].path",
+      "ocsf_type": "file_path_t",
+      "transform": "converted"
+    },
+    {
+      "area": "Malware Protection (S3, EC2, Backup)",
+      "guardduty_field": "service.malwareScanDetails.threats[].itemPaths[].nestedItemPath",
+      "ocsf_field": "malware[].files[].name",
+      "ocsf_type": "file_name_t",
+      "transform": "converted"
+    },
+    {
+      "area": "Malware Protection (S3, EC2, Backup)",
+      "guardduty_field": "service.malwareScanDetails.threats[].itemDetails[].hash",
+      "ocsf_field": "malware[].files[].hashes[].value",
+      "ocsf_type": "file_hash_t",
+      "transform": "direct"
+    },
+    {
+      "area": "Malware Protection (S3, EC2, Backup)",
+      "guardduty_field": "service.malwareScanDetails.threats[].itemDetails[].itemPath",
+      "ocsf_field": "malware[].files[].path",
+      "ocsf_type": "file_path_t",
+      "transform": "direct"
+    },
+    {
+      "area": "Malware Protection (S3, EC2, Backup)",
+      "guardduty_field": "service.malwareScanDetails.threats[].itemDetails[].itemPath",
+      "ocsf_field": "malware[].files[].name",
+      "ocsf_type": "file_name_t",
+      "transform": "converted"
+    },
+    {
+      "area": "Malware Protection (S3, EC2, Backup)",
+      "guardduty_field": "service.malwareScanDetails.threats[].itemDetails[].additionalInfo.versionId",
+      "ocsf_field": "malware[].files[].version",
+      "ocsf_type": "string_t",
+      "transform": "direct"
+    },
+    {
+      "area": "Malware Protection (S3, EC2, Backup)",
+      "guardduty_field": "service.malwareScanDetails.threats[].itemDetails[].resourceArn",
+      "ocsf_field": "malware[].files[].volume",
+      "ocsf_type": "string_t",
+      "transform": "converted"
+    },
+    {
+      "area": "Malware Protection (EBS volume scan)",
+      "guardduty_field": "service.ebsVolumeScanDetails.scanId",
+      "ocsf_field": "malware_scan_info.uid",
+      "ocsf_type": "string_t",
+      "transform": "direct"
+    },
+    {
+      "area": "Malware Protection (EBS volume scan)",
+      "guardduty_field": "service.ebsVolumeScanDetails.scanStartedAt",
+      "ocsf_field": "malware_scan_info.start_time",
+      "ocsf_type": "timestamp_t",
+      "transform": "direct"
+    },
+    {
+      "area": "Malware Protection (EBS volume scan)",
+      "guardduty_field": "service.ebsVolumeScanDetails.scanCompletedAt",
+      "ocsf_field": "malware_scan_info.end_time",
+      "ocsf_type": "timestamp_t",
+      "transform": "direct"
+    },
+    {
+      "area": "Malware Protection (EBS volume scan)",
+      "guardduty_field": "service.ebsVolumeScanDetails.scanType",
+      "ocsf_field": "malware_scan_info.type_id",
+      "ocsf_type": "integer_t",
+      "transform": "converted"
+    },
+    {
+      "area": "Malware Protection (EBS volume scan)",
+      "guardduty_field": "service.ebsVolumeScanDetails.scanType",
+      "ocsf_field": "malware_scan_info.type",
+      "ocsf_type": "string_t",
+      "transform": "converted"
+    },
+    {
+      "area": "Malware Protection (EBS volume scan)",
+      "guardduty_field": "service.ebsVolumeScanDetails.scanDetections.scannedItemCount.files",
+      "ocsf_field": "malware_scan_info.num_files",
+      "ocsf_type": "integer_t",
+      "transform": "direct"
+    },
+    {
+      "area": "Malware Protection (EBS volume scan)",
+      "guardduty_field": "service.ebsVolumeScanDetails.scanDetections.scannedItemCount.totalGb",
+      "ocsf_field": "malware_scan_info.size",
+      "ocsf_type": "long_t",
+      "transform": "direct"
+    },
+    {
+      "area": "Malware Protection (EBS volume scan)",
+      "guardduty_field": "service.ebsVolumeScanDetails.scanDetections.scannedItemCount.volumes",
+      "ocsf_field": "malware_scan_info.num_volumes",
+      "ocsf_type": "integer_t",
+      "transform": "direct"
+    },
+    {
+      "area": "Malware Protection (EBS volume scan)",
+      "guardduty_field": "service.ebsVolumeScanDetails.scanDetections.threatDetectedByName.uniqueThreatNameCount",
+      "ocsf_field": "malware_scan_info.unique_malware_count",
+      "ocsf_type": "integer_t",
+      "transform": "direct"
+    },
+    {
+      "area": "Malware Protection (EBS volume scan)",
+      "guardduty_field": "service.ebsVolumeScanDetails.scanDetections.threatDetectedByName.itemCount",
+      "ocsf_field": "malware_scan_info.num_infected",
+      "ocsf_type": "integer_t",
+      "transform": "direct"
+    },
+    {
+      "area": "Malware Protection (EBS volume scan)",
+      "guardduty_field": "service.ebsVolumeScanDetails.scanDetections.threatsDetectedItemCount.files",
+      "ocsf_field": "malware_scan_info.num_infected",
+      "ocsf_type": "integer_t",
+      "transform": "direct"
+    },
+    {
+      "area": "Malware Protection (EBS volume scan)",
+      "guardduty_field": "service.ebsVolumeScanDetails.scanDetections.threatDetectedByName.threatNames[].name",
+      "ocsf_field": "malware[].name",
+      "ocsf_type": "string_t",
+      "transform": "direct"
+    },
+    {
+      "area": "Malware Protection (EBS volume scan)",
+      "guardduty_field": "service.ebsVolumeScanDetails.scanDetections.threatDetectedByName.threatNames[].itemCount",
+      "ocsf_field": "malware[].num_infected",
+      "ocsf_type": "integer_t",
+      "transform": "direct"
+    },
+    {
+      "area": "Malware Protection (EBS volume scan)",
+      "guardduty_field": "service.ebsVolumeScanDetails.scanDetections.threatDetectedByName.threatNames[].severity",
+      "ocsf_field": "malware[].severity_id",
+      "ocsf_type": "integer_t",
+      "transform": "converted"
+    },
+    {
+      "area": "Malware Protection (EBS volume scan)",
+      "guardduty_field": "service.ebsVolumeScanDetails.scanDetections.threatDetectedByName.threatNames[].severity",
+      "ocsf_field": "malware[].severity",
+      "ocsf_type": "string_t",
+      "transform": "converted"
+    },
+    {
+      "area": "Malware Protection (EBS volume scan)",
+      "guardduty_field": "service.ebsVolumeScanDetails.scanDetections.threatDetectedByName.threatNames[].filePaths[].fileName",
+      "ocsf_field": "malware[].files[].name",
+      "ocsf_type": "file_name_t",
+      "transform": "direct"
+    },
+    {
+      "area": "Malware Protection (EBS volume scan)",
+      "guardduty_field": "service.ebsVolumeScanDetails.scanDetections.threatDetectedByName.threatNames[].filePaths[].filePath",
+      "ocsf_field": "malware[].files[].path",
+      "ocsf_type": "file_path_t",
+      "transform": "direct"
+    },
+    {
+      "area": "Malware Protection (EBS volume scan)",
+      "guardduty_field": "service.ebsVolumeScanDetails.scanDetections.threatDetectedByName.threatNames[].filePaths[].hash",
+      "ocsf_field": "malware[].files[].hashes[].value",
+      "ocsf_type": "file_hash_t",
+      "transform": "direct"
+    },
+    {
+      "area": "Malware Protection (EBS volume scan)",
+      "guardduty_field": "service.ebsVolumeScanDetails.scanDetections.threatDetectedByName.threatNames[].filePaths[].volumeArn",
+      "ocsf_field": "malware[].files[].volume",
+      "ocsf_type": "string_t",
+      "transform": "direct"
+    },
+    {
+      "area": "Bedrock Guardrail",
+      "guardduty_field": "resource.bedrockGuardrailDetails.guardrailSource",
+      "ocsf_field": "guardrail_evaluation_result.source_id",
+      "ocsf_type": "integer_t",
+      "transform": "converted"
+    },
+    {
+      "area": "Bedrock Guardrail",
+      "guardduty_field": "resource.bedrockGuardrailDetails.guardrailSource",
+      "ocsf_field": "guardrail_evaluation_result.source",
+      "ocsf_type": "string_t",
+      "transform": "converted"
+    },
+    {
+      "area": "Bedrock Guardrail",
+      "guardduty_field": "resource.bedrockGuardrailDetails.contentPolicyFilters[].type",
+      "ocsf_field": "guardrail_evaluation_result.content_policy_filters[].type_id",
+      "ocsf_type": "integer_t",
+      "transform": "converted"
+    },
+    {
+      "area": "Bedrock Guardrail",
+      "guardduty_field": "resource.bedrockGuardrailDetails.contentPolicyFilters[].type",
+      "ocsf_field": "guardrail_evaluation_result.content_policy_filters[].type",
+      "ocsf_type": "string_t",
+      "transform": "converted"
+    },
+    {
+      "area": "Bedrock Guardrail",
+      "guardduty_field": "resource.bedrockGuardrailDetails.contentPolicyFilters[].confidence",
+      "ocsf_field": "guardrail_evaluation_result.content_policy_filters[].confidence_id",
+      "ocsf_type": "integer_t",
+      "transform": "converted"
+    },
+    {
+      "area": "Bedrock Guardrail",
+      "guardduty_field": "resource.bedrockGuardrailDetails.contentPolicyFilters[].confidence",
+      "ocsf_field": "guardrail_evaluation_result.content_policy_filters[].confidence",
+      "ocsf_type": "string_t",
+      "transform": "converted"
+    },
+    {
+      "area": "Bedrock Guardrail",
+      "guardduty_field": "resource.bedrockGuardrailDetails.contentPolicyFilters[].action",
+      "ocsf_field": "guardrail_evaluation_result.content_policy_filters[].action_id",
+      "ocsf_type": "integer_t",
+      "transform": "converted"
+    },
+    {
+      "area": "Bedrock Guardrail",
+      "guardduty_field": "resource.bedrockGuardrailDetails.contentPolicyFilters[].action",
+      "ocsf_field": "guardrail_evaluation_result.content_policy_filters[].action",
+      "ocsf_type": "string_t",
+      "transform": "converted"
+    },
+    {
+      "area": "Anomaly Detection",
+      "guardduty_field": "service.additionalInfo.value.unusualBehavior.unusualDatabaseNameClusterProfiling",
+      "ocsf_field": "anomaly_analyses[].anomalies[].observations[].value",
+      "ocsf_type": "string_t",
+      "transform": "converted"
+    },
+    {
+      "area": "Anomaly Detection",
+      "guardduty_field": "service.additionalInfo.value.unusualBehavior.unusualUserTypesAccountProfiling",
+      "ocsf_field": "anomaly_analyses[].anomalies[].observations[].value",
+      "ocsf_type": "string_t",
+      "transform": "converted"
+    },
+    {
+      "area": "Anomaly Detection",
+      "guardduty_field": "service.additionalInfo.value.unusualBehavior.isUnusualUserIdentity",
+      "ocsf_field": "anomaly_analyses[].anomalies[].observations[].value",
+      "ocsf_type": "string_t",
+      "transform": "converted"
+    },
+    {
+      "area": "Anomaly Detection",
+      "guardduty_field": "service.additionalInfo.value.unusualBehavior.unusualUserAgentsAccountProfiling",
+      "ocsf_field": "anomaly_analyses[].anomalies[].observations[].value",
+      "ocsf_type": "string_t",
+      "transform": "converted"
+    },
+    {
+      "area": "Anomaly Detection",
+      "guardduty_field": "service.additionalInfo.value.unusualBehavior.unusualASNsUserIdentityProfiling",
+      "ocsf_field": "anomaly_analyses[].anomalies[].observations[].value",
+      "ocsf_type": "string_t",
+      "transform": "converted"
+    },
+    {
+      "area": "Anomaly Detection",
+      "guardduty_field": "service.additionalInfo.value.unusualBehavior.numberOfPast24HoursAPIsBucketProfiling",
+      "ocsf_field": "anomaly_analyses[].anomalies[].observations[].value",
+      "ocsf_type": "string_t",
+      "transform": "converted"
+    },
+    {
+      "area": "Anomaly Detection",
+      "guardduty_field": "service.additionalInfo.value.unusualBehavior.numberOfPast24HoursAPIsBucketUserIdentityProfiling",
+      "ocsf_field": "anomaly_analyses[].anomalies[].observations[].value",
+      "ocsf_type": "string_t",
+      "transform": "converted"
+    },
+    {
+      "area": "Anomaly Detection",
+      "guardduty_field": "service.additionalInfo.value.unusualBehavior.unusualAPIsUserIdentityProfiling",
+      "ocsf_field": "anomaly_analyses[].anomalies[].observations[].value",
+      "ocsf_type": "string_t",
+      "transform": "converted"
+    },
+    {
+      "area": "Anomaly Detection",
+      "guardduty_field": "service.additionalInfo.value.unusualBehavior.unusualAPIsAccountProfiling",
+      "ocsf_field": "anomaly_analyses[].anomalies[].observations[].value",
+      "ocsf_type": "string_t",
+      "transform": "converted"
+    },
+    {
+      "area": "Anomaly Detection",
+      "guardduty_field": "service.additionalInfo.value.unusualBehavior.unusualAPIsErrorCodeAccountProfiling",
+      "ocsf_field": "anomaly_analyses[].anomalies[].observations[].value",
+      "ocsf_type": "string_t",
+      "transform": "converted"
+    },
+    {
+      "area": "Anomaly Detection",
+      "guardduty_field": "service.additionalInfo.value.unusualBehavior.unusualAPIsErrorCodeUserIdentityProfiling",
+      "ocsf_field": "anomaly_analyses[].anomalies[].observations[].value",
+      "ocsf_type": "string_t",
+      "transform": "converted"
+    },
+    {
+      "area": "Anomaly Detection",
+      "guardduty_field": "service.additionalInfo.value.unusualBehavior.unusualUserNamesBucketProfiling",
+      "ocsf_field": "anomaly_analyses[].anomalies[].observations[].value",
+      "ocsf_type": "string_t",
+      "transform": "converted"
+    },
+    {
+      "area": "Anomaly Detection",
+      "guardduty_field": "service.additionalInfo.value.unusualBehavior.numberOfPast24HoursAPIsUserIdentityProfiling",
+      "ocsf_field": "anomaly_analyses[].anomalies[].observations[].value",
+      "ocsf_type": "string_t",
+      "transform": "converted"
+    },
+    {
+      "area": "Anomaly Detection",
+      "guardduty_field": "service.additionalInfo.value.unusualBehavior.unusualBucketsAccountProfiling",
+      "ocsf_field": "anomaly_analyses[].anomalies[].observations[].value",
+      "ocsf_type": "string_t",
+      "transform": "converted"
+    },
+    {
+      "area": "Anomaly Detection",
+      "guardduty_field": "service.additionalInfo.value.unusualBehavior.unusualUserNameClusterProfiling",
+      "ocsf_field": "anomaly_analyses[].anomalies[].observations[].value",
+      "ocsf_type": "string_t",
+      "transform": "converted"
+    },
+    {
+      "area": "Anomaly Detection",
+      "guardduty_field": "service.additionalInfo.value.unusualBehavior.unusualApplicationNameClusterProfiling",
+      "ocsf_field": "anomaly_analyses[].anomalies[].observations[].value",
+      "ocsf_type": "string_t",
+      "transform": "converted"
+    },
+    {
+      "area": "Anomaly Detection",
+      "guardduty_field": "service.additionalInfo.value.unusualBehavior.unusualUserAgentsUserIdentityProfiling",
+      "ocsf_field": "anomaly_analyses[].anomalies[].observations[].value",
+      "ocsf_type": "string_t",
+      "transform": "converted"
+    },
+    {
+      "area": "Anomaly Detection",
+      "guardduty_field": "service.additionalInfo.value.unusualBehavior.unusualUserNamesAccountProfiling",
+      "ocsf_field": "anomaly_analyses[].anomalies[].observations[].value",
+      "ocsf_type": "string_t",
+      "transform": "converted"
+    },
+    {
+      "area": "Anomaly Detection",
+      "guardduty_field": "service.additionalInfo.value.unusualBehavior.unusualASNsBucketProfiling",
+      "ocsf_field": "anomaly_analyses[].anomalies[].observations[].value",
+      "ocsf_type": "string_t",
+      "transform": "converted"
+    },
+    {
+      "area": "Anomaly Detection",
+      "guardduty_field": "service.additionalInfo.value.unusualBehavior.unusualASNClusterProfiling",
+      "ocsf_field": "anomaly_analyses[].anomalies[].observations[].value",
+      "ocsf_type": "string_t",
+      "transform": "converted"
+    },
+    {
+      "area": "Anomaly Detection",
+      "guardduty_field": "service.additionalInfo.value.profiledBehavior.frequentProfiledUserNamesAccountProfiling",
+      "ocsf_field": "anomaly_analyses[].baselines[].observations[].value",
+      "ocsf_type": "string_t",
+      "transform": "converted"
+    },
+    {
+      "area": "Anomaly Detection",
+      "guardduty_field": "service.additionalInfo.value.profiledBehavior.numberOfHistoricalDailyAvgAPIsBucketUserIdentityProfiling",
+      "ocsf_field": "anomaly_analyses[].baselines[].observations[].value",
+      "ocsf_type": "string_t",
+      "transform": "converted"
+    },
+    {
+      "area": "Anomaly Detection",
+      "guardduty_field": "service.additionalInfo.value.profiledBehavior.numberOfHistoricalDailyMaxAPIsUserIdentityProfiling",
+      "ocsf_field": "anomaly_analyses[].baselines[].observations[].value",
+      "ocsf_type": "string_t",
+      "transform": "converted"
+    },
+    {
+      "area": "Anomaly Detection",
+      "guardduty_field": "service.additionalInfo.value.profiledBehavior.infrequentProfiledUserAgentsAccountProfiling",
+      "ocsf_field": "anomaly_analyses[].baselines[].observations[].value",
+      "ocsf_type": "string_t",
+      "transform": "converted"
+    },
+    {
+      "area": "Anomaly Detection",
+      "guardduty_field": "service.additionalInfo.value.profiledBehavior.rareProfiledUserNamesBucketProfiling",
+      "ocsf_field": "anomaly_analyses[].baselines[].observations[].value",
+      "ocsf_type": "string_t",
+      "transform": "converted"
+    },
+    {
+      "area": "Anomaly Detection",
+      "guardduty_field": "service.additionalInfo.value.profiledBehavior.rareProfiledUserTypesAccountProfiling",
+      "ocsf_field": "anomaly_analyses[].baselines[].observations[].value",
+      "ocsf_type": "string_t",
+      "transform": "converted"
+    },
+    {
+      "area": "Anomaly Detection",
+      "guardduty_field": "service.additionalInfo.value.profiledBehavior.infrequentProfiledASNsUserIdentityProfiling",
+      "ocsf_field": "anomaly_analyses[].baselines[].observations[].value",
+      "ocsf_type": "string_t",
+      "transform": "converted"
+    },
+    {
+      "area": "Anomaly Detection",
+      "guardduty_field": "service.additionalInfo.value.profiledBehavior.profiledSuccessfulApplicationNamesClusterProfiling[].applicationName",
+      "ocsf_field": "anomaly_analyses[].baselines[].observations[].value",
+      "ocsf_type": "string_t",
+      "transform": "direct"
+    },
+    {
+      "area": "Anomaly Detection",
+      "guardduty_field": "service.additionalInfo.value.profiledBehavior.profiledSuccessfulApplicationNamesClusterProfiling[].count",
+      "ocsf_field": "anomaly_analyses[].baselines[].observations[].count",
+      "ocsf_type": "integer_t",
+      "transform": "direct"
+    },
+    {
+      "area": "Anomaly Detection",
+      "guardduty_field": "service.additionalInfo.value.profiledBehavior.infrequentProfiledUserNamesBucketProfiling",
+      "ocsf_field": "anomaly_analyses[].baselines[].observations[].value",
+      "ocsf_type": "string_t",
+      "transform": "converted"
+    },
+    {
+      "area": "Anomaly Detection",
+      "guardduty_field": "service.additionalInfo.value.profiledBehavior.rareProfiledUserAgentsAccountProfiling",
+      "ocsf_field": "anomaly_analyses[].baselines[].observations[].value",
+      "ocsf_type": "string_t",
+      "transform": "converted"
+    },
+    {
+      "area": "Anomaly Detection",
+      "guardduty_field": "service.additionalInfo.value.profiledBehavior.numberOfHistoricalDailyMaxAPIsBucketUserIdentityProfiling",
+      "ocsf_field": "anomaly_analyses[].baselines[].observations[].value",
+      "ocsf_type": "string_t",
+      "transform": "converted"
+    },
+    {
+      "area": "Anomaly Detection",
+      "guardduty_field": "service.additionalInfo.value.profiledBehavior.rareProfiledASNsBucketProfiling",
+      "ocsf_field": "anomaly_analyses[].baselines[].observations[].value",
+      "ocsf_type": "string_t",
+      "transform": "converted"
+    },
+    {
+      "area": "Anomaly Detection",
+      "guardduty_field": "service.additionalInfo.value.profiledBehavior.profiledSuccessfulUserNamesClusterProfiling[].userName",
+      "ocsf_field": "anomaly_analyses[].baselines[].observations[].value",
+      "ocsf_type": "string_t",
+      "transform": "direct"
+    },
+    {
+      "area": "Anomaly Detection",
+      "guardduty_field": "service.additionalInfo.value.profiledBehavior.profiledSuccessfulUserNamesClusterProfiling[].count",
+      "ocsf_field": "anomaly_analyses[].baselines[].observations[].count",
+      "ocsf_type": "integer_t",
+      "transform": "direct"
+    },
+    {
+      "area": "Anomaly Detection",
+      "guardduty_field": "service.additionalInfo.value.profiledBehavior.frequentProfiledBucketsUserIdentityProfiling",
+      "ocsf_field": "anomaly_analyses[].baselines[].observations[].value",
+      "ocsf_type": "string_t",
+      "transform": "converted"
+    },
+    {
+      "area": "Anomaly Detection",
+      "guardduty_field": "service.additionalInfo.value.profiledBehavior.profiledSuccessfulDatabaseNamesClusterProfiling[].databaseName",
+      "ocsf_field": "anomaly_analyses[].baselines[].observations[].value",
+      "ocsf_type": "string_t",
+      "transform": "direct"
+    },
+    {
+      "area": "Anomaly Detection",
+      "guardduty_field": "service.additionalInfo.value.profiledBehavior.profiledSuccessfulDatabaseNamesClusterProfiling[].count",
+      "ocsf_field": "anomaly_analyses[].baselines[].observations[].count",
+      "ocsf_type": "integer_t",
+      "transform": "direct"
+    },
+    {
+      "area": "Anomaly Detection",
+      "guardduty_field": "service.additionalInfo.value.profiledBehavior.infrequentProfiledASNsAccountProfiling",
+      "ocsf_field": "anomaly_analyses[].baselines[].observations[].value",
+      "ocsf_type": "string_t",
+      "transform": "converted"
+    },
+    {
+      "area": "Anomaly Detection",
+      "guardduty_field": "service.additionalInfo.value.profiledBehavior.infrequentProfiledUserNamesAccountProfiling",
+      "ocsf_field": "anomaly_analyses[].baselines[].observations[].value",
+      "ocsf_type": "string_t",
+      "transform": "converted"
+    },
+    {
+      "area": "Anomaly Detection",
+      "guardduty_field": "service.additionalInfo.value.profiledBehavior.numberOfHistoricalDailyAvgAPIsUserIdentityProfiling",
+      "ocsf_field": "anomaly_analyses[].baselines[].observations[].value",
+      "ocsf_type": "string_t",
+      "transform": "converted"
+    },
+    {
+      "area": "Anomaly Detection",
+      "guardduty_field": "service.additionalInfo.value.profiledBehavior.infrequentProfiledUserTypesAccountProfiling",
+      "ocsf_field": "anomaly_analyses[].baselines[].observations[].value",
+      "ocsf_type": "string_t",
+      "transform": "converted"
+    },
+    {
+      "area": "Anomaly Detection",
+      "guardduty_field": "service.additionalInfo.value.profiledBehavior.rareProfiledBucketsUserIdentityProfiling",
+      "ocsf_field": "anomaly_analyses[].baselines[].observations[].value",
+      "ocsf_type": "string_t",
+      "transform": "converted"
+    },
+    {
+      "area": "Anomaly Detection",
+      "guardduty_field": "service.additionalInfo.value.profiledBehavior.rareProfiledUserAgentsUserIdentityProfiling",
+      "ocsf_field": "anomaly_analyses[].baselines[].observations[].value",
+      "ocsf_type": "string_t",
+      "transform": "converted"
+    },
+    {
+      "area": "Anomaly Detection",
+      "guardduty_field": "service.additionalInfo.value.profiledBehavior.rareProfiledASNsUserIdentityProfiling",
+      "ocsf_field": "anomaly_analyses[].baselines[].observations[].value",
+      "ocsf_type": "string_t",
+      "transform": "converted"
+    },
+    {
+      "area": "Anomaly Detection",
+      "guardduty_field": "service.additionalInfo.value.profiledBehavior.frequentProfiledASNsUserIdentityProfiling",
+      "ocsf_field": "anomaly_analyses[].baselines[].observations[].value",
+      "ocsf_type": "string_t",
+      "transform": "converted"
+    },
+    {
+      "area": "Anomaly Detection",
+      "guardduty_field": "service.additionalInfo.value.profiledBehavior.infrequentProfiledBucketsUserIdentityProfiling",
+      "ocsf_field": "anomaly_analyses[].baselines[].observations[].value",
+      "ocsf_type": "string_t",
+      "transform": "converted"
+    },
+    {
+      "area": "Anomaly Detection",
+      "guardduty_field": "service.additionalInfo.value.profiledBehavior.rareProfiledBucketsAccountProfiling",
+      "ocsf_field": "anomaly_analyses[].baselines[].observations[].value",
+      "ocsf_type": "string_t",
+      "transform": "converted"
+    },
+    {
+      "area": "Anomaly Detection",
+      "guardduty_field": "service.additionalInfo.value.profiledBehavior.rareProfiledAPIsAccountProfiling",
+      "ocsf_field": "anomaly_analyses[].baselines[].observations[].value",
+      "ocsf_type": "string_t",
+      "transform": "converted"
+    },
+    {
+      "area": "Anomaly Detection",
+      "guardduty_field": "service.additionalInfo.value.profiledBehavior.infrequentProfiledASNsBucketProfiling",
+      "ocsf_field": "anomaly_analyses[].baselines[].observations[].value",
+      "ocsf_type": "string_t",
+      "transform": "converted"
+    },
+    {
+      "area": "Anomaly Detection",
+      "guardduty_field": "service.additionalInfo.value.profiledBehavior.numberOfHistoricalDailyAvgAPIsBucketProfiling",
+      "ocsf_field": "anomaly_analyses[].baselines[].observations[].value",
+      "ocsf_type": "string_t",
+      "transform": "converted"
+    },
+    {
+      "area": "Anomaly Detection",
+      "guardduty_field": "service.additionalInfo.value.profiledBehavior.rareProfiledUserNamesAccountProfiling",
+      "ocsf_field": "anomaly_analyses[].baselines[].observations[].value",
+      "ocsf_type": "string_t",
+      "transform": "converted"
+    },
+    {
+      "area": "Anomaly Detection",
+      "guardduty_field": "service.additionalInfo.value.profiledBehavior.frequentProfiledAPIsAccountProfiling",
+      "ocsf_field": "anomaly_analyses[].baselines[].observations[].value",
+      "ocsf_type": "string_t",
+      "transform": "converted"
+    },
+    {
+      "area": "Anomaly Detection",
+      "guardduty_field": "service.additionalInfo.value.profiledBehavior.frequentProfiledUserAgentsAccountProfiling",
+      "ocsf_field": "anomaly_analyses[].baselines[].observations[].value",
+      "ocsf_type": "string_t",
+      "transform": "converted"
+    },
+    {
+      "area": "Anomaly Detection",
+      "guardduty_field": "service.additionalInfo.value.profiledBehavior.infrequentProfiledBucketsAccountProfiling",
+      "ocsf_field": "anomaly_analyses[].baselines[].observations[].value",
+      "ocsf_type": "string_t",
+      "transform": "converted"
+    },
+    {
+      "area": "Anomaly Detection",
+      "guardduty_field": "service.additionalInfo.value.profiledBehavior.frequentProfiledASNsBucketProfiling",
+      "ocsf_field": "anomaly_analyses[].baselines[].observations[].value",
+      "ocsf_type": "string_t",
+      "transform": "converted"
+    },
+    {
+      "area": "Anomaly Detection",
+      "guardduty_field": "service.additionalInfo.value.profiledBehavior.frequentProfiledUserNamesBucketProfiling",
+      "ocsf_field": "anomaly_analyses[].baselines[].observations[].value",
+      "ocsf_type": "string_t",
+      "transform": "converted"
+    },
+    {
+      "area": "Anomaly Detection",
+      "guardduty_field": "service.additionalInfo.value.profiledBehavior.infrequentProfiledAPIsUserIdentityProfiling",
+      "ocsf_field": "anomaly_analyses[].baselines[].observations[].value",
+      "ocsf_type": "string_t",
+      "transform": "converted"
+    },
+    {
+      "area": "Anomaly Detection",
+      "guardduty_field": "service.additionalInfo.value.profiledBehavior.rareProfiledASNsAccountProfiling",
+      "ocsf_field": "anomaly_analyses[].baselines[].observations[].value",
+      "ocsf_type": "string_t",
+      "transform": "converted"
+    },
+    {
+      "area": "Anomaly Detection",
+      "guardduty_field": "service.additionalInfo.value.profiledBehavior.numberOfHistoricalDailyMaxAPIsBucketProfiling",
+      "ocsf_field": "anomaly_analyses[].baselines[].observations[].value",
+      "ocsf_type": "string_t",
+      "transform": "converted"
+    },
+    {
+      "area": "Anomaly Detection",
+      "guardduty_field": "service.additionalInfo.value.profiledBehavior.infrequentProfiledAPIsAccountProfiling",
+      "ocsf_field": "anomaly_analyses[].baselines[].observations[].value",
+      "ocsf_type": "string_t",
+      "transform": "converted"
+    },
+    {
+      "area": "Anomaly Detection",
+      "guardduty_field": "service.additionalInfo.value.profiledBehavior.frequentProfiledASNsAccountProfiling",
+      "ocsf_field": "anomaly_analyses[].baselines[].observations[].value",
+      "ocsf_type": "string_t",
+      "transform": "converted"
+    },
+    {
+      "area": "Anomaly Detection",
+      "guardduty_field": "service.additionalInfo.value.profiledBehavior.frequentProfiledBucketsAccountProfiling",
+      "ocsf_field": "anomaly_analyses[].baselines[].observations[].value",
+      "ocsf_type": "string_t",
+      "transform": "converted"
+    },
+    {
+      "area": "Anomaly Detection",
+      "guardduty_field": "service.additionalInfo.value.profiledBehavior.frequentProfiledUserTypesAccountProfiling",
+      "ocsf_field": "anomaly_analyses[].baselines[].observations[].value",
+      "ocsf_type": "string_t",
+      "transform": "converted"
+    },
+    {
+      "area": "Anomaly Detection",
+      "guardduty_field": "service.additionalInfo.value.profiledBehavior.frequentProfiledUserAgentsUserIdentityProfiling",
+      "ocsf_field": "anomaly_analyses[].baselines[].observations[].value",
+      "ocsf_type": "string_t",
+      "transform": "converted"
+    },
+    {
+      "area": "Anomaly Detection",
+      "guardduty_field": "service.additionalInfo.value.profiledBehavior.profiledSuccessfulAsnOrgsClusterProfiling[].asnOrg",
+      "ocsf_field": "anomaly_analyses[].baselines[].observations[].value",
+      "ocsf_type": "string_t",
+      "transform": "direct"
+    },
+    {
+      "area": "Anomaly Detection",
+      "guardduty_field": "service.additionalInfo.value.profiledBehavior.profiledSuccessfulAsnOrgsClusterProfiling[].count",
+      "ocsf_field": "anomaly_analyses[].baselines[].observations[].count",
+      "ocsf_type": "integer_t",
+      "transform": "direct"
+    },
+    {
+      "area": "Anomaly Detection",
+      "guardduty_field": "service.additionalInfo.value.profiledBehavior.frequentProfiledAPIsUserIdentityProfiling",
+      "ocsf_field": "anomaly_analyses[].baselines[].observations[].value",
+      "ocsf_type": "string_t",
+      "transform": "converted"
+    },
+    {
+      "area": "Anomaly Detection",
+      "guardduty_field": "service.additionalInfo.value.profiledBehavior.infrequentProfiledUserAgentsUserIdentityProfiling",
+      "ocsf_field": "anomaly_analyses[].baselines[].observations[].value",
+      "ocsf_type": "string_t",
+      "transform": "converted"
+    },
+    {
+      "area": "Anomaly Detection",
+      "guardduty_field": "service.additionalInfo.value.profiledBehavior.rareProfiledAPIsUserIdentityProfiling",
+      "ocsf_field": "anomaly_analyses[].baselines[].observations[].value",
+      "ocsf_type": "string_t",
+      "transform": "converted"
+    },
+    {
+      "area": "Anomaly Detection",
+      "guardduty_field": "service.additionalInfo.value.anomalies.anomalousAPIs",
+      "ocsf_field": "anomaly_analyses[].anomalies[].observations[].value",
+      "ocsf_type": "string_t",
+      "transform": "converted"
+    },
+    {
+      "area": "Anomaly Detection",
+      "guardduty_field": "service.detection.anomaly.profiles.*.*[].profileType",
+      "ocsf_field": "anomaly_analyses[].baselines[].observation_type",
+      "ocsf_type": "string_t",
+      "transform": "direct"
+    },
+    {
+      "area": "Anomaly Detection",
+      "guardduty_field": "service.detection.anomaly.profiles.*.*[].profileSubtype",
+      "ocsf_field": "anomaly_analyses[].baselines[].observed_pattern",
+      "ocsf_type": "string_t",
+      "transform": "direct"
+    },
+    {
+      "area": "Anomaly Detection",
+      "guardduty_field": "service.detection.anomaly.unusual.behavior.*.*.profileType",
+      "ocsf_field": "anomaly_analyses[].anomalies[].observation_type",
+      "ocsf_type": "string_t",
+      "transform": "direct"
+    },
+    {
+      "area": "Anomaly Detection",
+      "guardduty_field": "service.detection.anomaly.unusual.behavior.*.*.profileSubtype",
+      "ocsf_field": "anomaly_analyses[].anomalies[].observed_pattern",
+      "ocsf_type": "string_t",
+      "transform": "direct"
+    },
+    {
+      "area": "Anomaly Detection",
+      "guardduty_field": "service.detection.anomaly.profiles.*.*[].observations.number[]",
+      "ocsf_field": "anomaly_analyses[].baselines[].observations[].value",
+      "ocsf_type": "string_t",
+      "transform": "direct"
+    },
+    {
+      "area": "Anomaly Detection",
+      "guardduty_field": "service.detection.anomaly.profiles.*.*[].observations.text[]",
+      "ocsf_field": "anomaly_analyses[].baselines[].observations[].value",
+      "ocsf_type": "string_t",
+      "transform": "direct"
+    },
+    {
+      "area": "Anomaly Detection",
+      "guardduty_field": "service.detection.anomaly.unusual.behavior.*.*.observations.number[]",
+      "ocsf_field": "anomaly_analyses[].anomalies[].observations[].value",
+      "ocsf_type": "string_t",
+      "transform": "direct"
+    },
+    {
+      "area": "Anomaly Detection",
+      "guardduty_field": "service.detection.anomaly.unusual.behavior.*.*.observations.text[]",
+      "ocsf_field": "anomaly_analyses[].anomalies[].observations[].value",
+      "ocsf_type": "string_t",
+      "transform": "direct"
+    }
+  ]
+}

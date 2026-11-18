@@ -1,0 +1,144 @@
+area,inspector_field,ocsf_field,ocsf_type,transform
+Finding,type,class_uid,integer_t,converted
+Finding,type,class_name,string_t,converted
+Finding,status,activity_id,integer_t,converted
+Finding,status,activity_name,string_t,converted
+Finding,updatedAt,time,timestamp_t,direct
+Finding,severity,severity_id,integer_t,converted
+Finding,severity,severity,string_t,converted
+Finding,awsAccountId,cloud.account.uid,string_t,direct
+Finding,packageVulnerabilityDetails.vulnerablePackages[].sourceLayerHash,unmapped.affected_packages.sourceLayerHashes[],string_t,direct
+Finding Info,findingArn,finding_info.uid,string_t,direct
+Finding Info,type,finding_info.types[],string_t,converted
+Finding Info,title,finding_info.title,string_t,direct
+Finding Info,description,finding_info.desc,string_t,direct
+Finding Info,firstObservedAt,finding_info.created_time,timestamp_t,direct
+Finding Info,firstObservedAt,finding_info.first_seen_time,timestamp_t,direct
+Finding Info,lastObservedAt,finding_info.last_seen_time,timestamp_t,direct
+Finding Info,updatedAt,finding_info.modified_time,timestamp_t,direct
+Resource,resources[0].partition,resources[].cloud_partition,string_t,direct
+Resource,resources[0].region,resources[].region,string_t,direct
+Resource,resources[0].tags.*,resources[].tags[].name,string_t,direct
+Resource,resources[0].tags.*,resources[].tags[].value,string_t,direct
+Resource,resources[0].type,resources[].type,string_t,converted
+Resource,resources[0].provider,resources[].provider,string_t,converted
+Resource,resources[0].provider,resources[].owner.account.uid,string_t,converted
+Resource,resources[0].providerAccountId,resources[].owner.account.uid,string_t,converted
+Resource,awsAccountId,resources[].owner.account.uid,string_t,converted
+Resource,resources[0].providerOrgId,resources[].owner.org.uid,string_t,direct
+EC2 Instance,resources[0].tags.Name,resources[].name,string_t,direct
+EC2 Instance,resources[0].id,resources[].uid,resource_uid_t,direct
+EC2 Instance,resources[0].id,resources[].device.instance_uid,string_t,direct
+EC2 Instance,resources[0].details.awsEc2Instance.imageId,resources[].device.image.uid,string_t,direct
+EC2 Instance,resources[0].details.awsEc2Instance.vpcId,resources[].vpc_uid,string_t,direct
+EC2 Instance,resources[0].details.awsEc2Instance.subnetId,resources[].subnet_info.uid,string_t,direct
+EC2 Instance,resources[0].details.awsEc2Instance.ipV4Addresses[],resources[].ip_addresses[],ip_t,converted
+EC2 Instance,resources[0].details.awsEc2Instance.ipV6Addresses[],resources[].ip_addresses[],ip_t,converted
+Other VM,resources[0].id,resources[].device.instance_uid,string_t,direct
+Other VM,resources[0].details.vm.vmImageReference,resources[].device.image.uid,string_t,direct
+Other VM,resources[0].details.vm.networkId,resources[].vpc_uid,string_t,direct
+Other VM,resources[0].details.vm.ipV4Addresses[],resources[].ip_addresses[],ip_t,converted
+Other VM,resources[0].details.vm.ipV6Addresses[],resources[].ip_addresses[],ip_t,converted
+ECR Container Image,resources[0].details.awsEcrContainerImage.repositoryName,resources[0].name,string_t,direct
+ECR Container Image,resources[0].type,resources[0].type,string_t,converted
+ECR Container Image,resources[0].id,resources[0].uid,resource_uid_t,converted
+ECR Container Image,resources[0].details.awsEcrContainerImage.pushedAt,resources[0].created_time,timestamp_t,direct
+ECR Container Image,resources[0].details.awsEcrContainerImage.repositoryName,resources[0].image.name,string_t,direct
+ECR Container Image,resources[0].details.awsEcrContainerImage.repositoryName,resources[0].image.repository_name,string_t,direct
+ECR Container Image,resources[0].details.awsEcrContainerImage.imageHash,resources[0].image.uid,string_t,direct
+ECR Container Image,resources[0].details.awsEcrContainerImage.imageHash,resources[0].image.hash.value,file_hash_t,converted
+ECR Container Image,resources[0].details.awsEcrContainerImage.registry,resources[0].image.registry_uid,string_t,direct
+ECR Container Image,resources[0].details.awsEcrContainerImage.architecture,resources[0].image.architecture,string_t,direct
+ECR Container Image,resources[0].details.awsEcrContainerImage.imageTags[0],resources[0].image.tag,string_t,direct
+ECR Container Image,resources[0].details.awsEcrContainerImage.pushedAt,resources[0].image.created_time,timestamp_t,direct
+ECR Container Image,resources[0].details.awsEcrContainerImage.pushedAt,resources[0].image.modified_time,timestamp_t,direct
+ECR Container Image,resources[0].details.awsEcrContainerImage.lastInUseAt,resources[0].image.last_used_time,timestamp_t,direct
+ECR Container Image,resources[0].details.awsEcrContainerImage.inUseCount,resources[0].image.in_use_count,integer_t,direct
+ECR Container Image,resources[0].details.awsEcrContainerImage.imageHash,resources[1].uid,resource_uid_t,direct
+ECR Container Image,resources[0].type,resources[1].type,string_t,converted
+Other Container Image,resources[0].details.image.repositoryName,resources[0].name,string_t,direct
+Other Container Image,resources[0].type,resources[0].type,string_t,converted
+Other Container Image,resources[0].id,resources[0].uid,resource_uid_t,converted
+Other Container Image,resources[0].details.image.repositoryName,resources[0].uid,resource_uid_t,converted
+Other Container Image,resources[0].details.image.pushedAt,resources[0].created_time,timestamp_t,direct
+Other Container Image,resources[0].details.image.repositoryName,resources[0].image.name,string_t,direct
+Other Container Image,resources[0].details.image.repositoryName,resources[0].image.repository_name,string_t,direct
+Other Container Image,resources[0].details.image.imageDigest,resources[0].image.uid,string_t,direct
+Other Container Image,resources[0].details.image.imageDigest,resources[0].image.hash.value,file_hash_t,converted
+Other Container Image,resources[0].details.image.registry,resources[0].image.registry_uid,string_t,direct
+Other Container Image,resources[0].details.image.imageTags[0],resources[0].image.tag,string_t,direct
+Other Container Image,resources[0].details.image.pushedAt,resources[0].image.created_time,timestamp_t,direct
+Other Container Image,resources[0].details.image.pushedAt,resources[0].image.modified_time,timestamp_t,direct
+Other Container Image,resources[0].id,resources[1].uid,resource_uid_t,direct
+Other Container Image,resources[0].type,resources[1].type,string_t,converted
+Other Container Image,resources[0].id,resources[].uid,resource_uid_t,direct
+Lambda Function,resources[0].id,resources[].uid,resource_uid_t,converted
+Lambda Function,resources[0].id,resources[].uid_alt,resource_uid_t,converted
+Lambda Function,resources[0].details.awsLambdaFunction.functionName,resources[].name,string_t,direct
+Lambda Function,resources[0].details.awsLambdaFunction.lastModifiedAt,resources[].modified_time,timestamp_t,direct
+Lambda Function,resources[0].details.awsLambdaFunction.functionName,resources[].cloud_function.name,string_t,direct
+Lambda Function,resources[0].id,resources[].cloud_function.uid,string_t,converted
+Lambda Function,resources[0].id,resources[].cloud_function.uid_alt,string_t,converted
+Lambda Function,resources[0].details.awsLambdaFunction.runtime,resources[].cloud_function.runtime,string_t,direct
+Lambda Function,resources[0].details.awsLambdaFunction.executionRoleArn,resources[].cloud_function.user.uid,string_t,direct
+Lambda Function,resources[0].details.awsLambdaFunction.layers[],resources[].cloud_function.layers[].uid,string_t,direct
+Lambda Function,resources[0].details.awsLambdaFunction.layers[],resources[].cloud_function.layers[].uid_alt,string_t,direct
+Lambda Function,resources[0].details.awsLambdaFunction.layers[],resources[].cloud_function.layers[].name,string_t,direct
+Lambda Function,resources[0].details.awsLambdaFunction.version,resources[].cloud_function.version,string_t,direct
+Lambda Function,resources[0].details.awsLambdaFunction.vpcConfig.vpcId,resources[].cloud_function.vpc_uid,string_t,direct
+Other Serverless Function,resources[0].details.serverlessFunction.serverlessFunctionName,resources[].name,string_t,direct
+Other Serverless Function,resources[0].details.serverlessFunction.lastModifiedAt,resources[].modified_time,timestamp_t,direct
+Other Serverless Function,resources[0].details.serverlessFunction.serverlessFunctionName,resources[].cloud_function.name,string_t,direct
+Other Serverless Function,resources[0].id,resources[].cloud_function.uid,string_t,converted
+Other Serverless Function,resources[0].id,resources[].cloud_function.uid_alt,string_t,converted
+Other Serverless Function,resources[0].details.serverlessFunction.runtime,resources[].cloud_function.runtime,string_t,direct
+Other Serverless Function,resources[0].details.serverlessFunction.version,resources[].cloud_function.version,string_t,direct
+Other Serverless Function,resources[0].details.serverlessFunction.networkId,resources[].cloud_function.vpc_uid,string_t,direct
+Other Resource Types,resources[0].id,resources[].uid,resource_uid_t,direct
+Other Resource Types,resources[0].id,resources[].name,string_t,direct
+Network Reachability,resources[0].id,resources[].uid,resource_uid_t,direct
+Network Reachability,resources[0].tags.Name,resources[].name,string_t,direct
+Network Reachability,resources[0].id,resources[].resource_relationship.name,string_t,converted
+Network Reachability,networkReachabilityDetails.networkPath.steps[].componentId,resources[].resource_relationship.nodes[].uid,string_t,direct
+Network Reachability,networkReachabilityDetails.networkPath.steps[].componentId,resources[].resource_relationship.nodes[].name,string_t,direct
+Network Reachability,networkReachabilityDetails.networkPath.steps[].componentType,resources[].resource_relationship.nodes[].type,string_t,direct
+Package Vulnerability,packageVulnerabilityDetails.vulnerablePackages[].arch,vulnerabilities[0].affected_packages[].architecture,string_t,direct
+Package Vulnerability,packageVulnerabilityDetails.vulnerablePackages[].epoch,vulnerabilities[0].affected_packages[].epoch,integer_t,direct
+Package Vulnerability,packageVulnerabilityDetails.vulnerablePackages[].fixedInVersion,vulnerabilities[0].affected_packages[].fixed_in_version,string_t,direct
+Package Vulnerability,packageVulnerabilityDetails.vulnerablePackages[].name,vulnerabilities[0].affected_packages[].name,string_t,direct
+Package Vulnerability,packageVulnerabilityDetails.vulnerablePackages[].packageManager,vulnerabilities[0].affected_packages[].package_manager,string_t,direct
+Package Vulnerability,packageVulnerabilityDetails.vulnerablePackages[].filePath,vulnerabilities[0].affected_packages[].path,file_path_t,direct
+Package Vulnerability,packageVulnerabilityDetails.vulnerablePackages[].remediation,vulnerabilities[0].affected_packages[].remediation.desc,string_t,direct
+Package Vulnerability,packageVulnerabilityDetails.vulnerablePackages[].release,vulnerabilities[0].affected_packages[].release,string_t,direct
+Package Vulnerability,packageVulnerabilityDetails.vulnerablePackages[].version,vulnerabilities[0].affected_packages[].version,string_t,direct
+Package Vulnerability,packageVulnerabilityDetails.vendorSeverity,vulnerabilities[0].severity,string_t,direct
+Package Vulnerability,packageVulnerabilityDetails.vulnerabilityId,vulnerabilities[0].cve.uid,string_t,direct
+Package Vulnerability,description,vulnerabilities[0].cve.desc,string_t,direct
+Package Vulnerability,packageVulnerabilityDetails.vendorCreatedAt,vulnerabilities[0].cve.created_time,timestamp_t,direct
+Package Vulnerability,packageVulnerabilityDetails.vendorUpdatedAt,vulnerabilities[0].cve.modified_time,timestamp_t,direct
+Package Vulnerability,packageVulnerabilityDetails.cvss[].baseScore,vulnerabilities[0].cve.cvss[].base_score,float_t,direct
+Package Vulnerability,packageVulnerabilityDetails.cvss[].source,vulnerabilities[0].cve.cvss[].vendor_name,string_t,direct
+Package Vulnerability,packageVulnerabilityDetails.cvss[].version,vulnerabilities[0].cve.cvss[].version,string_t,direct
+Package Vulnerability,packageVulnerabilityDetails.cvss[].scoringVector,vulnerabilities[0].cve.cvss[].vector_string,string_t,converted
+Package Vulnerability,packageVulnerabilityDetails.cvss[].baseScore,vulnerabilities[0].cve.cvss[].severity,string_t,converted
+Package Vulnerability,inspectorScoreDetails.adjustedCvss.score,vulnerabilities[0].cve.cvss[].adjusted_score,float_t,direct
+Package Vulnerability,inspectorScoreDetails.adjustedCvss.scoringVector,vulnerabilities[0].cve.cvss[].adjusted_vector_string,string_t,converted
+Package Vulnerability,inspectorScoreDetails.adjustedCvss.adjustments[].metric,vulnerabilities[0].cve.cvss[].adjusted_metric_list[].cvss_metric,string_t,direct
+Package Vulnerability,inspectorScoreDetails.adjustedCvss.adjustments[].reason,vulnerabilities[0].cve.cvss[].adjusted_metric_list[].update_reason,string_t,direct
+Package Vulnerability,epss.score,vulnerabilities[0].cve.epss.score,string_t,converted
+Package Vulnerability,exploitabilityDetails.lastKnownExploitAt,vulnerabilities[0].exploit_last_seen_time,timestamp_t,direct
+Package Vulnerability,exploitAvailable,vulnerabilities[0].is_exploit_available,boolean_t,converted
+Package Vulnerability,fixAvailable,vulnerabilities[0].is_fix_available,boolean_t,converted
+Package Vulnerability,fixAvailable,vulnerabilities[0].fix_coverage_id,integer_t,converted
+Package Vulnerability,fixAvailable,vulnerabilities[0].fix_coverage,string_t,converted
+Package Vulnerability,packageVulnerabilityDetails.relatedVulnerabilities[],vulnerabilities[0].related_vulnerabilities[],string_t,direct
+Package Vulnerability,packageVulnerabilityDetails.referenceUrls[],vulnerabilities[0].references[],string_t,direct
+Code Vulnerability,codeVulnerabilityDetails.cwes[],vulnerabilities[].cwe.uid,string_t,direct
+Code Vulnerability,codeVulnerabilityDetails.detectorId,vulnerabilities[0].advisory.uid,string_t,direct
+Code Vulnerability,description,vulnerabilities[].desc,string_t,direct
+Code Vulnerability,codeVulnerabilityDetails.referenceUrls[],vulnerabilities[].references[],string_t,direct
+Code Vulnerability,codeVulnerabilityDetails.filePath.startLine,vulnerabilities[].affected_code[0].start_line,integer_t,direct
+Code Vulnerability,codeVulnerabilityDetails.filePath.endLine,vulnerabilities[].affected_code[0].end_line,integer_t,direct
+Code Vulnerability,codeVulnerabilityDetails.filePath.fileName,vulnerabilities[].affected_code[0].file.name,file_name_t,direct
+Code Vulnerability,codeVulnerabilityDetails.filePath.filePath,vulnerabilities[].affected_code[0].file.path,file_path_t,direct
+Code Vulnerability,remediation.recommendation.text,vulnerabilities[].affected_code[0].remediation.desc,string_t,direct

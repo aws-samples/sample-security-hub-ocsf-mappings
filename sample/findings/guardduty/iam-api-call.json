@@ -1,0 +1,66 @@
+{
+  "schemaVersion": "2.0",
+  "accountId": "123456789012",
+  "region": "us-east-1",
+  "partition": "aws",
+  "id": "b2c3d4e5f60718293a4b5c6d7e8f90a1",
+  "arn": "arn:aws:guardduty:us-east-1:123456789012:detector/0123456789abcdef0123456789abcdef/finding/b2c3d4e5f60718293a4b5c6d7e8f90a1",
+  "type": "Recon:IAMUser/MaliciousIPCaller",
+  "resource": {
+    "resourceType": "AccessKey",
+    "accessKeyDetails": {
+      "accessKeyId": "AKIAIOSFODNN7EXAMPLE",
+      "principalId": "AIDAEXAMPLE0123456789",
+      "userName": "ExampleUser",
+      "userType": "IAMUser"
+    }
+  },
+  "service": {
+    "serviceName": "guardduty",
+    "detectorId": "0123456789abcdef0123456789abcdef",
+    "action": {
+      "actionType": "AWS_API_CALL",
+      "awsApiCallAction": {
+        "api": "ListBuckets",
+        "serviceName": "s3.amazonaws.com",
+        "callerType": "Remote IP",
+        "errorCode": "AccessDenied",
+        "remoteIpDetails": {
+          "ipAddressV4": "198.51.100.77",
+          "city": {
+            "cityName": "Example City"
+          },
+          "country": {
+            "countryName": "Example Country"
+          },
+          "geoLocation": {
+            "lat": 0.0,
+            "lon": 0.0
+          },
+          "organization": {
+            "asn": "64497",
+            "asnOrg": "Example Hosting",
+            "isp": "Example ISP",
+            "org": "Example Org"
+          }
+        },
+        "affectedResources": {}
+      }
+    },
+    "archived": false,
+    "count": 3,
+    "eventFirstSeen": "2026-02-02T09:00:00.000Z",
+    "eventLastSeen": "2026-02-02T09:20:00.000Z",
+    "resourceRole": "TARGET",
+    "featureName": "CloudTrail",
+    "additionalInfo": {
+      "value": "{\"sample\":true,\"userAgent\":{\"fullUserAgent\":\"aws-cli/2.0.0\",\"userAgentCategory\":\"AWS CLI\"}}",
+      "type": "default"
+    }
+  },
+  "severity": 5,
+  "createdAt": "2026-02-02T09:21:00.000Z",
+  "updatedAt": "2026-02-02T09:25:00.000Z",
+  "title": "API ListBuckets was invoked from an IP address on a custom threat list.",
+  "description": "Example finding for illustration. An API was invoked by ExampleUser from IP address 198.51.100.77."
+}

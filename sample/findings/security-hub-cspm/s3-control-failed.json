@@ -1,0 +1,64 @@
+{
+  "SchemaVersion": "2018-10-08",
+  "Id": "arn:aws:securityhub:us-east-1:123456789012:security-control/S3.8/finding/01234567-89ab-cdef-0123-456789abcdef",
+  "ProductArn": "arn:aws:securityhub:us-east-1::product/aws/securityhub",
+  "GeneratorId": "security-control/S3.8",
+  "AwsAccountId": "123456789012",
+  "AwsAccountName": "ExampleAccount",
+  "Types": [
+    "Software and Configuration Checks/Industry and Regulatory Standards"
+  ],
+  "FirstObservedAt": "2026-02-07T10:00:00.000Z",
+  "LastObservedAt": "2026-02-08T10:00:00.000Z",
+  "CreatedAt": "2026-02-07T10:00:00.000Z",
+  "UpdatedAt": "2026-02-08T10:00:00.000Z",
+  "Severity": {
+    "Label": "HIGH"
+  },
+  "Title": "S3 general purpose buckets should block public access",
+  "Description": "Example finding for illustration. This control checks whether an S3 general purpose bucket blocks public access at the bucket level.",
+  "Remediation": {
+    "Recommendation": {
+      "Text": "For information on how to correct this issue, consult the AWS Security Hub controls documentation.",
+      "Url": "https://docs.aws.amazon.com/console/securityhub/S3.8/remediation"
+    }
+  },
+  "ProductFields": {
+    "RelatedAWSResources:0/name": "securityhub-s3-bucket-level-public-access-prohibited-0123abcd",
+    "RelatedAWSResources:0/type": "AWS::Config::ConfigRule",
+    "aws/securityhub/ProductName": "Security Hub"
+  },
+  "Resources": [
+    {
+      "Type": "AwsS3Bucket",
+      "Id": "arn:aws:s3:::amzn-s3-demo-bucket",
+      "Partition": "aws",
+      "Region": "us-east-1",
+      "Tags": {
+        "Environment": "example"
+      }
+    }
+  ],
+  "Compliance": {
+    "Status": "FAILED",
+    "SecurityControlId": "S3.8",
+    "AssociatedStandards": [
+      {
+        "StandardsId": "standards/aws-foundational-security-best-practices/v/1.0.0"
+      }
+    ],
+    "RelatedRequirements": [
+      "NIST.800-53.r5 AC-21"
+    ],
+    "StatusReasons": [
+      {
+        "ReasonCode": "CONFIG_EVALUATIONS_EMPTY",
+        "Description": "Example reason for illustration."
+      }
+    ]
+  },
+  "RecordState": "ACTIVE",
+  "Workflow": {
+    "Status": "NEW"
+  }
+}

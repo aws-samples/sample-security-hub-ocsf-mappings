@@ -1,0 +1,46 @@
+area,asff_field,ocsf_field,ocsf_type,transform
+Finding,RecordState,activity_id,integer_t,converted
+Finding,RecordState,activity_name,string_t,converted
+Finding,UpdatedAt,time,timestamp_t,direct
+Finding,Severity.Label,severity_id,integer_t,converted
+Finding,Severity.Label,severity,string_t,converted
+Finding,AwsAccountId,cloud.account.uid,string_t,direct
+Finding,AwsAccountName,cloud.account.name,string_t,direct
+Finding Info,Id,finding_info.uid,string_t,direct
+Finding Info,Title,finding_info.title,string_t,direct
+Finding Info,Description,finding_info.desc,string_t,direct
+Finding Info,Types[],finding_info.types[],string_t,converted
+Finding Info,CreatedAt,finding_info.created_time,timestamp_t,direct
+Finding Info,FirstObservedAt,finding_info.first_seen_time,timestamp_t,direct
+Finding Info,LastObservedAt,finding_info.last_seen_time,timestamp_t,direct
+Finding Info,UpdatedAt,finding_info.modified_time,timestamp_t,direct
+Analytic,ProductFields.RelatedAWSResources:0/type,finding_info.analytic.category,string_t,direct
+Analytic,ProductFields.RelatedAWSResources:0/name,finding_info.analytic.name,string_t,converted
+Analytic,Compliance.SecurityControlId,finding_info.analytic.name,string_t,converted
+Analytic,ProductFields.RelatedAWSResources:0/type,finding_info.related_analytics[0].category,string_t,direct
+Analytic,ProductFields.RelatedAWSResources:0/name,finding_info.related_analytics[0].name,string_t,direct
+Analytic,ProductFields.RelatedAWSResources:1/type,finding_info.related_analytics[1].category,string_t,direct
+Analytic,ProductFields.RelatedAWSResources:1/name,finding_info.related_analytics[1].name,string_t,direct
+Compliance,Compliance.SecurityControlId,compliance.control,string_t,direct
+Compliance,Compliance.SecurityControlParameters[].Name,compliance.control_parameters[].name,string_t,direct
+Compliance,Compliance.SecurityControlParameters[].Value[],compliance.control_parameters[].values[],string_t,direct
+Compliance,Compliance.RelatedRequirements[],compliance.requirements[],string_t,direct
+Compliance,Compliance.AssociatedStandards[].StandardsId,compliance.standards[],string_t,direct
+Compliance,Compliance.Status,compliance.status_id,integer_t,converted
+Compliance,Compliance.Status,compliance.status,string_t,converted
+Compliance,Compliance.StatusReasons[].ReasonCode,compliance.assessments[].name,string_t,direct
+Compliance,Compliance.Status,compliance.assessments[].meets_criteria,boolean_t,converted
+Compliance,Compliance.StatusReasons[].Description,compliance.assessments[].desc,string_t,converted
+Compliance,Compliance.StatusReasons[].ReasonCode,compliance.assessments[].desc,string_t,converted
+Remediation,Remediation.Recommendation.Text,remediation.desc,string_t,direct
+Remediation,Remediation.Recommendation.Url,remediation.references[],string_t,direct
+Resource,Resources[].Tags.*,resources[].tags[].name,string_t,direct
+Resource,Resources[].Tags.*,resources[].tags[].value,string_t,direct
+Resource,Resources[].Provider,resources[].provider,string_t,converted
+AWS Resource,Resources[].Region,resources[].region,string_t,converted
+AWS Resource,AwsAccountId,resources[].owner.account.uid,string_t,direct
+Azure Resource,Resources[].Partition,resources[].cloud_partition,string_t,direct
+Azure Resource,Resources[].Id,resources[].uid,resource_uid_t,direct
+Azure Resource,Resources[].Region,resources[].region,string_t,direct
+Azure Resource,Resources[].Owner.Account.Id,resources[].owner.account.uid,string_t,direct
+Azure Resource,Resources[].Owner.Org.Id,resources[].owner.org.uid,string_t,direct

@@ -1,0 +1,323 @@
+{
+  "ocsf_version": "1.8.0",
+  "aws_extension_version": "1.1.0",
+  "class_uid": 2003,
+  "class_name": "Compliance Finding",
+  "mappings": [
+    {
+      "area": "Finding",
+      "asff_field": "RecordState",
+      "ocsf_field": "activity_id",
+      "ocsf_type": "integer_t",
+      "transform": "converted"
+    },
+    {
+      "area": "Finding",
+      "asff_field": "RecordState",
+      "ocsf_field": "activity_name",
+      "ocsf_type": "string_t",
+      "transform": "converted"
+    },
+    {
+      "area": "Finding",
+      "asff_field": "UpdatedAt",
+      "ocsf_field": "time",
+      "ocsf_type": "timestamp_t",
+      "transform": "direct"
+    },
+    {
+      "area": "Finding",
+      "asff_field": "Severity.Label",
+      "ocsf_field": "severity_id",
+      "ocsf_type": "integer_t",
+      "transform": "converted"
+    },
+    {
+      "area": "Finding",
+      "asff_field": "Severity.Label",
+      "ocsf_field": "severity",
+      "ocsf_type": "string_t",
+      "transform": "converted"
+    },
+    {
+      "area": "Finding",
+      "asff_field": "AwsAccountId",
+      "ocsf_field": "cloud.account.uid",
+      "ocsf_type": "string_t",
+      "transform": "direct"
+    },
+    {
+      "area": "Finding",
+      "asff_field": "AwsAccountName",
+      "ocsf_field": "cloud.account.name",
+      "ocsf_type": "string_t",
+      "transform": "direct"
+    },
+    {
+      "area": "Finding Info",
+      "asff_field": "Id",
+      "ocsf_field": "finding_info.uid",
+      "ocsf_type": "string_t",
+      "transform": "direct"
+    },
+    {
+      "area": "Finding Info",
+      "asff_field": "Title",
+      "ocsf_field": "finding_info.title",
+      "ocsf_type": "string_t",
+      "transform": "direct"
+    },
+    {
+      "area": "Finding Info",
+      "asff_field": "Description",
+      "ocsf_field": "finding_info.desc",
+      "ocsf_type": "string_t",
+      "transform": "direct"
+    },
+    {
+      "area": "Finding Info",
+      "asff_field": "Types[]",
+      "ocsf_field": "finding_info.types[]",
+      "ocsf_type": "string_t",
+      "transform": "converted"
+    },
+    {
+      "area": "Finding Info",
+      "asff_field": "CreatedAt",
+      "ocsf_field": "finding_info.created_time",
+      "ocsf_type": "timestamp_t",
+      "transform": "direct"
+    },
+    {
+      "area": "Finding Info",
+      "asff_field": "FirstObservedAt",
+      "ocsf_field": "finding_info.first_seen_time",
+      "ocsf_type": "timestamp_t",
+      "transform": "direct"
+    },
+    {
+      "area": "Finding Info",
+      "asff_field": "LastObservedAt",
+      "ocsf_field": "finding_info.last_seen_time",
+      "ocsf_type": "timestamp_t",
+      "transform": "direct"
+    },
+    {
+      "area": "Finding Info",
+      "asff_field": "UpdatedAt",
+      "ocsf_field": "finding_info.modified_time",
+      "ocsf_type": "timestamp_t",
+      "transform": "direct"
+    },
+    {
+      "area": "Analytic",
+      "asff_field": "ProductFields.RelatedAWSResources:0/type",
+      "ocsf_field": "finding_info.analytic.category",
+      "ocsf_type": "string_t",
+      "transform": "direct"
+    },
+    {
+      "area": "Analytic",
+      "asff_field": "ProductFields.RelatedAWSResources:0/name",
+      "ocsf_field": "finding_info.analytic.name",
+      "ocsf_type": "string_t",
+      "transform": "converted"
+    },
+    {
+      "area": "Analytic",
+      "asff_field": "Compliance.SecurityControlId",
+      "ocsf_field": "finding_info.analytic.name",
+      "ocsf_type": "string_t",
+      "transform": "converted"
+    },
+    {
+      "area": "Analytic",
+      "asff_field": "ProductFields.RelatedAWSResources:0/type",
+      "ocsf_field": "finding_info.related_analytics[0].category",
+      "ocsf_type": "string_t",
+      "transform": "direct"
+    },
+    {
+      "area": "Analytic",
+      "asff_field": "ProductFields.RelatedAWSResources:0/name",
+      "ocsf_field": "finding_info.related_analytics[0].name",
+      "ocsf_type": "string_t",
+      "transform": "direct"
+    },
+    {
+      "area": "Analytic",
+      "asff_field": "ProductFields.RelatedAWSResources:1/type",
+      "ocsf_field": "finding_info.related_analytics[1].category",
+      "ocsf_type": "string_t",
+      "transform": "direct"
+    },
+    {
+      "area": "Analytic",
+      "asff_field": "ProductFields.RelatedAWSResources:1/name",
+      "ocsf_field": "finding_info.related_analytics[1].name",
+      "ocsf_type": "string_t",
+      "transform": "direct"
+    },
+    {
+      "area": "Compliance",
+      "asff_field": "Compliance.SecurityControlId",
+      "ocsf_field": "compliance.control",
+      "ocsf_type": "string_t",
+      "transform": "direct"
+    },
+    {
+      "area": "Compliance",
+      "asff_field": "Compliance.SecurityControlParameters[].Name",
+      "ocsf_field": "compliance.control_parameters[].name",
+      "ocsf_type": "string_t",
+      "transform": "direct"
+    },
+    {
+      "area": "Compliance",
+      "asff_field": "Compliance.SecurityControlParameters[].Value[]",
+      "ocsf_field": "compliance.control_parameters[].values[]",
+      "ocsf_type": "string_t",
+      "transform": "direct"
+    },
+    {
+      "area": "Compliance",
+      "asff_field": "Compliance.RelatedRequirements[]",
+      "ocsf_field": "compliance.requirements[]",
+      "ocsf_type": "string_t",
+      "transform": "direct"
+    },
+    {
+      "area": "Compliance",
+      "asff_field": "Compliance.AssociatedStandards[].StandardsId",
+      "ocsf_field": "compliance.standards[]",
+      "ocsf_type": "string_t",
+      "transform": "direct"
+    },
+    {
+      "area": "Compliance",
+      "asff_field": "Compliance.Status",
+      "ocsf_field": "compliance.status_id",
+      "ocsf_type": "integer_t",
+      "transform": "converted"
+    },
+    {
+      "area": "Compliance",
+      "asff_field": "Compliance.Status",
+      "ocsf_field": "compliance.status",
+      "ocsf_type": "string_t",
+      "transform": "converted"
+    },
+    {
+      "area": "Compliance",
+      "asff_field": "Compliance.StatusReasons[].ReasonCode",
+      "ocsf_field": "compliance.assessments[].name",
+      "ocsf_type": "string_t",
+      "transform": "direct"
+    },
+    {
+      "area": "Compliance",
+      "asff_field": "Compliance.Status",
+      "ocsf_field": "compliance.assessments[].meets_criteria",
+      "ocsf_type": "boolean_t",
+      "transform": "converted"
+    },
+    {
+      "area": "Compliance",
+      "asff_field": "Compliance.StatusReasons[].Description",
+      "ocsf_field": "compliance.assessments[].desc",
+      "ocsf_type": "string_t",
+      "transform": "converted"
+    },
+    {
+      "area": "Compliance",
+      "asff_field": "Compliance.StatusReasons[].ReasonCode",
+      "ocsf_field": "compliance.assessments[].desc",
+      "ocsf_type": "string_t",
+      "transform": "converted"
+    },
+    {
+      "area": "Remediation",
+      "asff_field": "Remediation.Recommendation.Text",
+      "ocsf_field": "remediation.desc",
+      "ocsf_type": "string_t",
+      "transform": "direct"
+    },
+    {
+      "area": "Remediation",
+      "asff_field": "Remediation.Recommendation.Url",
+      "ocsf_field": "remediation.references[]",
+      "ocsf_type": "string_t",
+      "transform": "direct"
+    },
+    {
+      "area": "Resource",
+      "asff_field": "Resources[].Tags.*",
+      "ocsf_field": "resources[].tags[].name",
+      "ocsf_type": "string_t",
+      "transform": "direct"
+    },
+    {
+      "area": "Resource",
+      "asff_field": "Resources[].Tags.*",
+      "ocsf_field": "resources[].tags[].value",
+      "ocsf_type": "string_t",
+      "transform": "direct"
+    },
+    {
+      "area": "Resource",
+      "asff_field": "Resources[].Provider",
+      "ocsf_field": "resources[].provider",
+      "ocsf_type": "string_t",
+      "transform": "converted"
+    },
+    {
+      "area": "AWS Resource",
+      "asff_field": "Resources[].Region",
+      "ocsf_field": "resources[].region",
+      "ocsf_type": "string_t",
+      "transform": "converted"
+    },
+    {
+      "area": "AWS Resource",
+      "asff_field": "AwsAccountId",
+      "ocsf_field": "resources[].owner.account.uid",
+      "ocsf_type": "string_t",
+      "transform": "direct"
+    },
+    {
+      "area": "Azure Resource",
+      "asff_field": "Resources[].Partition",
+      "ocsf_field": "resources[].cloud_partition",
+      "ocsf_type": "string_t",
+      "transform": "direct"
+    },
+    {
+      "area": "Azure Resource",
+      "asff_field": "Resources[].Id",
+      "ocsf_field": "resources[].uid",
+      "ocsf_type": "resource_uid_t",
+      "transform": "direct"
+    },
+    {
+      "area": "Azure Resource",
+      "asff_field": "Resources[].Region",
+      "ocsf_field": "resources[].region",
+      "ocsf_type": "string_t",
+      "transform": "direct"
+    },
+    {
+      "area": "Azure Resource",
+      "asff_field": "Resources[].Owner.Account.Id",
+      "ocsf_field": "resources[].owner.account.uid",
+      "ocsf_type": "string_t",
+      "transform": "direct"
+    },
+    {
+      "area": "Azure Resource",
+      "asff_field": "Resources[].Owner.Org.Id",
+      "ocsf_field": "resources[].owner.org.uid",
+      "ocsf_type": "string_t",
+      "transform": "direct"
+    }
+  ]
+}

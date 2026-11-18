@@ -1,0 +1,576 @@
+area,guardduty_field,ocsf_field,ocsf_type,transform
+Finding,accountId,cloud.account.uid,string_t,direct
+Finding,partition,cloud.cloud_partition,string_t,direct
+Finding,region,cloud.region,string_t,direct
+Finding,service.archived,activity_id,integer_t,converted
+Finding,service.count,activity_id,integer_t,converted
+Finding,service.archived,activity_name,string_t,converted
+Finding,service.count,activity_name,string_t,converted
+Finding,service.count,count,integer_t,direct
+Finding,severity,severity_id,integer_t,converted
+Finding,severity,severity,string_t,converted
+Finding,updatedAt,time,timestamp_t,direct
+Finding,type,remediation.references[],string_t,converted
+Finding,type,remediation.desc,string_t,converted
+Finding,service.action.dnsRequestAction.blocked,disposition_id,integer_t,converted
+Finding,service.action.dnsRequestAction.blocked,disposition,string_t,converted
+Finding,resource.bedrockGuardrailDetails.guardrailAction,disposition_id,integer_t,converted
+Finding,resource.bedrockGuardrailDetails.guardrailAction,disposition,string_t,converted
+Finding Info,arn,finding_info.uid,string_t,direct
+Finding Info,createdAt,finding_info.created_time,timestamp_t,direct
+Finding Info,updatedAt,finding_info.modified_time,timestamp_t,direct
+Finding Info,service.eventFirstSeen,finding_info.first_seen_time,timestamp_t,direct
+Finding Info,service.eventLastSeen,finding_info.last_seen_time,timestamp_t,direct
+Finding Info,service.detection.sequence.uid,finding_info.uid_alt,string_t,direct
+Finding Info,id,finding_info.uid_alt,string_t,direct
+Finding Info,service.detection.sequence.description,finding_info.desc,string_t,direct
+Finding Info,title,finding_info.title,string_t,direct
+Finding Info,description,finding_info.desc,string_t,direct
+Finding Info,type,finding_info.types[],string_t,direct
+Finding Info,service.detection.sequence.additionalSequenceTypes[],finding_info.types[],string_t,direct
+Finding Info,service.detectorId,finding_info.product.uid,string_t,direct
+Finding Info,service.detectorId,finding_info.analytic.uid,string_t,direct
+Finding Info,type,finding_info.analytic.type_id,integer_t,converted
+Finding Info,type,finding_info.analytic.type,string_t,converted
+Finding Info,customDetectionRuleName,finding_info.analytic.name,string_t,direct
+Finding Info,customDetectionRuleName,finding_info.analytic.category,string_t,converted
+Attack Sequence,service.detection.sequence.sequenceIndicators[].values[],finding_info.attacks[].tactic.name,string_t,direct
+Attack Sequence,service.detection.sequence.sequenceIndicators[].values[],finding_info.attacks[].technique.name,string_t,direct
+Attack Sequence,service.detection.sequence.sequenceIndicators[].key,finding_info.traits[].name,string_t,direct
+Attack Sequence,service.detection.sequence.sequenceIndicators[].values[],finding_info.traits[].values[],string_t,direct
+Attack Sequence,service.detection.sequence.signals[].uid,finding_info.related_events[].uid,string_t,direct
+Attack Sequence,service.detection.sequence.signals[].type,finding_info.related_events[].type,string_t,direct
+Attack Sequence,service.detection.sequence.signals[].name,finding_info.related_events[].title,string_t,direct
+Attack Sequence,service.detection.sequence.signals[].description,finding_info.related_events[].desc,string_t,direct
+Attack Sequence,service.detection.sequence.signals[].count,finding_info.related_events[].count,integer_t,direct
+Attack Sequence,service.detection.sequence.signals[].severity,finding_info.related_events[].severity_id,integer_t,converted
+Attack Sequence,service.detection.sequence.signals[].severity,finding_info.related_events[].severity,string_t,converted
+Attack Sequence,service.detection.sequence.signals[].createdAt,finding_info.related_events[].created_time,timestamp_t,direct
+Attack Sequence,service.detection.sequence.signals[].firstSeenAt,finding_info.related_events[].first_seen_time,timestamp_t,direct
+Attack Sequence,service.detection.sequence.signals[].lastSeenAt,finding_info.related_events[].last_seen_time,timestamp_t,direct
+Attack Sequence,service.detection.sequence.signals[].updatedAt,finding_info.related_events[].modified_time,timestamp_t,direct
+Attack Sequence,service.detection.sequence.signals[].signalIndicators[].values[],finding_info.related_events[].attacks[].tactic.name,string_t,direct
+Attack Sequence,service.detection.sequence.signals[].signalIndicators[].values[],finding_info.related_events[].attacks[].technique.name,string_t,direct
+Attack Sequence,service.detection.sequence.signals[].signalIndicators[].key,finding_info.related_events[].traits[].name,string_t,direct
+Attack Sequence,service.detection.sequence.signals[].signalIndicators[].values[],finding_info.related_events[].traits[].values[],string_t,direct
+Attack Sequence,service.detection.sequence.signals[].actorIds[],finding_info.related_events[].observables[].value,string_t,converted
+Attack Sequence,service.detection.sequence.signals[].endpointIds[],finding_info.related_events[].observables[].value,string_t,converted
+Attack Sequence,service.detection.sequence.signals[].resourceUids[],finding_info.related_events[].observables[].value,string_t,converted
+Threat Intelligence,service.evidence.threatIntelligenceDetails[].threatListName,osint[].name,string_t,direct
+Threat Intelligence,service.evidence.threatIntelligenceDetails[].threatNames[],osint[].value,string_t,direct
+Runtime Monitoring,service.runtimeDetails.context.fileSystemType,observables[].value,string_t,converted
+Runtime Monitoring,service.runtimeDetails.context.flags[],observables[].value,string_t,converted
+Runtime Monitoring,service.runtimeDetails.context.mountSource,observables[].value,string_t,converted
+Runtime Monitoring,service.runtimeDetails.context.mountTarget,observables[].value,string_t,converted
+Runtime Monitoring,service.runtimeDetails.context.toolCategory,observables[].value,string_t,converted
+Runtime Monitoring,service.runtimeDetails.context.toolName,observables[].value,string_t,converted
+Runtime Monitoring,service.runtimeDetails.context.commandLineExample,observables[].value,string_t,converted
+Metadata,service.featureName,metadata.product.feature.name,string_t,direct
+Metadata,associatedAttackSequenceArn,metadata.correlation_uid,string_t,direct
+Metadata,service.additionalInfo.value.sample,metadata.labels[],string_t,converted
+Attack Sequence Resources,service.detection.sequence.resources[].name,resources[].uid,resource_uid_t,direct
+Attack Sequence Resources,service.detection.sequence.resources[].uid,resources[].uid,resource_uid_t,direct
+Attack Sequence Resources,service.detection.sequence.resources[].resourceType,resources[].type,string_t,converted
+Attack Sequence Resources,service.detection.sequence.resources[].cloudPartition,resources[].cloud_partition,string_t,direct
+Attack Sequence Resources,service.detection.sequence.resources[].region,resources[].region,string_t,direct
+Attack Sequence Resources,service.detection.sequence.resources[].accountId,resources[].owner.account.uid,string_t,direct
+Attack Sequence Actors,service.detection.sequence.actors[].user.uid,resources[].uid,resource_uid_t,direct
+Attack Sequence Actors,service.detection.sequence.actors[].user.name,resources[].name,string_t,direct
+Attack Sequence Actors,service.detection.sequence.actors[].user.type,resources[].type,string_t,converted
+Attack Sequence Actors,service.detection.sequence.actors[].user.uid,resources[].user.uid,string_t,direct
+Attack Sequence Actors,service.detection.sequence.actors[].user.name,resources[].user.name,username_t,direct
+Attack Sequence Actors,service.detection.sequence.actors[].user.credentialUid,resources[].user.programmatic_credentials[].uid,string_t,direct
+Attack Sequence Actors,service.detection.sequence.actors[].user.account.uid,resources[].user.account.uid,string_t,direct
+Attack Sequence Actors,service.detection.sequence.actors[].user.type,resources[].user.type_id,integer_t,converted
+Attack Sequence Actors,service.detection.sequence.actors[].user.type,resources[].user.type,string_t,converted
+Attack Sequence Actors,service.detection.sequence.actors[].user.account.uid,resources[].owner.account.uid,string_t,direct
+Attack Sequence Actors,region,resources[].region,string_t,direct
+Attack Sequence Actors,partition,resources[].cloud_partition,string_t,direct
+IAM Identity,resource.accessKeyDetails.userName,resources[].name,string_t,direct
+IAM Identity,resource.accessKeyDetails.principalId,resources[].uid,resource_uid_t,converted
+IAM Identity,resource.accessKeyDetails.userType,resources[].type,string_t,converted
+IAM Identity,accountId,resources[].owner.account.uid,string_t,direct
+Resource (all types),service.resourceRole,resources[].role_id,integer_t,converted
+Resource (all types),service.resourceRole,resources[].role,string_t,converted
+Access Key,resource.accessKeyDetails.accessKeyId,resources[].uid,resource_uid_t,direct
+Access Key,resource.accessKeyDetails.userName,resources[].user.name,username_t,direct
+Access Key,resource.accessKeyDetails.principalId,resources[].user.uid_alt,string_t,direct
+Access Key,resource.accessKeyDetails.accessKeyId,resources[].user.programmatic_credentials[].uid,string_t,direct
+Access Key,resource.accessKeyDetails.userType,resources[].user.type_id,integer_t,converted
+Access Key,resource.accessKeyDetails.userType,resources[].user.type,string_t,converted
+Container,resource.containerDetails.id,resources[].uid,resource_uid_t,direct
+Container,resource.containerDetails.name,resources[].name,string_t,direct
+Container,resource.containerDetails.id,resources[].device.uid,string_t,direct
+Container,resource.containerDetails.name,resources[].device.name,string_t,direct
+Container,resource.containerDetails.id,resources[].device.container.uid,string_t,direct
+Container,resource.containerDetails.name,resources[].device.container.name,string_t,direct
+Container,resource.containerDetails.containerRuntime,resources[].device.container.runtime,string_t,direct
+Container,resource.containerDetails.image,resources[].device.container.image.name,string_t,direct
+EBS Volume,resource.ebsVolumeDetails.scannedVolumeDetails[].volumeArn,resources[].uid,resource_uid_t,converted
+EBS Volume,resource.ebsVolumeDetails.skippedVolumeDetails[].volumeArn,resources[].uid,resource_uid_t,converted
+EBS Volume,resource.ebsVolumeDetails.scannedVolumeDetails[].volumeArn,resources[].uid_alt,resource_uid_t,direct
+EBS Volume,resource.ebsVolumeDetails.skippedVolumeDetails[].volumeArn,resources[].uid_alt,resource_uid_t,direct
+EBS Volume,resource.ebsVolumeDetails.scannedVolumeDetails[].volumeArn,resources[].storage_device.uid_alt,string_t,direct
+EBS Volume,resource.ebsVolumeDetails.skippedVolumeDetails[].volumeArn,resources[].storage_device.uid_alt,string_t,direct
+EBS Volume,resource.ebsVolumeDetails.scannedVolumeDetails[].deviceName,resources[].name,string_t,direct
+EBS Volume,resource.ebsVolumeDetails.skippedVolumeDetails[].deviceName,resources[].name,string_t,direct
+EBS Volume,resource.ebsVolumeDetails.scannedVolumeDetails[].deviceName,resources[].storage_device.name,string_t,direct
+EBS Volume,resource.ebsVolumeDetails.skippedVolumeDetails[].deviceName,resources[].storage_device.name,string_t,direct
+EBS Volume,resource.ebsVolumeDetails.scannedVolumeDetails[].encryptionType,resources[].storage_device.encryption_details.type,string_t,direct
+EBS Volume,resource.ebsVolumeDetails.skippedVolumeDetails[].encryptionType,resources[].storage_device.encryption_details.type,string_t,direct
+EBS Volume,resource.ebsVolumeDetails.scannedVolumeDetails[].kmsKeyArn,resources[].storage_device.encryption_details.key_uid,string_t,direct
+EBS Volume,resource.ebsVolumeDetails.skippedVolumeDetails[].kmsKeyArn,resources[].storage_device.encryption_details.key_uid,string_t,direct
+EBS Volume,resource.ebsVolumeDetails.scannedVolumeDetails[].encryptionType,resources[].storage_device.is_encrypted,boolean_t,converted
+EBS Volume,resource.ebsVolumeDetails.scannedVolumeDetails[].kmsKeyArn,resources[].storage_device.is_encrypted,boolean_t,converted
+EBS Volume,resource.ebsVolumeDetails.skippedVolumeDetails[].encryptionType,resources[].storage_device.is_encrypted,boolean_t,converted
+EBS Volume,resource.ebsVolumeDetails.skippedVolumeDetails[].kmsKeyArn,resources[].storage_device.is_encrypted,boolean_t,converted
+EBS Volume,resource.ebsVolumeDetails.scannedVolumeDetails[].snapshotArn,resources[].storage_device.snapshot_id,string_t,direct
+EBS Volume,resource.ebsVolumeDetails.skippedVolumeDetails[].snapshotArn,resources[].storage_device.snapshot_id,string_t,direct
+EBS Snapshot,resource.ebsSnapshotDetails.snapshotArn,resources[].uid,resource_uid_t,converted
+EBS Snapshot,resource.ebsSnapshotDetails.snapshotArn,resources[].uid_alt,resource_uid_t,direct
+ECS Cluster,resource.ecsClusterDetails.name,resources[].name,string_t,direct
+ECS Cluster,resource.ecsClusterDetails.arn,resources[].uid,resource_uid_t,converted
+ECS Cluster,resource.ecsClusterDetails.arn,resources[].uid_alt,resource_uid_t,direct
+ECS Cluster,resource.ecsClusterDetails.tags[].key,resources[].tags[].name,string_t,direct
+ECS Cluster,resource.ecsClusterDetails.tags[].value,resources[].tags[].value,string_t,direct
+ECS Task,resource.ecsClusterDetails.taskDetails.arn,resources[].uid,resource_uid_t,converted
+ECS Task,resource.ecsClusterDetails.taskDetails.createdAt,resources[].created_time,timestamp_t,converted
+ECS Task,resource.ecsClusterDetails.taskDetails.createdAt,resources[].created_time_dt,datetime_t,direct
+ECS Task,resource.ecsClusterDetails.taskDetails.group,resources[].group.name,string_t,direct
+ECS Task,resource.ecsClusterDetails.taskDetails.version,resources[].version,string_t,direct
+ECS Task,resource.ecsClusterDetails.taskDetails.tags[].key,resources[].tags[].name,string_t,direct
+ECS Task,resource.ecsClusterDetails.taskDetails.tags[].value,resources[].tags[].value,string_t,direct
+ECS Task Definition,resource.ecsClusterDetails.taskDetails.definitionArn,resources[].uid,resource_uid_t,converted
+ECS Task Definition,resource.ecsClusterDetails.taskDetails.definitionArn,resources[].uid_alt,resource_uid_t,direct
+EKS Cluster,resource.eksClusterDetails.name,resources[].name,string_t,direct
+EKS Cluster,resource.eksClusterDetails.arn,resources[].uid,resource_uid_t,converted
+EKS Cluster,resource.eksClusterDetails.arn,resources[].uid_alt,resource_uid_t,direct
+EKS Cluster,resource.eksClusterDetails.createdAt,resources[].created_time,timestamp_t,direct
+EKS Cluster,resource.eksClusterDetails.createdAt,resources[].created_time_dt,datetime_t,converted
+EKS Cluster,resource.eksClusterDetails.vpcId,resources[].vpc_uid,string_t,direct
+EKS Cluster,resource.eksClusterDetails.tags[].key,resources[].tags[].name,string_t,direct
+EKS Cluster,resource.eksClusterDetails.tags[].value,resources[].tags[].value,string_t,direct
+EC2 Instance,resource.instanceDetails.instanceId,resources[].uid,resource_uid_t,direct
+EC2 Instance,resource.instanceDetails.availabilityZone,resources[].zone,string_t,direct
+EC2 Instance,resource.instanceDetails.tags[].key,resources[].tags[].name,string_t,direct
+EC2 Instance,resource.instanceDetails.tags[].value,resources[].tags[].value,string_t,direct
+EC2 Instance,resource.instanceDetails.instanceId,resources[].device.uid,string_t,direct
+EC2 Instance,resource.instanceDetails.instanceType,resources[].device.model,string_t,direct
+EC2 Instance,resource.instanceDetails.launchTime,resources[].device.launch_time,timestamp_t,direct
+EC2 Instance,resource.instanceDetails.launchTime,resources[].device.launch_time_dt,datetime_t,converted
+EC2 Instance,resource.instanceDetails.imageId,resources[].device.image.uid,string_t,direct
+EC2 Instance,resource.instanceDetails.iamInstanceProfile.id,resources[].device.instance_profile.uid,string_t,direct
+EC2 Instance,resource.instanceDetails.iamInstanceProfile.arn,resources[].device.instance_profile.uid_alt,string_t,direct
+EC2 Instance,resource.instanceDetails.platform,resources[].device.os.name,string_t,direct
+EC2 Instance,resource.instanceDetails.platform,resources[].device.os.type_id,integer_t,converted
+EC2 Instance,resource.instanceDetails.platform,resources[].device.os.type,string_t,converted
+EC2 Instance,resource.instanceDetails.networkInterfaces[].networkInterfaceId,resources[].device.network_interfaces[].uid,string_t,direct
+EC2 Instance,resource.instanceDetails.networkInterfaces[].publicIp,resources[].device.network_interfaces[].ip,ip_t,direct
+EC2 Instance,resource.instanceDetails.networkInterfaces[].securityGroups[].groupId,resources[].device.network_interfaces[].security_groups[].uid,string_t,direct
+EC2 Instance,resource.instanceDetails.networkInterfaces[].securityGroups[].groupName,resources[].device.network_interfaces[].security_groups[].name,string_t,direct
+Kubernetes Workload,resource.kubernetesDetails.kubernetesWorkloadDetails.uid,resources[].uid,resource_uid_t,direct
+Kubernetes Workload,resource.kubernetesDetails.kubernetesWorkloadDetails.name,resources[].name,string_t,direct
+Kubernetes Workload,resource.kubernetesDetails.kubernetesWorkloadDetails.namespace,resources[].namespace,string_t,direct
+Kubernetes Workload,resource.kubernetesDetails.kubernetesUserDetails.uid,resources[].user.uid,string_t,direct
+Kubernetes Workload,resource.kubernetesDetails.kubernetesUserDetails.username,resources[].user.name,username_t,direct
+Lambda Function,resource.lambdaDetails.functionArn,resources[].uid,resource_uid_t,converted
+Lambda Function,resource.lambdaDetails.functionArn,resources[].uid_alt,resource_uid_t,direct
+Lambda Function,resource.lambdaDetails.functionName,resources[].name,string_t,direct
+Lambda Function,resource.lambdaDetails.functionVersion,resources[].version,string_t,direct
+Lambda Function,resource.lambdaDetails.lastModifiedAt,resources[].modified_time,timestamp_t,direct
+Lambda Function,resource.lambdaDetails.lastModifiedAt,resources[].modified_time_dt,datetime_t,converted
+Lambda Function,resource.lambdaDetails.tags[].key,resources[].tags[].name,string_t,direct
+Lambda Function,resource.lambdaDetails.tags[].value,resources[].tags[].value,string_t,direct
+Lambda Function,resource.lambdaDetails.functionArn,resources[].cloud_function.uid_alt,string_t,direct
+Lambda Function,resource.lambdaDetails.functionName,resources[].cloud_function.name,string_t,direct
+Lambda Function,resource.lambdaDetails.functionVersion,resources[].cloud_function.version,string_t,direct
+Lambda Function,resource.lambdaDetails.vpcConfig.securityGroups[].groupId,resources[].cloud_function.security_groups[].uid,string_t,direct
+Lambda Function,resource.lambdaDetails.vpcConfig.securityGroups[].groupName,resources[].cloud_function.security_groups[].name,string_t,direct
+Lambda Function,resource.lambdaDetails.vpcConfig.subnetIds[],resources[].cloud_function.subnet_info_list[].uid,string_t,direct
+Lambda Function,resource.lambdaDetails.vpcConfig.vpcId,resources[].cloud_function.vpc_uid,string_t,direct
+S3 Bucket,resource.s3BucketDetails[].name,resources[].uid,resource_uid_t,direct
+S3 Bucket,resource.s3BucketDetails[].name,resources[].name,string_t,direct
+S3 Bucket,resource.s3BucketDetails[].arn,resources[].uid_alt,resource_uid_t,direct
+S3 Bucket,resource.s3BucketDetails[].createdAt,resources[].created_time,timestamp_t,direct
+S3 Bucket,resource.s3BucketDetails[].createdAt,resources[].created_time_dt,datetime_t,converted
+S3 Bucket,resource.s3BucketDetails[].name,resources[].databucket.name,string_t,direct
+S3 Bucket,resource.s3BucketDetails[].arn,resources[].databucket.uid_alt,resource_uid_t,direct
+S3 Bucket,resource.s3BucketDetails[].defaultServerSideEncryption.encryptionType,resources[].databucket.encryption_details.type,string_t,direct
+S3 Bucket,resource.s3BucketDetails[].defaultServerSideEncryption.kmsMasterKeyArn,resources[].databucket.encryption_details.key_uid,string_t,direct
+S3 Bucket,resource.s3BucketDetails[].owner.id,resources[].databucket.owner.uid,string_t,direct
+S3 Bucket,resource.s3BucketDetails[].publicAccess.effectivePermission,resources[].databucket.is_public,boolean_t,converted
+S3 Bucket,resource.s3BucketDetails[].tags[].key,resources[].databucket.tags[].name,string_t,direct
+S3 Bucket,resource.s3BucketDetails[].tags[].value,resources[].databucket.tags[].value,string_t,direct
+S3 Bucket,resource.s3BucketDetails[].s3ObjectDetails[].key,resources[].databucket.file.name,file_name_t,direct
+S3 Bucket,resource.s3BucketDetails[].s3ObjectDetails[].objectArn,resources[].databucket.file.uid,string_t,direct
+S3 Bucket,resource.s3BucketDetails[].s3ObjectDetails[].versionId,resources[].databucket.file.version,string_t,direct
+S3 Bucket,resource.s3BucketDetails[].s3ObjectDetails[].hash,resources[].databucket.file.hashes[].value,file_hash_t,direct
+S3 Bucket,resource.s3BucketDetails[].s3ObjectDetails[].eTag,resources[].databucket.file.hashes[].value,file_hash_t,direct
+RDS DB Instance,resource.rdsDbInstanceDetails.dbiResourceId,resources[].uid,resource_uid_t,direct
+RDS DB Instance,resource.rdsDbInstanceDetails.dbInstanceIdentifier,resources[].uid,resource_uid_t,direct
+RDS DB Instance,resource.rdsDbInstanceDetails.dbInstanceArn,resources[].uid_alt,resource_uid_t,direct
+RDS DB Instance,resource.rdsDbInstanceDetails.tags[].key,resources[].tags[].name,string_t,direct
+RDS DB Instance,resource.rdsDbInstanceDetails.tags[].value,resources[].tags[].value,string_t,direct
+RDS DB Instance,resource.rdsDbInstanceDetails.dbInstanceIdentifier,resources[].database.uid,string_t,direct
+RDS DB Instance,resource.rdsDbInstanceDetails.dbInstanceArn,resources[].database.uid_alt,string_t,direct
+RDS DB Instance,resource.rdsDbInstanceDetails.dbClusterIdentifier,resources[].database.cluster_uid,string_t,direct
+RDS DB Instance,resource.rdsDbInstanceDetails.engine,resources[].database.engine,string_t,direct
+RDS DB Instance,resource.rdsDbInstanceDetails.engineVersion,resources[].database.version,string_t,direct
+RDS DB Instance,resource.rdsDbUserDetails.user,resources[].database.user.name,username_t,direct
+RDS Limitless DB,resource.rdsLimitlessDbDetails.dbClusterIdentifier,resources[].uid,resource_uid_t,direct
+RDS Limitless DB,resource.rdsLimitlessDbDetails.dbClusterIdentifier,resources[].name,string_t,direct
+RDS Limitless DB,resource.rdsLimitlessDbDetails.tags[].key,resources[].tags[].name,string_t,direct
+RDS Limitless DB,resource.rdsLimitlessDbDetails.tags[].value,resources[].tags[].value,string_t,direct
+RDS Limitless DB,resource.rdsLimitlessDbDetails.dbClusterIdentifier,resources[].database.cluster_uid,string_t,direct
+RDS Limitless DB,resource.rdsLimitlessDbDetails.dbClusterIdentifier,resources[].database.uid_alt,string_t,direct
+RDS Limitless DB,resource.rdsLimitlessDbDetails.engine,resources[].database.engine,string_t,direct
+RDS Limitless DB,resource.rdsLimitlessDbDetails.engineVersion,resources[].database.version,string_t,direct
+EC2 Image,resource.ec2ImageDetails.imageArn,resources[].uid,resource_uid_t,converted
+EC2 Image,resource.ec2ImageDetails.imageArn,resources[].uid_alt,resource_uid_t,direct
+Backup Recovery Point,resource.recoveryPointDetails.backupVaultName,resources[].uid,resource_uid_t,converted
+Backup Recovery Point,resource.recoveryPointDetails.recoveryPointArn,resources[].uid,resource_uid_t,converted
+Backup Recovery Point,resource.recoveryPointDetails.recoveryPointArn,resources[].uid_alt,resource_uid_t,direct
+Bedrock Guardrail,resource.bedrockGuardrailDetails.guardrails[].arn,resources[].uid_alt,resource_uid_t,direct
+Bedrock Guardrail,resource.bedrockGuardrailDetails.guardrails[].version,resources[].version,string_t,direct
+Bedrock Guardrail,resource.bedrockGuardrailDetails.guardrailArn,resources[].uid_alt,resource_uid_t,direct
+Bedrock Guardrail,resource.bedrockGuardrailDetails.guardrailVersion,resources[].version,string_t,direct
+Bedrock Guardrail,resource.bedrockGuardrailDetails.guardrailArn,resources[].uid,resource_uid_t,converted
+Bedrock Model,resource.modelDetails[].modelId,resources[].uid,resource_uid_t,direct
+Bedrock Model,resource.modelDetails[].modelId,resources[].uid_alt,resource_uid_t,direct
+Attack Sequence Resources,service.detection.sequence.resources[].data.accessKey.principalId,resources[].user.uid_alt,string_t,direct
+Attack Sequence Resources,service.detection.sequence.resources[].data.accessKey.userName,resources[].user.name,username_t,direct
+Attack Sequence Resources,service.detection.sequence.resources[].data.accessKey.userType,resources[].user.type_id,integer_t,converted
+Attack Sequence Resources,service.detection.sequence.resources[].data.accessKey.userType,resources[].user.type,string_t,converted
+Attack Sequence Resources,service.detection.sequence.resources[].data.ec2LaunchTemplate.version,resources[].version,string_t,direct
+Attack Sequence Resources,service.detection.sequence.resources[].name,resources[].device.uid,string_t,direct
+Attack Sequence Resources,service.detection.sequence.resources[].data.ec2Instance.availabilityZone,resources[].zone,string_t,direct
+Attack Sequence Resources,service.detection.sequence.resources[].data.ec2Instance.instanceType,resources[].device.model,string_t,direct
+Attack Sequence Resources,service.detection.sequence.resources[].data.ec2Instance.iamInstanceProfile.id,resources[].device.instance_profile.uid,string_t,direct
+Attack Sequence Resources,service.detection.sequence.resources[].data.ec2Instance.iamInstanceProfile.arn,resources[].device.instance_profile.uid_alt,string_t,direct
+Attack Sequence Resources,service.detection.sequence.resources[].data.ec2Instance.platform,resources[].device.os.name,string_t,direct
+Attack Sequence Resources,service.detection.sequence.resources[].data.ec2Instance.platform,resources[].device.os.type_id,integer_t,converted
+Attack Sequence Resources,service.detection.sequence.resources[].data.ec2Instance.platform,resources[].device.os.type,string_t,converted
+Attack Sequence Resources,service.detection.sequence.resources[].data.ec2Instance.ec2NetworkInterfaceUids[],resources[].device.network_interfaces[].uid,string_t,direct
+Attack Sequence Resources,service.detection.sequence.resources[].name,resources[].device.network_interfaces[].uid,string_t,direct
+Attack Sequence Resources,service.detection.sequence.resources[].data.ec2NetworkInterface.publicIp,resources[].device.network_interfaces[].ip,ip_t,direct
+Attack Sequence Resources,service.detection.sequence.resources[].data.ec2NetworkInterface.securityGroups[].groupId,resources[].device.network_interfaces[].security_groups[].uid,string_t,direct
+Attack Sequence Resources,service.detection.sequence.resources[].data.ec2NetworkInterface.securityGroups[].groupName,resources[].device.network_interfaces[].security_groups[].name,string_t,direct
+Attack Sequence Resources,service.detection.sequence.resources[].name,resources[].device.container.uid,string_t,direct
+Attack Sequence Resources,service.detection.sequence.resources[].data.container.image,resources[].device.container.image.name,string_t,direct
+Attack Sequence Resources,service.detection.sequence.resources[].data.container.imageUid,resources[].device.container.image.uid,string_t,direct
+Attack Sequence Resources,service.detection.sequence.resources[].data.eksCluster.arn,resources[].uid_alt,resource_uid_t,direct
+Attack Sequence Resources,service.detection.sequence.resources[].data.eksCluster.createdAt,resources[].created_time,timestamp_t,direct
+Attack Sequence Resources,service.detection.sequence.resources[].data.eksCluster.vpcId,resources[].vpc_uid,string_t,direct
+Attack Sequence Resources,service.detection.sequence.resources[].data.kubernetesWorkload.namespace,resources[].namespace,string_t,direct
+Attack Sequence Resources,service.detection.sequence.resources[].data.s3Bucket.createdAt,resources[].created_time,timestamp_t,direct
+Attack Sequence Resources,service.detection.sequence.resources[].name,resources[].databucket.uid,resource_uid_t,direct
+Attack Sequence Resources,service.detection.sequence.resources[].data.s3Bucket.effectivePermission,resources[].databucket.is_public,boolean_t,converted
+Attack Sequence Resources,service.detection.sequence.resources[].data.s3Bucket.encryptionKeyArn,resources[].databucket.encryption_details.key_uid,string_t,direct
+Attack Sequence Resources,service.detection.sequence.resources[].data.s3Bucket.encryptionType,resources[].databucket.encryption_details.type,string_t,direct
+Attack Sequence Resources,service.detection.sequence.resources[].data.s3Bucket.ownerId,resources[].owner.uid,string_t,direct
+Attack Sequence Resources,service.detection.sequence.resources[].data.s3Object.key,resources[].databucket.file.name,file_name_t,direct
+Attack Sequence Resources,service.detection.sequence.resources[].data.s3Object.versionId,resources[].databucket.file.version,string_t,direct
+Action (all types),service.action.actionType,evidences[].name,string_t,direct
+AWS API Call,service.action.awsApiCallAction.api,evidences[].api.operation,string_t,direct
+AWS API Call,service.action.awsApiCallAction.serviceName,evidences[].api.service.name,string_t,direct
+AWS API Call,service.action.awsApiCallAction.errorCode,evidences[].api.response.error_message,string_t,direct
+AWS API Call,service.action.awsApiCallAction.remoteIpDetails.ipAddressV4,evidences[].src_endpoint.ip,ip_t,direct
+AWS API Call,service.action.awsApiCallAction.remoteIpDetails.ipAddressV6,evidences[].src_endpoint.ip,ip_t,direct
+AWS API Call,service.action.awsApiCallAction.remoteIpDetails.city.cityName,evidences[].src_endpoint.location.city,string_t,direct
+AWS API Call,service.action.awsApiCallAction.remoteIpDetails.country.countryName,evidences[].src_endpoint.location.country,string_t,direct
+AWS API Call,service.action.awsApiCallAction.remoteIpDetails.geoLocation.lat,evidences[].src_endpoint.location.lat,float_t,direct
+AWS API Call,service.action.awsApiCallAction.remoteIpDetails.geoLocation.lon,evidences[].src_endpoint.location.long,float_t,direct
+AWS API Call,service.action.awsApiCallAction.remoteIpDetails.organization.asn,evidences[].src_endpoint.autonomous_system.number,integer_t,direct
+AWS API Call,service.action.awsApiCallAction.remoteIpDetails.organization.asnOrg,evidences[].src_endpoint.autonomous_system.name,string_t,direct
+AWS API Call,service.action.awsApiCallAction.remoteIpDetails.organization.isp,evidences[].src_endpoint.isp,string_t,direct
+AWS API Call,service.action.awsApiCallAction.remoteIpDetails.organization.org,evidences[].src_endpoint.isp_org,string_t,direct
+AWS API Call,service.action.awsApiCallAction.domainDetails.domain,evidences[].src_endpoint.domain,string_t,direct
+AWS API Call,service.action.awsApiCallAction.remoteAccountDetails.awsServiceName,evidences[].src_endpoint.svc_name,string_t,direct
+AWS API Call,service.resourceRole,evidences[].data.resource_role,json_t,direct
+AWS API Call,service.action.awsApiCallAction.affectedResources,evidences[].data.affected_resource,json_t,direct
+Kubernetes API Call,service.action.kubernetesApiCallAction.verb,evidences[].api.operation,string_t,direct
+Kubernetes API Call,service.action.kubernetesApiCallAction.requestUri,evidences[].api.request.data.request_uri,json_t,direct
+Kubernetes API Call,service.action.kubernetesApiCallAction.userAgent,evidences[].api.request.data.user_agent,json_t,direct
+Kubernetes API Call,service.action.kubernetesApiCallAction.statusCode,evidences[].api.response.code,integer_t,direct
+Kubernetes API Call,service.action.kubernetesApiCallAction.remoteIpDetails.ipAddressV4,evidences[].src_endpoint.ip,ip_t,direct
+Kubernetes API Call,service.action.kubernetesApiCallAction.remoteIpDetails.ipAddressV6,evidences[].src_endpoint.ip,ip_t,direct
+Kubernetes API Call,service.action.kubernetesApiCallAction.remoteIpDetails.city.cityName,evidences[].src_endpoint.location.city,string_t,direct
+Kubernetes API Call,service.action.kubernetesApiCallAction.remoteIpDetails.country.countryName,evidences[].src_endpoint.location.country,string_t,direct
+Kubernetes API Call,service.action.kubernetesApiCallAction.remoteIpDetails.geoLocation.lat,evidences[].src_endpoint.location.lat,float_t,direct
+Kubernetes API Call,service.action.kubernetesApiCallAction.remoteIpDetails.geoLocation.lon,evidences[].src_endpoint.location.long,float_t,direct
+Kubernetes API Call,service.action.kubernetesApiCallAction.remoteIpDetails.organization.asn,evidences[].src_endpoint.autonomous_system.number,integer_t,direct
+Kubernetes API Call,service.action.kubernetesApiCallAction.remoteIpDetails.organization.asnOrg,evidences[].src_endpoint.autonomous_system.name,string_t,direct
+Kubernetes API Call,service.action.kubernetesApiCallAction.remoteIpDetails.organization.isp,evidences[].src_endpoint.isp,string_t,direct
+Kubernetes API Call,service.action.kubernetesApiCallAction.remoteIpDetails.organization.org,evidences[].src_endpoint.isp_org,string_t,direct
+Kubernetes API Call,service.action.kubernetesApiCallAction.sourceIPs[],evidences[].src_endpoint.intermediate_ips[],ip_t,direct
+AWS API Call / Kubernetes API Call,service.additionalInfo.value.authenticationMethod,evidences[].data.additional_info.authentication_method,json_t,direct
+AWS API Call / Kubernetes API Call,service.additionalInfo.value.containers,evidences[].data.additional_info.containers,json_t,direct
+AWS API Call / Kubernetes API Call,service.additionalInfo.value.context,evidences[].data.additional_info.context,json_t,direct
+AWS API Call / Kubernetes API Call,service.additionalInfo.value.inBytes,evidences[].data.additional_info.in_bytes,json_t,direct
+AWS API Call / Kubernetes API Call,service.additionalInfo.value.localNetworkInterfaceOwner,evidences[].data.additional_info.local_network_interface_owner,json_t,direct
+AWS API Call / Kubernetes API Call,service.additionalInfo.value.localPort,evidences[].data.additional_info.local_port,json_t,direct
+AWS API Call / Kubernetes API Call,service.additionalInfo.value.outBytes,evidences[].data.additional_info.out_bytes,json_t,direct
+AWS API Call / Kubernetes API Call,service.additionalInfo.value.policyArn,evidences[].data.additional_info.policy_arn,json_t,direct
+AWS API Call / Kubernetes API Call,service.additionalInfo.value.policyName,evidences[].data.additional_info.policy_name,json_t,direct
+AWS API Call / Kubernetes API Call,service.additionalInfo.value.portsScannedSample,evidences[].data.additional_info.ports_scanned_sample,json_t,direct
+AWS API Call / Kubernetes API Call,service.additionalInfo.value.recentApiCalls,evidences[].data.additional_info.recent_api_calls,json_t,direct
+AWS API Call / Kubernetes API Call,service.additionalInfo.value.recentCredentials,evidences[].data.additional_info.recent_credentials,json_t,direct
+AWS API Call / Kubernetes API Call,service.additionalInfo.value.remotePort,evidences[].data.additional_info.remote_port,json_t,direct
+AWS API Call / Kubernetes API Call,service.additionalInfo.value.sample,evidences[].data.additional_info.sample,json_t,direct
+AWS API Call / Kubernetes API Call,service.additionalInfo.value.scannedPort,evidences[].data.additional_info.scanned_port,json_t,direct
+AWS API Call / Kubernetes API Call,service.additionalInfo.value.threatFileSha256,evidences[].data.additional_info.threat_file_sha256,json_t,direct
+AWS API Call / Kubernetes API Call,service.additionalInfo.value.threatListName,evidences[].data.additional_info.threat_list_name,json_t,direct
+AWS API Call / Kubernetes API Call,service.additionalInfo.value.threatName,evidences[].data.additional_info.threat_name,json_t,direct
+AWS API Call / Kubernetes API Call,service.additionalInfo.value.unusual,evidences[].data.additional_info.unusual,json_t,direct
+AWS API Call / Kubernetes API Call,service.additionalInfo.value.unusualProtocol,evidences[].data.additional_info.unusual_protocol,json_t,direct
+AWS API Call / Kubernetes API Call,service.additionalInfo.value.userAgent,evidences[].data.additional_info.user_agent,json_t,direct
+DNS Request,service.action.dnsRequestAction,evidences[].data,json_t,direct
+DNS Request,service.action.dnsRequestAction.domainWithSuffix,evidences[].query.hostname,hostname_t,direct
+DNS Request,service.action.dnsRequestAction.protocol,evidences[].connection_info.protocol_name,string_t,direct
+Network Connection,service.action.networkConnectionAction.connectionDirection,evidences[].connection_info.direction_id,integer_t,converted
+Network Connection,service.action.networkConnectionAction.protocol,evidences[].connection_info.protocol_name,string_t,direct
+Network Connection,service.action.networkConnectionAction.localIpDetails.ipAddressV4,evidences[].src_endpoint.ip,ip_t,direct
+Network Connection,service.action.networkConnectionAction.localIpDetails.ipAddressV6,evidences[].src_endpoint.ip,ip_t,direct
+Network Connection,service.action.networkConnectionAction.localPortDetails.port,evidences[].src_endpoint.port,port_t,direct
+Network Connection,service.action.networkConnectionAction.localPortDetails.portName,evidences[].src_endpoint.name,string_t,direct
+Network Connection,service.action.networkConnectionAction.remoteIpDetails.ipAddressV4,evidences[].dst_endpoint.ip,ip_t,direct
+Network Connection,service.action.networkConnectionAction.remoteIpDetails.ipAddressV6,evidences[].dst_endpoint.ip,ip_t,direct
+Network Connection,service.action.networkConnectionAction.remoteIpDetails.city.cityName,evidences[].dst_endpoint.location.city,string_t,direct
+Network Connection,service.action.networkConnectionAction.remoteIpDetails.country.countryName,evidences[].dst_endpoint.location.country,string_t,direct
+Network Connection,service.action.networkConnectionAction.remoteIpDetails.geoLocation.lat,evidences[].dst_endpoint.location.lat,float_t,direct
+Network Connection,service.action.networkConnectionAction.remoteIpDetails.geoLocation.lon,evidences[].dst_endpoint.location.long,float_t,direct
+Network Connection,service.action.networkConnectionAction.remoteIpDetails.organization.asn,evidences[].dst_endpoint.autonomous_system.number,integer_t,direct
+Network Connection,service.action.networkConnectionAction.remoteIpDetails.organization.asnOrg,evidences[].dst_endpoint.autonomous_system.name,string_t,direct
+Network Connection,service.action.networkConnectionAction.remoteIpDetails.organization.isp,evidences[].dst_endpoint.isp,string_t,direct
+Network Connection,service.action.networkConnectionAction.remoteIpDetails.organization.org,evidences[].dst_endpoint.isp_org,string_t,direct
+Network Connection,service.action.networkConnectionAction.remotePortDetails.port,evidences[].dst_endpoint.port,port_t,direct
+Network Connection,service.action.networkConnectionAction.remotePortDetails.portName,evidences[].dst_endpoint.name,string_t,direct
+Port Probe,service.action.portProbeAction.portProbeDetails[],evidences[].data,json_t,direct
+Port Probe,service.action.portProbeAction.portProbeDetails[].localIpDetails.ipAddressV4,evidences[].dst_endpoint.ip,ip_t,direct
+Port Probe,service.action.portProbeAction.portProbeDetails[].localIpDetails.ipAddressV6,evidences[].dst_endpoint.ip,ip_t,direct
+Port Probe,service.action.portProbeAction.portProbeDetails[].localPortDetails.port,evidences[].dst_endpoint.port,port_t,direct
+Port Probe,service.action.portProbeAction.portProbeDetails[].localPortDetails.portName,evidences[].dst_endpoint.name,string_t,direct
+Port Probe,service.action.portProbeAction.portProbeDetails[].remoteIpDetails.ipAddressV4,evidences[].src_endpoint.ip,ip_t,direct
+Port Probe,service.action.portProbeAction.portProbeDetails[].remoteIpDetails.ipAddressV6,evidences[].src_endpoint.ip,ip_t,direct
+Port Probe,service.action.portProbeAction.portProbeDetails[].remoteIpDetails.city.cityName,evidences[].src_endpoint.location.city,string_t,direct
+Port Probe,service.action.portProbeAction.portProbeDetails[].remoteIpDetails.country.countryName,evidences[].src_endpoint.location.country,string_t,direct
+Port Probe,service.action.portProbeAction.portProbeDetails[].remoteIpDetails.geoLocation.lat,evidences[].src_endpoint.location.lat,float_t,direct
+Port Probe,service.action.portProbeAction.portProbeDetails[].remoteIpDetails.geoLocation.lon,evidences[].src_endpoint.location.long,float_t,direct
+Port Probe,service.action.portProbeAction.portProbeDetails[].remoteIpDetails.organization.asn,evidences[].src_endpoint.autonomous_system.number,integer_t,direct
+Port Probe,service.action.portProbeAction.portProbeDetails[].remoteIpDetails.organization.asnOrg,evidences[].src_endpoint.autonomous_system.name,string_t,direct
+Port Probe,service.action.portProbeAction.portProbeDetails[].remoteIpDetails.organization.isp,evidences[].src_endpoint.isp,string_t,direct
+Port Probe,service.action.portProbeAction.portProbeDetails[].remoteIpDetails.organization.org,evidences[].src_endpoint.isp_org,string_t,direct
+RDS Login Attempt,service.action.rdsLoginAttemptAction.remoteIpDetails.ipAddressV4,evidences[].src_endpoint.ip,ip_t,direct
+RDS Login Attempt,service.action.rdsLoginAttemptAction.remoteIpDetails.ipAddressV6,evidences[].src_endpoint.ip,ip_t,direct
+RDS Login Attempt,service.action.rdsLoginAttemptAction.remoteIpDetails.city.cityName,evidences[].src_endpoint.location.city,string_t,direct
+RDS Login Attempt,service.action.rdsLoginAttemptAction.remoteIpDetails.country.countryName,evidences[].src_endpoint.location.country,string_t,direct
+RDS Login Attempt,service.action.rdsLoginAttemptAction.remoteIpDetails.geoLocation.lat,evidences[].src_endpoint.location.lat,float_t,direct
+RDS Login Attempt,service.action.rdsLoginAttemptAction.remoteIpDetails.geoLocation.lon,evidences[].src_endpoint.location.long,float_t,direct
+RDS Login Attempt,service.action.rdsLoginAttemptAction.remoteIpDetails.organization.asn,evidences[].src_endpoint.autonomous_system.number,integer_t,direct
+RDS Login Attempt,service.action.rdsLoginAttemptAction.remoteIpDetails.organization.asnOrg,evidences[].src_endpoint.autonomous_system.name,string_t,direct
+RDS Login Attempt,service.action.rdsLoginAttemptAction.remoteIpDetails.organization.isp,evidences[].src_endpoint.isp,string_t,direct
+RDS Login Attempt,service.action.rdsLoginAttemptAction.remoteIpDetails.organization.org,evidences[].src_endpoint.isp_org,string_t,direct
+Attack Sequence Actors,service.detection.sequence.actors[].session.uid,evidences[].actor.session.uid,string_t,direct
+Attack Sequence Actors,service.detection.sequence.actors[].session.createdTime,evidences[].actor.session.created_time,timestamp_t,direct
+Attack Sequence Actors,service.detection.sequence.actors[].session.mfaStatus,evidences[].actor.session.is_mfa,boolean_t,converted
+Attack Sequence Actors,service.detection.sequence.actors[].id,evidences[].actor.user.uid,string_t,direct
+Attack Sequence Actors,service.detection.sequence.actors[].user.name,evidences[].actor.user.name,username_t,direct
+Attack Sequence Actors,service.detection.sequence.actors[].user.credentialUid,evidences[].actor.user.credential_uid,string_t,direct
+Attack Sequence Actors,service.detection.sequence.actors[].user.credentialUid,evidences[].actor.user.programmatic_credentials[].uid,string_t,direct
+Attack Sequence Actors,service.detection.sequence.actors[].process.name,evidences[].actor.process.name,process_name_t,direct
+Attack Sequence Actors,service.detection.sequence.actors[].process.path,evidences[].actor.process.path,string_t,direct
+Attack Sequence Endpoints,service.detection.sequence.endpoints[].connection.direction,evidences[].connection_info.direction_id,integer_t,converted
+Attack Sequence Endpoints,service.detection.sequence.endpoints[].id,evidences[].src_endpoint.uid,string_t,direct
+Attack Sequence Endpoints,service.detection.sequence.endpoints[].ip,evidences[].src_endpoint.ip,ip_t,direct
+Attack Sequence Endpoints,service.detection.sequence.endpoints[].domain,evidences[].src_endpoint.domain,string_t,direct
+Attack Sequence Endpoints,service.detection.sequence.endpoints[].port,evidences[].src_endpoint.port,port_t,direct
+Attack Sequence Endpoints,service.detection.sequence.endpoints[].autonomousSystem.name,evidences[].src_endpoint.autonomous_system.name,string_t,direct
+Attack Sequence Endpoints,service.detection.sequence.endpoints[].autonomousSystem.number,evidences[].src_endpoint.autonomous_system.number,integer_t,direct
+Attack Sequence Endpoints,service.detection.sequence.endpoints[].location.city,evidences[].src_endpoint.location.city,string_t,direct
+Attack Sequence Endpoints,service.detection.sequence.endpoints[].location.country,evidences[].src_endpoint.location.country,string_t,direct
+Attack Sequence Endpoints,service.detection.sequence.endpoints[].location.lat,evidences[].src_endpoint.location.lat,float_t,direct
+Attack Sequence Endpoints,service.detection.sequence.endpoints[].location.lon,evidences[].src_endpoint.location.long,float_t,direct
+Runtime Process,service.runtimeDetails.process.name,evidences[].actor.process.name,process_name_t,direct
+Runtime Process,service.runtimeDetails.process.pid,evidences[].actor.process.pid,integer_t,direct
+Runtime Process,service.runtimeDetails.process.uuid,evidences[].actor.process.uid,string_t,direct
+Runtime Process,service.runtimeDetails.process.pwd,evidences[].actor.process.working_directory,string_t,direct
+Runtime Process,service.runtimeDetails.process.startTime,evidences[].actor.process.created_time,timestamp_t,converted
+Runtime Process,service.runtimeDetails.process.executablePath,evidences[].actor.process.file.path,file_path_t,direct
+Runtime Process,service.runtimeDetails.process.name,evidences[].actor.process.file.name,file_name_t,direct
+Runtime Process,service.runtimeDetails.process.executableSha256,evidences[].actor.process.file.hashes[].value,file_hash_t,direct
+Runtime Process,service.runtimeDetails.process.user,evidences[].actor.user.name,username_t,direct
+Runtime Process,service.runtimeDetails.process.euid,evidences[].actor.user.uid,string_t,direct
+Runtime Process,service.runtimeDetails.process.userId,evidences[].actor.user.uid_alt,string_t,direct
+Runtime Process,service.runtimeDetails.process.lineage[].name,evidences[].actor.process.ancestry[].name,process_name_t,direct
+Runtime Process,service.runtimeDetails.process.lineage[].pid,evidences[].actor.process.ancestry[].pid,integer_t,direct
+Runtime Process,service.runtimeDetails.process.lineage[].executablePath,evidences[].actor.process.ancestry[].path,string_t,direct
+Runtime Process,service.runtimeDetails.process.lineage[].euid,evidences[].actor.process.ancestry[].uid,string_t,direct
+Runtime Process,service.runtimeDetails.process.lineage[].startTime,evidences[].actor.process.ancestry[].created_time,timestamp_t,converted
+Runtime Process,service.runtimeDetails.process.lineage[0].uuid,evidences[].actor.process.parent_process.uid,string_t,direct
+Runtime Process,service.runtimeDetails.process.parentUuid,evidences[].actor.process.parent_process.uid,string_t,direct
+Runtime Process,service.runtimeDetails.process.lineage[0].name,evidences[].actor.process.parent_process.name,process_name_t,direct
+Runtime Process,service.runtimeDetails.process.lineage[0].pid,evidences[].actor.process.parent_process.pid,integer_t,direct
+Runtime Process,service.runtimeDetails.process.lineage[0].startTime,evidences[].actor.process.parent_process.created_time,timestamp_t,converted
+Runtime Process,service.runtimeDetails.process.lineage[0].executablePath,evidences[].actor.process.parent_process.file.path,file_path_t,direct
+Runtime Process,service.runtimeDetails.process.lineage[0].name,evidences[].actor.process.parent_process.file.name,file_name_t,direct
+Runtime Process,service.runtimeDetails.process.lineage[0].parentUuid,evidences[].actor.process.parent_process.parent_process.uid,string_t,direct
+Runtime Process,service.runtimeDetails.process.lineage[0].euid,evidences[].actor.process.parent_process.user.uid,string_t,direct
+Runtime Process,service.runtimeDetails.process.lineage[0].userId,evidences[].actor.process.parent_process.user.uid_alt,string_t,direct
+Runtime Context,service.runtimeDetails.context.modifyingProcess.name,evidences[].process.name,process_name_t,direct
+Runtime Context,service.runtimeDetails.context.modifyingProcess.pid,evidences[].process.pid,integer_t,direct
+Runtime Context,service.runtimeDetails.context.modifyingProcess.uuid,evidences[].process.uid,string_t,direct
+Runtime Context,service.runtimeDetails.context.modifyingProcess.pwd,evidences[].process.working_directory,string_t,direct
+Runtime Context,service.runtimeDetails.context.modifyingProcess.executablePath,evidences[].process.file.path,file_path_t,direct
+Runtime Context,service.runtimeDetails.context.modifyingProcess.startTime,evidences[].process.created_time,timestamp_t,converted
+Runtime Context,service.runtimeDetails.context.modifyingProcess.executableSha256,evidences[].process.file.hashes[].value,file_hash_t,direct
+Runtime Context,service.runtimeDetails.context.modifyingProcess.user,evidences[].process.user.name,username_t,direct
+Runtime Context,service.runtimeDetails.context.modifyingProcess.euid,evidences[].process.user.uid,string_t,direct
+Runtime Context,service.runtimeDetails.context.modifyingProcess.userId,evidences[].process.user.uid_alt,string_t,direct
+Runtime Context,service.runtimeDetails.context.modifyingProcess.parentUuid,evidences[].process.parent_process.uid,string_t,direct
+Runtime Context,service.runtimeDetails.context.targetProcess.name,evidences[].process.name,process_name_t,direct
+Runtime Context,service.runtimeDetails.context.targetProcess.pid,evidences[].process.pid,integer_t,direct
+Runtime Context,service.runtimeDetails.context.targetProcess.uuid,evidences[].process.uid,string_t,direct
+Runtime Context,service.runtimeDetails.context.targetProcess.pwd,evidences[].process.working_directory,string_t,direct
+Runtime Context,service.runtimeDetails.context.targetProcess.executablePath,evidences[].process.file.path,file_path_t,direct
+Runtime Context,service.runtimeDetails.context.targetProcess.startTime,evidences[].process.created_time,timestamp_t,converted
+Runtime Context,service.runtimeDetails.context.targetProcess.executableSha256,evidences[].process.file.hashes[].value,file_hash_t,direct
+Runtime Context,service.runtimeDetails.context.targetProcess.user,evidences[].process.user.name,username_t,direct
+Runtime Context,service.runtimeDetails.context.targetProcess.euid,evidences[].process.user.uid,string_t,direct
+Runtime Context,service.runtimeDetails.context.targetProcess.userId,evidences[].process.user.uid_alt,string_t,direct
+Runtime Context,service.runtimeDetails.context.targetProcess.parentUuid,evidences[].process.parent_process.uid,string_t,direct
+Runtime Context,service.runtimeDetails.context.modifiedAt,evidences[].file.modified_time,timestamp_t,direct
+Runtime Context,service.runtimeDetails.context.socketPath,evidences[].file.path,file_path_t,direct
+Runtime Context,service.runtimeDetails.context.runcBinaryPath,evidences[].file.path,file_path_t,direct
+Runtime Context,service.runtimeDetails.context.releaseAgentPath,evidences[].file.path,file_path_t,direct
+Runtime Context,service.runtimeDetails.context.threatFilePath,evidences[].file.path,file_path_t,direct
+Runtime Context,service.runtimeDetails.context.libraryPath,evidences[].file.path,file_path_t,direct
+Runtime Context,service.runtimeDetails.context.moduleName,evidences[].file.name,file_name_t,direct
+Runtime Context,service.runtimeDetails.context.moduleFilePath,evidences[].file.path,file_path_t,direct
+Runtime Context,service.runtimeDetails.context.moduleSha256,evidences[].file.hashes[].value,file_hash_t,direct
+Runtime Context,service.runtimeDetails.context.relatedFilePaths[],evidences[].file.path,file_path_t,direct
+Runtime Context,service.runtimeDetails.context.filePath,evidences[].file.path,file_path_t,direct
+Runtime Context,service.runtimeDetails.context.relatedFilePaths[],evidences[].file.name,file_name_t,converted
+Runtime Context,service.runtimeDetails.context.filePath,evidences[].file.name,file_name_t,converted
+Runtime Context,service.runtimeDetails.context.fileOperation,evidences[].api.operation,string_t,direct
+"Malware Protection (S3, EC2, Backup)",service.malwareScanDetails.scanId,malware_scan_info.uid,string_t,direct
+"Malware Protection (S3, EC2, Backup)",service.malwareScanDetails.scanCategory,malware_scan_info.name,string_t,direct
+"Malware Protection (S3, EC2, Backup)",service.malwareScanDetails.scanType,malware_scan_info.type_id,integer_t,converted
+"Malware Protection (S3, EC2, Backup)",service.malwareScanDetails.scanType,malware_scan_info.type,string_t,converted
+"Malware Protection (S3, EC2, Backup)",service.malwareScanDetails.uniqueThreatCount,malware_scan_info.unique_malware_count,integer_t,direct
+"Malware Protection (S3, EC2, Backup)",service.malwareScanDetails.threats[].name,malware[].name,string_t,direct
+"Malware Protection (S3, EC2, Backup)",service.malwareScanDetails.threats[].source,malware[].provider,string_t,direct
+"Malware Protection (S3, EC2, Backup)",service.malwareScanDetails.threats[].count,malware[].num_infected,integer_t,direct
+"Malware Protection (S3, EC2, Backup)",service.malwareScanDetails.threats[].itemPaths[].hash,malware[].files[].hashes[].value,file_hash_t,direct
+"Malware Protection (S3, EC2, Backup)",service.malwareScanDetails.threats[].itemPaths[].nestedItemPath,malware[].files[].path,file_path_t,converted
+"Malware Protection (S3, EC2, Backup)",service.malwareScanDetails.threats[].itemPaths[].nestedItemPath,malware[].files[].name,file_name_t,converted
+"Malware Protection (S3, EC2, Backup)",service.malwareScanDetails.threats[].itemDetails[].hash,malware[].files[].hashes[].value,file_hash_t,direct
+"Malware Protection (S3, EC2, Backup)",service.malwareScanDetails.threats[].itemDetails[].itemPath,malware[].files[].path,file_path_t,direct
+"Malware Protection (S3, EC2, Backup)",service.malwareScanDetails.threats[].itemDetails[].itemPath,malware[].files[].name,file_name_t,converted
+"Malware Protection (S3, EC2, Backup)",service.malwareScanDetails.threats[].itemDetails[].additionalInfo.versionId,malware[].files[].version,string_t,direct
+"Malware Protection (S3, EC2, Backup)",service.malwareScanDetails.threats[].itemDetails[].resourceArn,malware[].files[].volume,string_t,converted
+Malware Protection (EBS volume scan),service.ebsVolumeScanDetails.scanId,malware_scan_info.uid,string_t,direct
+Malware Protection (EBS volume scan),service.ebsVolumeScanDetails.scanStartedAt,malware_scan_info.start_time,timestamp_t,direct
+Malware Protection (EBS volume scan),service.ebsVolumeScanDetails.scanCompletedAt,malware_scan_info.end_time,timestamp_t,direct
+Malware Protection (EBS volume scan),service.ebsVolumeScanDetails.scanType,malware_scan_info.type_id,integer_t,converted
+Malware Protection (EBS volume scan),service.ebsVolumeScanDetails.scanType,malware_scan_info.type,string_t,converted
+Malware Protection (EBS volume scan),service.ebsVolumeScanDetails.scanDetections.scannedItemCount.files,malware_scan_info.num_files,integer_t,direct
+Malware Protection (EBS volume scan),service.ebsVolumeScanDetails.scanDetections.scannedItemCount.totalGb,malware_scan_info.size,long_t,direct
+Malware Protection (EBS volume scan),service.ebsVolumeScanDetails.scanDetections.scannedItemCount.volumes,malware_scan_info.num_volumes,integer_t,direct
+Malware Protection (EBS volume scan),service.ebsVolumeScanDetails.scanDetections.threatDetectedByName.uniqueThreatNameCount,malware_scan_info.unique_malware_count,integer_t,direct
+Malware Protection (EBS volume scan),service.ebsVolumeScanDetails.scanDetections.threatDetectedByName.itemCount,malware_scan_info.num_infected,integer_t,direct
+Malware Protection (EBS volume scan),service.ebsVolumeScanDetails.scanDetections.threatsDetectedItemCount.files,malware_scan_info.num_infected,integer_t,direct
+Malware Protection (EBS volume scan),service.ebsVolumeScanDetails.scanDetections.threatDetectedByName.threatNames[].name,malware[].name,string_t,direct
+Malware Protection (EBS volume scan),service.ebsVolumeScanDetails.scanDetections.threatDetectedByName.threatNames[].itemCount,malware[].num_infected,integer_t,direct
+Malware Protection (EBS volume scan),service.ebsVolumeScanDetails.scanDetections.threatDetectedByName.threatNames[].severity,malware[].severity_id,integer_t,converted
+Malware Protection (EBS volume scan),service.ebsVolumeScanDetails.scanDetections.threatDetectedByName.threatNames[].severity,malware[].severity,string_t,converted
+Malware Protection (EBS volume scan),service.ebsVolumeScanDetails.scanDetections.threatDetectedByName.threatNames[].filePaths[].fileName,malware[].files[].name,file_name_t,direct
+Malware Protection (EBS volume scan),service.ebsVolumeScanDetails.scanDetections.threatDetectedByName.threatNames[].filePaths[].filePath,malware[].files[].path,file_path_t,direct
+Malware Protection (EBS volume scan),service.ebsVolumeScanDetails.scanDetections.threatDetectedByName.threatNames[].filePaths[].hash,malware[].files[].hashes[].value,file_hash_t,direct
+Malware Protection (EBS volume scan),service.ebsVolumeScanDetails.scanDetections.threatDetectedByName.threatNames[].filePaths[].volumeArn,malware[].files[].volume,string_t,direct
+Bedrock Guardrail,resource.bedrockGuardrailDetails.guardrailSource,guardrail_evaluation_result.source_id,integer_t,converted
+Bedrock Guardrail,resource.bedrockGuardrailDetails.guardrailSource,guardrail_evaluation_result.source,string_t,converted
+Bedrock Guardrail,resource.bedrockGuardrailDetails.contentPolicyFilters[].type,guardrail_evaluation_result.content_policy_filters[].type_id,integer_t,converted
+Bedrock Guardrail,resource.bedrockGuardrailDetails.contentPolicyFilters[].type,guardrail_evaluation_result.content_policy_filters[].type,string_t,converted
+Bedrock Guardrail,resource.bedrockGuardrailDetails.contentPolicyFilters[].confidence,guardrail_evaluation_result.content_policy_filters[].confidence_id,integer_t,converted
+Bedrock Guardrail,resource.bedrockGuardrailDetails.contentPolicyFilters[].confidence,guardrail_evaluation_result.content_policy_filters[].confidence,string_t,converted
+Bedrock Guardrail,resource.bedrockGuardrailDetails.contentPolicyFilters[].action,guardrail_evaluation_result.content_policy_filters[].action_id,integer_t,converted
+Bedrock Guardrail,resource.bedrockGuardrailDetails.contentPolicyFilters[].action,guardrail_evaluation_result.content_policy_filters[].action,string_t,converted
+Anomaly Detection,service.additionalInfo.value.unusualBehavior.unusualDatabaseNameClusterProfiling,anomaly_analyses[].anomalies[].observations[].value,string_t,converted
+Anomaly Detection,service.additionalInfo.value.unusualBehavior.unusualUserTypesAccountProfiling,anomaly_analyses[].anomalies[].observations[].value,string_t,converted
+Anomaly Detection,service.additionalInfo.value.unusualBehavior.isUnusualUserIdentity,anomaly_analyses[].anomalies[].observations[].value,string_t,converted
+Anomaly Detection,service.additionalInfo.value.unusualBehavior.unusualUserAgentsAccountProfiling,anomaly_analyses[].anomalies[].observations[].value,string_t,converted
+Anomaly Detection,service.additionalInfo.value.unusualBehavior.unusualASNsUserIdentityProfiling,anomaly_analyses[].anomalies[].observations[].value,string_t,converted
+Anomaly Detection,service.additionalInfo.value.unusualBehavior.numberOfPast24HoursAPIsBucketProfiling,anomaly_analyses[].anomalies[].observations[].value,string_t,converted
+Anomaly Detection,service.additionalInfo.value.unusualBehavior.numberOfPast24HoursAPIsBucketUserIdentityProfiling,anomaly_analyses[].anomalies[].observations[].value,string_t,converted
+Anomaly Detection,service.additionalInfo.value.unusualBehavior.unusualAPIsUserIdentityProfiling,anomaly_analyses[].anomalies[].observations[].value,string_t,converted
+Anomaly Detection,service.additionalInfo.value.unusualBehavior.unusualAPIsAccountProfiling,anomaly_analyses[].anomalies[].observations[].value,string_t,converted
+Anomaly Detection,service.additionalInfo.value.unusualBehavior.unusualAPIsErrorCodeAccountProfiling,anomaly_analyses[].anomalies[].observations[].value,string_t,converted
+Anomaly Detection,service.additionalInfo.value.unusualBehavior.unusualAPIsErrorCodeUserIdentityProfiling,anomaly_analyses[].anomalies[].observations[].value,string_t,converted
+Anomaly Detection,service.additionalInfo.value.unusualBehavior.unusualUserNamesBucketProfiling,anomaly_analyses[].anomalies[].observations[].value,string_t,converted
+Anomaly Detection,service.additionalInfo.value.unusualBehavior.numberOfPast24HoursAPIsUserIdentityProfiling,anomaly_analyses[].anomalies[].observations[].value,string_t,converted
+Anomaly Detection,service.additionalInfo.value.unusualBehavior.unusualBucketsAccountProfiling,anomaly_analyses[].anomalies[].observations[].value,string_t,converted
+Anomaly Detection,service.additionalInfo.value.unusualBehavior.unusualUserNameClusterProfiling,anomaly_analyses[].anomalies[].observations[].value,string_t,converted
+Anomaly Detection,service.additionalInfo.value.unusualBehavior.unusualApplicationNameClusterProfiling,anomaly_analyses[].anomalies[].observations[].value,string_t,converted
+Anomaly Detection,service.additionalInfo.value.unusualBehavior.unusualUserAgentsUserIdentityProfiling,anomaly_analyses[].anomalies[].observations[].value,string_t,converted
+Anomaly Detection,service.additionalInfo.value.unusualBehavior.unusualUserNamesAccountProfiling,anomaly_analyses[].anomalies[].observations[].value,string_t,converted
+Anomaly Detection,service.additionalInfo.value.unusualBehavior.unusualASNsBucketProfiling,anomaly_analyses[].anomalies[].observations[].value,string_t,converted
+Anomaly Detection,service.additionalInfo.value.unusualBehavior.unusualASNClusterProfiling,anomaly_analyses[].anomalies[].observations[].value,string_t,converted
+Anomaly Detection,service.additionalInfo.value.profiledBehavior.frequentProfiledUserNamesAccountProfiling,anomaly_analyses[].baselines[].observations[].value,string_t,converted
+Anomaly Detection,service.additionalInfo.value.profiledBehavior.numberOfHistoricalDailyAvgAPIsBucketUserIdentityProfiling,anomaly_analyses[].baselines[].observations[].value,string_t,converted
+Anomaly Detection,service.additionalInfo.value.profiledBehavior.numberOfHistoricalDailyMaxAPIsUserIdentityProfiling,anomaly_analyses[].baselines[].observations[].value,string_t,converted
+Anomaly Detection,service.additionalInfo.value.profiledBehavior.infrequentProfiledUserAgentsAccountProfiling,anomaly_analyses[].baselines[].observations[].value,string_t,converted
+Anomaly Detection,service.additionalInfo.value.profiledBehavior.rareProfiledUserNamesBucketProfiling,anomaly_analyses[].baselines[].observations[].value,string_t,converted
+Anomaly Detection,service.additionalInfo.value.profiledBehavior.rareProfiledUserTypesAccountProfiling,anomaly_analyses[].baselines[].observations[].value,string_t,converted
+Anomaly Detection,service.additionalInfo.value.profiledBehavior.infrequentProfiledASNsUserIdentityProfiling,anomaly_analyses[].baselines[].observations[].value,string_t,converted
+Anomaly Detection,service.additionalInfo.value.profiledBehavior.profiledSuccessfulApplicationNamesClusterProfiling[].applicationName,anomaly_analyses[].baselines[].observations[].value,string_t,direct
+Anomaly Detection,service.additionalInfo.value.profiledBehavior.profiledSuccessfulApplicationNamesClusterProfiling[].count,anomaly_analyses[].baselines[].observations[].count,integer_t,direct
+Anomaly Detection,service.additionalInfo.value.profiledBehavior.infrequentProfiledUserNamesBucketProfiling,anomaly_analyses[].baselines[].observations[].value,string_t,converted
+Anomaly Detection,service.additionalInfo.value.profiledBehavior.rareProfiledUserAgentsAccountProfiling,anomaly_analyses[].baselines[].observations[].value,string_t,converted
+Anomaly Detection,service.additionalInfo.value.profiledBehavior.numberOfHistoricalDailyMaxAPIsBucketUserIdentityProfiling,anomaly_analyses[].baselines[].observations[].value,string_t,converted
+Anomaly Detection,service.additionalInfo.value.profiledBehavior.rareProfiledASNsBucketProfiling,anomaly_analyses[].baselines[].observations[].value,string_t,converted
+Anomaly Detection,service.additionalInfo.value.profiledBehavior.profiledSuccessfulUserNamesClusterProfiling[].userName,anomaly_analyses[].baselines[].observations[].value,string_t,direct
+Anomaly Detection,service.additionalInfo.value.profiledBehavior.profiledSuccessfulUserNamesClusterProfiling[].count,anomaly_analyses[].baselines[].observations[].count,integer_t,direct
+Anomaly Detection,service.additionalInfo.value.profiledBehavior.frequentProfiledBucketsUserIdentityProfiling,anomaly_analyses[].baselines[].observations[].value,string_t,converted
+Anomaly Detection,service.additionalInfo.value.profiledBehavior.profiledSuccessfulDatabaseNamesClusterProfiling[].databaseName,anomaly_analyses[].baselines[].observations[].value,string_t,direct
+Anomaly Detection,service.additionalInfo.value.profiledBehavior.profiledSuccessfulDatabaseNamesClusterProfiling[].count,anomaly_analyses[].baselines[].observations[].count,integer_t,direct
+Anomaly Detection,service.additionalInfo.value.profiledBehavior.infrequentProfiledASNsAccountProfiling,anomaly_analyses[].baselines[].observations[].value,string_t,converted
+Anomaly Detection,service.additionalInfo.value.profiledBehavior.infrequentProfiledUserNamesAccountProfiling,anomaly_analyses[].baselines[].observations[].value,string_t,converted
+Anomaly Detection,service.additionalInfo.value.profiledBehavior.numberOfHistoricalDailyAvgAPIsUserIdentityProfiling,anomaly_analyses[].baselines[].observations[].value,string_t,converted
+Anomaly Detection,service.additionalInfo.value.profiledBehavior.infrequentProfiledUserTypesAccountProfiling,anomaly_analyses[].baselines[].observations[].value,string_t,converted
+Anomaly Detection,service.additionalInfo.value.profiledBehavior.rareProfiledBucketsUserIdentityProfiling,anomaly_analyses[].baselines[].observations[].value,string_t,converted
+Anomaly Detection,service.additionalInfo.value.profiledBehavior.rareProfiledUserAgentsUserIdentityProfiling,anomaly_analyses[].baselines[].observations[].value,string_t,converted
+Anomaly Detection,service.additionalInfo.value.profiledBehavior.rareProfiledASNsUserIdentityProfiling,anomaly_analyses[].baselines[].observations[].value,string_t,converted
+Anomaly Detection,service.additionalInfo.value.profiledBehavior.frequentProfiledASNsUserIdentityProfiling,anomaly_analyses[].baselines[].observations[].value,string_t,converted
+Anomaly Detection,service.additionalInfo.value.profiledBehavior.infrequentProfiledBucketsUserIdentityProfiling,anomaly_analyses[].baselines[].observations[].value,string_t,converted
+Anomaly Detection,service.additionalInfo.value.profiledBehavior.rareProfiledBucketsAccountProfiling,anomaly_analyses[].baselines[].observations[].value,string_t,converted
+Anomaly Detection,service.additionalInfo.value.profiledBehavior.rareProfiledAPIsAccountProfiling,anomaly_analyses[].baselines[].observations[].value,string_t,converted
+Anomaly Detection,service.additionalInfo.value.profiledBehavior.infrequentProfiledASNsBucketProfiling,anomaly_analyses[].baselines[].observations[].value,string_t,converted
+Anomaly Detection,service.additionalInfo.value.profiledBehavior.numberOfHistoricalDailyAvgAPIsBucketProfiling,anomaly_analyses[].baselines[].observations[].value,string_t,converted
+Anomaly Detection,service.additionalInfo.value.profiledBehavior.rareProfiledUserNamesAccountProfiling,anomaly_analyses[].baselines[].observations[].value,string_t,converted
+Anomaly Detection,service.additionalInfo.value.profiledBehavior.frequentProfiledAPIsAccountProfiling,anomaly_analyses[].baselines[].observations[].value,string_t,converted
+Anomaly Detection,service.additionalInfo.value.profiledBehavior.frequentProfiledUserAgentsAccountProfiling,anomaly_analyses[].baselines[].observations[].value,string_t,converted
+Anomaly Detection,service.additionalInfo.value.profiledBehavior.infrequentProfiledBucketsAccountProfiling,anomaly_analyses[].baselines[].observations[].value,string_t,converted
+Anomaly Detection,service.additionalInfo.value.profiledBehavior.frequentProfiledASNsBucketProfiling,anomaly_analyses[].baselines[].observations[].value,string_t,converted
+Anomaly Detection,service.additionalInfo.value.profiledBehavior.frequentProfiledUserNamesBucketProfiling,anomaly_analyses[].baselines[].observations[].value,string_t,converted
+Anomaly Detection,service.additionalInfo.value.profiledBehavior.infrequentProfiledAPIsUserIdentityProfiling,anomaly_analyses[].baselines[].observations[].value,string_t,converted
+Anomaly Detection,service.additionalInfo.value.profiledBehavior.rareProfiledASNsAccountProfiling,anomaly_analyses[].baselines[].observations[].value,string_t,converted
+Anomaly Detection,service.additionalInfo.value.profiledBehavior.numberOfHistoricalDailyMaxAPIsBucketProfiling,anomaly_analyses[].baselines[].observations[].value,string_t,converted
+Anomaly Detection,service.additionalInfo.value.profiledBehavior.infrequentProfiledAPIsAccountProfiling,anomaly_analyses[].baselines[].observations[].value,string_t,converted
+Anomaly Detection,service.additionalInfo.value.profiledBehavior.frequentProfiledASNsAccountProfiling,anomaly_analyses[].baselines[].observations[].value,string_t,converted
+Anomaly Detection,service.additionalInfo.value.profiledBehavior.frequentProfiledBucketsAccountProfiling,anomaly_analyses[].baselines[].observations[].value,string_t,converted
+Anomaly Detection,service.additionalInfo.value.profiledBehavior.frequentProfiledUserTypesAccountProfiling,anomaly_analyses[].baselines[].observations[].value,string_t,converted
+Anomaly Detection,service.additionalInfo.value.profiledBehavior.frequentProfiledUserAgentsUserIdentityProfiling,anomaly_analyses[].baselines[].observations[].value,string_t,converted
+Anomaly Detection,service.additionalInfo.value.profiledBehavior.profiledSuccessfulAsnOrgsClusterProfiling[].asnOrg,anomaly_analyses[].baselines[].observations[].value,string_t,direct
+Anomaly Detection,service.additionalInfo.value.profiledBehavior.profiledSuccessfulAsnOrgsClusterProfiling[].count,anomaly_analyses[].baselines[].observations[].count,integer_t,direct
+Anomaly Detection,service.additionalInfo.value.profiledBehavior.frequentProfiledAPIsUserIdentityProfiling,anomaly_analyses[].baselines[].observations[].value,string_t,converted
+Anomaly Detection,service.additionalInfo.value.profiledBehavior.infrequentProfiledUserAgentsUserIdentityProfiling,anomaly_analyses[].baselines[].observations[].value,string_t,converted
+Anomaly Detection,service.additionalInfo.value.profiledBehavior.rareProfiledAPIsUserIdentityProfiling,anomaly_analyses[].baselines[].observations[].value,string_t,converted
+Anomaly Detection,service.additionalInfo.value.anomalies.anomalousAPIs,anomaly_analyses[].anomalies[].observations[].value,string_t,converted
+Anomaly Detection,service.detection.anomaly.profiles.*.*[].profileType,anomaly_analyses[].baselines[].observation_type,string_t,direct
+Anomaly Detection,service.detection.anomaly.profiles.*.*[].profileSubtype,anomaly_analyses[].baselines[].observed_pattern,string_t,direct
+Anomaly Detection,service.detection.anomaly.unusual.behavior.*.*.profileType,anomaly_analyses[].anomalies[].observation_type,string_t,direct
+Anomaly Detection,service.detection.anomaly.unusual.behavior.*.*.profileSubtype,anomaly_analyses[].anomalies[].observed_pattern,string_t,direct
+Anomaly Detection,service.detection.anomaly.profiles.*.*[].observations.number[],anomaly_analyses[].baselines[].observations[].value,string_t,direct
+Anomaly Detection,service.detection.anomaly.profiles.*.*[].observations.text[],anomaly_analyses[].baselines[].observations[].value,string_t,direct
+Anomaly Detection,service.detection.anomaly.unusual.behavior.*.*.observations.number[],anomaly_analyses[].anomalies[].observations[].value,string_t,direct
+Anomaly Detection,service.detection.anomaly.unusual.behavior.*.*.observations.text[],anomaly_analyses[].anomalies[].observations[].value,string_t,direct

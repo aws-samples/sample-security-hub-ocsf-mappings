@@ -1,0 +1,61 @@
+{
+  "awsAccountId": "123456789012",
+  "findingArn": "arn:aws:inspector2:us-east-1:123456789012:finding/fedcba9876543210fedcba9876543210",
+  "type": "NETWORK_REACHABILITY",
+  "status": "ACTIVE",
+  "severity": "MEDIUM",
+  "title": "Port 22 is reachable from an Internet Gateway",
+  "description": "Example finding for illustration. On the instance i-0123456789abcdef0, port 22 is reachable from an internet gateway.",
+  "firstObservedAt": "2026-02-05T08:00:00.000Z",
+  "lastObservedAt": "2026-02-06T08:00:00.000Z",
+  "updatedAt": "2026-02-06T08:00:00.000Z",
+  "remediation": {
+    "recommendation": {
+      "text": "Edit the security group to remove access from the internet to port 22."
+    }
+  },
+  "resources": [
+    {
+      "type": "AWS_EC2_INSTANCE",
+      "id": "i-0123456789abcdef0",
+      "partition": "aws",
+      "region": "us-east-1",
+      "tags": {
+        "Name": "example-instance"
+      },
+      "details": {
+        "awsEc2Instance": {
+          "imageId": "ami-0123456789abcdef0",
+          "ipV4Addresses": [
+            "192.0.2.20"
+          ],
+          "subnetId": "subnet-0123456789abcdef0",
+          "vpcId": "vpc-0123456789abcdef0"
+        }
+      }
+    }
+  ],
+  "networkReachabilityDetails": {
+    "protocol": "TCP",
+    "openPortRange": {
+      "begin": 22,
+      "end": 22
+    },
+    "networkPath": {
+      "steps": [
+        {
+          "componentId": "igw-0123456789abcdef0",
+          "componentType": "AWS::EC2::InternetGateway"
+        },
+        {
+          "componentId": "sg-0123456789abcdef0",
+          "componentType": "AWS::EC2::SecurityGroup"
+        },
+        {
+          "componentId": "eni-0123456789abcdef0",
+          "componentType": "AWS::EC2::NetworkInterface"
+        }
+      ]
+    }
+  }
+}

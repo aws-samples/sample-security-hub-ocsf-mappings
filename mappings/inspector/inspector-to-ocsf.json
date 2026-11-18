@@ -1,0 +1,1017 @@
+{
+  "ocsf_version": "1.9.0",
+  "aws_extension_version": "1.2.0",
+  "classes": [
+    {
+      "class_uid": 2002,
+      "class_name": "Vulnerability Finding"
+    },
+    {
+      "class_uid": 2004,
+      "class_name": "Detection Finding"
+    }
+  ],
+  "mappings": [
+    {
+      "area": "Finding",
+      "inspector_field": "type",
+      "ocsf_field": "class_uid",
+      "ocsf_type": "integer_t",
+      "transform": "converted"
+    },
+    {
+      "area": "Finding",
+      "inspector_field": "type",
+      "ocsf_field": "class_name",
+      "ocsf_type": "string_t",
+      "transform": "converted"
+    },
+    {
+      "area": "Finding",
+      "inspector_field": "status",
+      "ocsf_field": "activity_id",
+      "ocsf_type": "integer_t",
+      "transform": "converted"
+    },
+    {
+      "area": "Finding",
+      "inspector_field": "status",
+      "ocsf_field": "activity_name",
+      "ocsf_type": "string_t",
+      "transform": "converted"
+    },
+    {
+      "area": "Finding",
+      "inspector_field": "updatedAt",
+      "ocsf_field": "time",
+      "ocsf_type": "timestamp_t",
+      "transform": "direct"
+    },
+    {
+      "area": "Finding",
+      "inspector_field": "severity",
+      "ocsf_field": "severity_id",
+      "ocsf_type": "integer_t",
+      "transform": "converted"
+    },
+    {
+      "area": "Finding",
+      "inspector_field": "severity",
+      "ocsf_field": "severity",
+      "ocsf_type": "string_t",
+      "transform": "converted"
+    },
+    {
+      "area": "Finding",
+      "inspector_field": "awsAccountId",
+      "ocsf_field": "cloud.account.uid",
+      "ocsf_type": "string_t",
+      "transform": "direct"
+    },
+    {
+      "area": "Finding",
+      "inspector_field": "packageVulnerabilityDetails.vulnerablePackages[].sourceLayerHash",
+      "ocsf_field": "unmapped.affected_packages.sourceLayerHashes[]",
+      "ocsf_type": "string_t",
+      "transform": "direct"
+    },
+    {
+      "area": "Finding Info",
+      "inspector_field": "findingArn",
+      "ocsf_field": "finding_info.uid",
+      "ocsf_type": "string_t",
+      "transform": "direct"
+    },
+    {
+      "area": "Finding Info",
+      "inspector_field": "type",
+      "ocsf_field": "finding_info.types[]",
+      "ocsf_type": "string_t",
+      "transform": "converted"
+    },
+    {
+      "area": "Finding Info",
+      "inspector_field": "title",
+      "ocsf_field": "finding_info.title",
+      "ocsf_type": "string_t",
+      "transform": "direct"
+    },
+    {
+      "area": "Finding Info",
+      "inspector_field": "description",
+      "ocsf_field": "finding_info.desc",
+      "ocsf_type": "string_t",
+      "transform": "direct"
+    },
+    {
+      "area": "Finding Info",
+      "inspector_field": "firstObservedAt",
+      "ocsf_field": "finding_info.created_time",
+      "ocsf_type": "timestamp_t",
+      "transform": "direct"
+    },
+    {
+      "area": "Finding Info",
+      "inspector_field": "firstObservedAt",
+      "ocsf_field": "finding_info.first_seen_time",
+      "ocsf_type": "timestamp_t",
+      "transform": "direct"
+    },
+    {
+      "area": "Finding Info",
+      "inspector_field": "lastObservedAt",
+      "ocsf_field": "finding_info.last_seen_time",
+      "ocsf_type": "timestamp_t",
+      "transform": "direct"
+    },
+    {
+      "area": "Finding Info",
+      "inspector_field": "updatedAt",
+      "ocsf_field": "finding_info.modified_time",
+      "ocsf_type": "timestamp_t",
+      "transform": "direct"
+    },
+    {
+      "area": "Resource",
+      "inspector_field": "resources[0].partition",
+      "ocsf_field": "resources[].cloud_partition",
+      "ocsf_type": "string_t",
+      "transform": "direct"
+    },
+    {
+      "area": "Resource",
+      "inspector_field": "resources[0].region",
+      "ocsf_field": "resources[].region",
+      "ocsf_type": "string_t",
+      "transform": "direct"
+    },
+    {
+      "area": "Resource",
+      "inspector_field": "resources[0].tags.*",
+      "ocsf_field": "resources[].tags[].name",
+      "ocsf_type": "string_t",
+      "transform": "direct"
+    },
+    {
+      "area": "Resource",
+      "inspector_field": "resources[0].tags.*",
+      "ocsf_field": "resources[].tags[].value",
+      "ocsf_type": "string_t",
+      "transform": "direct"
+    },
+    {
+      "area": "Resource",
+      "inspector_field": "resources[0].type",
+      "ocsf_field": "resources[].type",
+      "ocsf_type": "string_t",
+      "transform": "converted"
+    },
+    {
+      "area": "Resource",
+      "inspector_field": "resources[0].provider",
+      "ocsf_field": "resources[].provider",
+      "ocsf_type": "string_t",
+      "transform": "converted"
+    },
+    {
+      "area": "Resource",
+      "inspector_field": "resources[0].provider",
+      "ocsf_field": "resources[].owner.account.uid",
+      "ocsf_type": "string_t",
+      "transform": "converted"
+    },
+    {
+      "area": "Resource",
+      "inspector_field": "resources[0].providerAccountId",
+      "ocsf_field": "resources[].owner.account.uid",
+      "ocsf_type": "string_t",
+      "transform": "converted"
+    },
+    {
+      "area": "Resource",
+      "inspector_field": "awsAccountId",
+      "ocsf_field": "resources[].owner.account.uid",
+      "ocsf_type": "string_t",
+      "transform": "converted"
+    },
+    {
+      "area": "Resource",
+      "inspector_field": "resources[0].providerOrgId",
+      "ocsf_field": "resources[].owner.org.uid",
+      "ocsf_type": "string_t",
+      "transform": "direct"
+    },
+    {
+      "area": "EC2 Instance",
+      "inspector_field": "resources[0].tags.Name",
+      "ocsf_field": "resources[].name",
+      "ocsf_type": "string_t",
+      "transform": "direct"
+    },
+    {
+      "area": "EC2 Instance",
+      "inspector_field": "resources[0].id",
+      "ocsf_field": "resources[].uid",
+      "ocsf_type": "resource_uid_t",
+      "transform": "direct"
+    },
+    {
+      "area": "EC2 Instance",
+      "inspector_field": "resources[0].id",
+      "ocsf_field": "resources[].device.instance_uid",
+      "ocsf_type": "string_t",
+      "transform": "direct"
+    },
+    {
+      "area": "EC2 Instance",
+      "inspector_field": "resources[0].details.awsEc2Instance.imageId",
+      "ocsf_field": "resources[].device.image.uid",
+      "ocsf_type": "string_t",
+      "transform": "direct"
+    },
+    {
+      "area": "EC2 Instance",
+      "inspector_field": "resources[0].details.awsEc2Instance.vpcId",
+      "ocsf_field": "resources[].vpc_uid",
+      "ocsf_type": "string_t",
+      "transform": "direct"
+    },
+    {
+      "area": "EC2 Instance",
+      "inspector_field": "resources[0].details.awsEc2Instance.subnetId",
+      "ocsf_field": "resources[].subnet_info.uid",
+      "ocsf_type": "string_t",
+      "transform": "direct"
+    },
+    {
+      "area": "EC2 Instance",
+      "inspector_field": "resources[0].details.awsEc2Instance.ipV4Addresses[]",
+      "ocsf_field": "resources[].ip_addresses[]",
+      "ocsf_type": "ip_t",
+      "transform": "converted"
+    },
+    {
+      "area": "EC2 Instance",
+      "inspector_field": "resources[0].details.awsEc2Instance.ipV6Addresses[]",
+      "ocsf_field": "resources[].ip_addresses[]",
+      "ocsf_type": "ip_t",
+      "transform": "converted"
+    },
+    {
+      "area": "Other VM",
+      "inspector_field": "resources[0].id",
+      "ocsf_field": "resources[].device.instance_uid",
+      "ocsf_type": "string_t",
+      "transform": "direct"
+    },
+    {
+      "area": "Other VM",
+      "inspector_field": "resources[0].details.vm.vmImageReference",
+      "ocsf_field": "resources[].device.image.uid",
+      "ocsf_type": "string_t",
+      "transform": "direct"
+    },
+    {
+      "area": "Other VM",
+      "inspector_field": "resources[0].details.vm.networkId",
+      "ocsf_field": "resources[].vpc_uid",
+      "ocsf_type": "string_t",
+      "transform": "direct"
+    },
+    {
+      "area": "Other VM",
+      "inspector_field": "resources[0].details.vm.ipV4Addresses[]",
+      "ocsf_field": "resources[].ip_addresses[]",
+      "ocsf_type": "ip_t",
+      "transform": "converted"
+    },
+    {
+      "area": "Other VM",
+      "inspector_field": "resources[0].details.vm.ipV6Addresses[]",
+      "ocsf_field": "resources[].ip_addresses[]",
+      "ocsf_type": "ip_t",
+      "transform": "converted"
+    },
+    {
+      "area": "ECR Container Image",
+      "inspector_field": "resources[0].details.awsEcrContainerImage.repositoryName",
+      "ocsf_field": "resources[0].name",
+      "ocsf_type": "string_t",
+      "transform": "direct"
+    },
+    {
+      "area": "ECR Container Image",
+      "inspector_field": "resources[0].type",
+      "ocsf_field": "resources[0].type",
+      "ocsf_type": "string_t",
+      "transform": "converted"
+    },
+    {
+      "area": "ECR Container Image",
+      "inspector_field": "resources[0].id",
+      "ocsf_field": "resources[0].uid",
+      "ocsf_type": "resource_uid_t",
+      "transform": "converted"
+    },
+    {
+      "area": "ECR Container Image",
+      "inspector_field": "resources[0].details.awsEcrContainerImage.pushedAt",
+      "ocsf_field": "resources[0].created_time",
+      "ocsf_type": "timestamp_t",
+      "transform": "direct"
+    },
+    {
+      "area": "ECR Container Image",
+      "inspector_field": "resources[0].details.awsEcrContainerImage.repositoryName",
+      "ocsf_field": "resources[0].image.name",
+      "ocsf_type": "string_t",
+      "transform": "direct"
+    },
+    {
+      "area": "ECR Container Image",
+      "inspector_field": "resources[0].details.awsEcrContainerImage.repositoryName",
+      "ocsf_field": "resources[0].image.repository_name",
+      "ocsf_type": "string_t",
+      "transform": "direct"
+    },
+    {
+      "area": "ECR Container Image",
+      "inspector_field": "resources[0].details.awsEcrContainerImage.imageHash",
+      "ocsf_field": "resources[0].image.uid",
+      "ocsf_type": "string_t",
+      "transform": "direct"
+    },
+    {
+      "area": "ECR Container Image",
+      "inspector_field": "resources[0].details.awsEcrContainerImage.imageHash",
+      "ocsf_field": "resources[0].image.hash.value",
+      "ocsf_type": "file_hash_t",
+      "transform": "converted"
+    },
+    {
+      "area": "ECR Container Image",
+      "inspector_field": "resources[0].details.awsEcrContainerImage.registry",
+      "ocsf_field": "resources[0].image.registry_uid",
+      "ocsf_type": "string_t",
+      "transform": "direct"
+    },
+    {
+      "area": "ECR Container Image",
+      "inspector_field": "resources[0].details.awsEcrContainerImage.architecture",
+      "ocsf_field": "resources[0].image.architecture",
+      "ocsf_type": "string_t",
+      "transform": "direct"
+    },
+    {
+      "area": "ECR Container Image",
+      "inspector_field": "resources[0].details.awsEcrContainerImage.imageTags[0]",
+      "ocsf_field": "resources[0].image.tag",
+      "ocsf_type": "string_t",
+      "transform": "direct"
+    },
+    {
+      "area": "ECR Container Image",
+      "inspector_field": "resources[0].details.awsEcrContainerImage.pushedAt",
+      "ocsf_field": "resources[0].image.created_time",
+      "ocsf_type": "timestamp_t",
+      "transform": "direct"
+    },
+    {
+      "area": "ECR Container Image",
+      "inspector_field": "resources[0].details.awsEcrContainerImage.pushedAt",
+      "ocsf_field": "resources[0].image.modified_time",
+      "ocsf_type": "timestamp_t",
+      "transform": "direct"
+    },
+    {
+      "area": "ECR Container Image",
+      "inspector_field": "resources[0].details.awsEcrContainerImage.lastInUseAt",
+      "ocsf_field": "resources[0].image.last_used_time",
+      "ocsf_type": "timestamp_t",
+      "transform": "direct"
+    },
+    {
+      "area": "ECR Container Image",
+      "inspector_field": "resources[0].details.awsEcrContainerImage.inUseCount",
+      "ocsf_field": "resources[0].image.in_use_count",
+      "ocsf_type": "integer_t",
+      "transform": "direct"
+    },
+    {
+      "area": "ECR Container Image",
+      "inspector_field": "resources[0].details.awsEcrContainerImage.imageHash",
+      "ocsf_field": "resources[1].uid",
+      "ocsf_type": "resource_uid_t",
+      "transform": "direct"
+    },
+    {
+      "area": "ECR Container Image",
+      "inspector_field": "resources[0].type",
+      "ocsf_field": "resources[1].type",
+      "ocsf_type": "string_t",
+      "transform": "converted"
+    },
+    {
+      "area": "Other Container Image",
+      "inspector_field": "resources[0].details.image.repositoryName",
+      "ocsf_field": "resources[0].name",
+      "ocsf_type": "string_t",
+      "transform": "direct"
+    },
+    {
+      "area": "Other Container Image",
+      "inspector_field": "resources[0].type",
+      "ocsf_field": "resources[0].type",
+      "ocsf_type": "string_t",
+      "transform": "converted"
+    },
+    {
+      "area": "Other Container Image",
+      "inspector_field": "resources[0].id",
+      "ocsf_field": "resources[0].uid",
+      "ocsf_type": "resource_uid_t",
+      "transform": "converted"
+    },
+    {
+      "area": "Other Container Image",
+      "inspector_field": "resources[0].details.image.repositoryName",
+      "ocsf_field": "resources[0].uid",
+      "ocsf_type": "resource_uid_t",
+      "transform": "converted"
+    },
+    {
+      "area": "Other Container Image",
+      "inspector_field": "resources[0].details.image.pushedAt",
+      "ocsf_field": "resources[0].created_time",
+      "ocsf_type": "timestamp_t",
+      "transform": "direct"
+    },
+    {
+      "area": "Other Container Image",
+      "inspector_field": "resources[0].details.image.repositoryName",
+      "ocsf_field": "resources[0].image.name",
+      "ocsf_type": "string_t",
+      "transform": "direct"
+    },
+    {
+      "area": "Other Container Image",
+      "inspector_field": "resources[0].details.image.repositoryName",
+      "ocsf_field": "resources[0].image.repository_name",
+      "ocsf_type": "string_t",
+      "transform": "direct"
+    },
+    {
+      "area": "Other Container Image",
+      "inspector_field": "resources[0].details.image.imageDigest",
+      "ocsf_field": "resources[0].image.uid",
+      "ocsf_type": "string_t",
+      "transform": "direct"
+    },
+    {
+      "area": "Other Container Image",
+      "inspector_field": "resources[0].details.image.imageDigest",
+      "ocsf_field": "resources[0].image.hash.value",
+      "ocsf_type": "file_hash_t",
+      "transform": "converted"
+    },
+    {
+      "area": "Other Container Image",
+      "inspector_field": "resources[0].details.image.registry",
+      "ocsf_field": "resources[0].image.registry_uid",
+      "ocsf_type": "string_t",
+      "transform": "direct"
+    },
+    {
+      "area": "Other Container Image",
+      "inspector_field": "resources[0].details.image.imageTags[0]",
+      "ocsf_field": "resources[0].image.tag",
+      "ocsf_type": "string_t",
+      "transform": "direct"
+    },
+    {
+      "area": "Other Container Image",
+      "inspector_field": "resources[0].details.image.pushedAt",
+      "ocsf_field": "resources[0].image.created_time",
+      "ocsf_type": "timestamp_t",
+      "transform": "direct"
+    },
+    {
+      "area": "Other Container Image",
+      "inspector_field": "resources[0].details.image.pushedAt",
+      "ocsf_field": "resources[0].image.modified_time",
+      "ocsf_type": "timestamp_t",
+      "transform": "direct"
+    },
+    {
+      "area": "Other Container Image",
+      "inspector_field": "resources[0].id",
+      "ocsf_field": "resources[1].uid",
+      "ocsf_type": "resource_uid_t",
+      "transform": "direct"
+    },
+    {
+      "area": "Other Container Image",
+      "inspector_field": "resources[0].type",
+      "ocsf_field": "resources[1].type",
+      "ocsf_type": "string_t",
+      "transform": "converted"
+    },
+    {
+      "area": "Other Container Image",
+      "inspector_field": "resources[0].id",
+      "ocsf_field": "resources[].uid",
+      "ocsf_type": "resource_uid_t",
+      "transform": "direct"
+    },
+    {
+      "area": "Lambda Function",
+      "inspector_field": "resources[0].id",
+      "ocsf_field": "resources[].uid",
+      "ocsf_type": "resource_uid_t",
+      "transform": "converted"
+    },
+    {
+      "area": "Lambda Function",
+      "inspector_field": "resources[0].id",
+      "ocsf_field": "resources[].uid_alt",
+      "ocsf_type": "resource_uid_t",
+      "transform": "converted"
+    },
+    {
+      "area": "Lambda Function",
+      "inspector_field": "resources[0].details.awsLambdaFunction.functionName",
+      "ocsf_field": "resources[].name",
+      "ocsf_type": "string_t",
+      "transform": "direct"
+    },
+    {
+      "area": "Lambda Function",
+      "inspector_field": "resources[0].details.awsLambdaFunction.lastModifiedAt",
+      "ocsf_field": "resources[].modified_time",
+      "ocsf_type": "timestamp_t",
+      "transform": "direct"
+    },
+    {
+      "area": "Lambda Function",
+      "inspector_field": "resources[0].details.awsLambdaFunction.functionName",
+      "ocsf_field": "resources[].cloud_function.name",
+      "ocsf_type": "string_t",
+      "transform": "direct"
+    },
+    {
+      "area": "Lambda Function",
+      "inspector_field": "resources[0].id",
+      "ocsf_field": "resources[].cloud_function.uid",
+      "ocsf_type": "string_t",
+      "transform": "converted"
+    },
+    {
+      "area": "Lambda Function",
+      "inspector_field": "resources[0].id",
+      "ocsf_field": "resources[].cloud_function.uid_alt",
+      "ocsf_type": "string_t",
+      "transform": "converted"
+    },
+    {
+      "area": "Lambda Function",
+      "inspector_field": "resources[0].details.awsLambdaFunction.runtime",
+      "ocsf_field": "resources[].cloud_function.runtime",
+      "ocsf_type": "string_t",
+      "transform": "direct"
+    },
+    {
+      "area": "Lambda Function",
+      "inspector_field": "resources[0].details.awsLambdaFunction.executionRoleArn",
+      "ocsf_field": "resources[].cloud_function.user.uid",
+      "ocsf_type": "string_t",
+      "transform": "direct"
+    },
+    {
+      "area": "Lambda Function",
+      "inspector_field": "resources[0].details.awsLambdaFunction.layers[]",
+      "ocsf_field": "resources[].cloud_function.layers[].uid",
+      "ocsf_type": "string_t",
+      "transform": "direct"
+    },
+    {
+      "area": "Lambda Function",
+      "inspector_field": "resources[0].details.awsLambdaFunction.layers[]",
+      "ocsf_field": "resources[].cloud_function.layers[].uid_alt",
+      "ocsf_type": "string_t",
+      "transform": "direct"
+    },
+    {
+      "area": "Lambda Function",
+      "inspector_field": "resources[0].details.awsLambdaFunction.layers[]",
+      "ocsf_field": "resources[].cloud_function.layers[].name",
+      "ocsf_type": "string_t",
+      "transform": "direct"
+    },
+    {
+      "area": "Lambda Function",
+      "inspector_field": "resources[0].details.awsLambdaFunction.version",
+      "ocsf_field": "resources[].cloud_function.version",
+      "ocsf_type": "string_t",
+      "transform": "direct"
+    },
+    {
+      "area": "Lambda Function",
+      "inspector_field": "resources[0].details.awsLambdaFunction.vpcConfig.vpcId",
+      "ocsf_field": "resources[].cloud_function.vpc_uid",
+      "ocsf_type": "string_t",
+      "transform": "direct"
+    },
+    {
+      "area": "Other Serverless Function",
+      "inspector_field": "resources[0].details.serverlessFunction.serverlessFunctionName",
+      "ocsf_field": "resources[].name",
+      "ocsf_type": "string_t",
+      "transform": "direct"
+    },
+    {
+      "area": "Other Serverless Function",
+      "inspector_field": "resources[0].details.serverlessFunction.lastModifiedAt",
+      "ocsf_field": "resources[].modified_time",
+      "ocsf_type": "timestamp_t",
+      "transform": "direct"
+    },
+    {
+      "area": "Other Serverless Function",
+      "inspector_field": "resources[0].details.serverlessFunction.serverlessFunctionName",
+      "ocsf_field": "resources[].cloud_function.name",
+      "ocsf_type": "string_t",
+      "transform": "direct"
+    },
+    {
+      "area": "Other Serverless Function",
+      "inspector_field": "resources[0].id",
+      "ocsf_field": "resources[].cloud_function.uid",
+      "ocsf_type": "string_t",
+      "transform": "converted"
+    },
+    {
+      "area": "Other Serverless Function",
+      "inspector_field": "resources[0].id",
+      "ocsf_field": "resources[].cloud_function.uid_alt",
+      "ocsf_type": "string_t",
+      "transform": "converted"
+    },
+    {
+      "area": "Other Serverless Function",
+      "inspector_field": "resources[0].details.serverlessFunction.runtime",
+      "ocsf_field": "resources[].cloud_function.runtime",
+      "ocsf_type": "string_t",
+      "transform": "direct"
+    },
+    {
+      "area": "Other Serverless Function",
+      "inspector_field": "resources[0].details.serverlessFunction.version",
+      "ocsf_field": "resources[].cloud_function.version",
+      "ocsf_type": "string_t",
+      "transform": "direct"
+    },
+    {
+      "area": "Other Serverless Function",
+      "inspector_field": "resources[0].details.serverlessFunction.networkId",
+      "ocsf_field": "resources[].cloud_function.vpc_uid",
+      "ocsf_type": "string_t",
+      "transform": "direct"
+    },
+    {
+      "area": "Other Resource Types",
+      "inspector_field": "resources[0].id",
+      "ocsf_field": "resources[].uid",
+      "ocsf_type": "resource_uid_t",
+      "transform": "direct"
+    },
+    {
+      "area": "Other Resource Types",
+      "inspector_field": "resources[0].id",
+      "ocsf_field": "resources[].name",
+      "ocsf_type": "string_t",
+      "transform": "direct"
+    },
+    {
+      "area": "Network Reachability",
+      "inspector_field": "resources[0].id",
+      "ocsf_field": "resources[].uid",
+      "ocsf_type": "resource_uid_t",
+      "transform": "direct"
+    },
+    {
+      "area": "Network Reachability",
+      "inspector_field": "resources[0].tags.Name",
+      "ocsf_field": "resources[].name",
+      "ocsf_type": "string_t",
+      "transform": "direct"
+    },
+    {
+      "area": "Network Reachability",
+      "inspector_field": "resources[0].id",
+      "ocsf_field": "resources[].resource_relationship.name",
+      "ocsf_type": "string_t",
+      "transform": "converted"
+    },
+    {
+      "area": "Network Reachability",
+      "inspector_field": "networkReachabilityDetails.networkPath.steps[].componentId",
+      "ocsf_field": "resources[].resource_relationship.nodes[].uid",
+      "ocsf_type": "string_t",
+      "transform": "direct"
+    },
+    {
+      "area": "Network Reachability",
+      "inspector_field": "networkReachabilityDetails.networkPath.steps[].componentId",
+      "ocsf_field": "resources[].resource_relationship.nodes[].name",
+      "ocsf_type": "string_t",
+      "transform": "direct"
+    },
+    {
+      "area": "Network Reachability",
+      "inspector_field": "networkReachabilityDetails.networkPath.steps[].componentType",
+      "ocsf_field": "resources[].resource_relationship.nodes[].type",
+      "ocsf_type": "string_t",
+      "transform": "direct"
+    },
+    {
+      "area": "Package Vulnerability",
+      "inspector_field": "packageVulnerabilityDetails.vulnerablePackages[].arch",
+      "ocsf_field": "vulnerabilities[0].affected_packages[].architecture",
+      "ocsf_type": "string_t",
+      "transform": "direct"
+    },
+    {
+      "area": "Package Vulnerability",
+      "inspector_field": "packageVulnerabilityDetails.vulnerablePackages[].epoch",
+      "ocsf_field": "vulnerabilities[0].affected_packages[].epoch",
+      "ocsf_type": "integer_t",
+      "transform": "direct"
+    },
+    {
+      "area": "Package Vulnerability",
+      "inspector_field": "packageVulnerabilityDetails.vulnerablePackages[].fixedInVersion",
+      "ocsf_field": "vulnerabilities[0].affected_packages[].fixed_in_version",
+      "ocsf_type": "string_t",
+      "transform": "direct"
+    },
+    {
+      "area": "Package Vulnerability",
+      "inspector_field": "packageVulnerabilityDetails.vulnerablePackages[].name",
+      "ocsf_field": "vulnerabilities[0].affected_packages[].name",
+      "ocsf_type": "string_t",
+      "transform": "direct"
+    },
+    {
+      "area": "Package Vulnerability",
+      "inspector_field": "packageVulnerabilityDetails.vulnerablePackages[].packageManager",
+      "ocsf_field": "vulnerabilities[0].affected_packages[].package_manager",
+      "ocsf_type": "string_t",
+      "transform": "direct"
+    },
+    {
+      "area": "Package Vulnerability",
+      "inspector_field": "packageVulnerabilityDetails.vulnerablePackages[].filePath",
+      "ocsf_field": "vulnerabilities[0].affected_packages[].path",
+      "ocsf_type": "file_path_t",
+      "transform": "direct"
+    },
+    {
+      "area": "Package Vulnerability",
+      "inspector_field": "packageVulnerabilityDetails.vulnerablePackages[].remediation",
+      "ocsf_field": "vulnerabilities[0].affected_packages[].remediation.desc",
+      "ocsf_type": "string_t",
+      "transform": "direct"
+    },
+    {
+      "area": "Package Vulnerability",
+      "inspector_field": "packageVulnerabilityDetails.vulnerablePackages[].release",
+      "ocsf_field": "vulnerabilities[0].affected_packages[].release",
+      "ocsf_type": "string_t",
+      "transform": "direct"
+    },
+    {
+      "area": "Package Vulnerability",
+      "inspector_field": "packageVulnerabilityDetails.vulnerablePackages[].version",
+      "ocsf_field": "vulnerabilities[0].affected_packages[].version",
+      "ocsf_type": "string_t",
+      "transform": "direct"
+    },
+    {
+      "area": "Package Vulnerability",
+      "inspector_field": "packageVulnerabilityDetails.vendorSeverity",
+      "ocsf_field": "vulnerabilities[0].severity",
+      "ocsf_type": "string_t",
+      "transform": "direct"
+    },
+    {
+      "area": "Package Vulnerability",
+      "inspector_field": "packageVulnerabilityDetails.vulnerabilityId",
+      "ocsf_field": "vulnerabilities[0].cve.uid",
+      "ocsf_type": "string_t",
+      "transform": "direct"
+    },
+    {
+      "area": "Package Vulnerability",
+      "inspector_field": "description",
+      "ocsf_field": "vulnerabilities[0].cve.desc",
+      "ocsf_type": "string_t",
+      "transform": "direct"
+    },
+    {
+      "area": "Package Vulnerability",
+      "inspector_field": "packageVulnerabilityDetails.vendorCreatedAt",
+      "ocsf_field": "vulnerabilities[0].cve.created_time",
+      "ocsf_type": "timestamp_t",
+      "transform": "direct"
+    },
+    {
+      "area": "Package Vulnerability",
+      "inspector_field": "packageVulnerabilityDetails.vendorUpdatedAt",
+      "ocsf_field": "vulnerabilities[0].cve.modified_time",
+      "ocsf_type": "timestamp_t",
+      "transform": "direct"
+    },
+    {
+      "area": "Package Vulnerability",
+      "inspector_field": "packageVulnerabilityDetails.cvss[].baseScore",
+      "ocsf_field": "vulnerabilities[0].cve.cvss[].base_score",
+      "ocsf_type": "float_t",
+      "transform": "direct"
+    },
+    {
+      "area": "Package Vulnerability",
+      "inspector_field": "packageVulnerabilityDetails.cvss[].source",
+      "ocsf_field": "vulnerabilities[0].cve.cvss[].vendor_name",
+      "ocsf_type": "string_t",
+      "transform": "direct"
+    },
+    {
+      "area": "Package Vulnerability",
+      "inspector_field": "packageVulnerabilityDetails.cvss[].version",
+      "ocsf_field": "vulnerabilities[0].cve.cvss[].version",
+      "ocsf_type": "string_t",
+      "transform": "direct"
+    },
+    {
+      "area": "Package Vulnerability",
+      "inspector_field": "packageVulnerabilityDetails.cvss[].scoringVector",
+      "ocsf_field": "vulnerabilities[0].cve.cvss[].vector_string",
+      "ocsf_type": "string_t",
+      "transform": "converted"
+    },
+    {
+      "area": "Package Vulnerability",
+      "inspector_field": "packageVulnerabilityDetails.cvss[].baseScore",
+      "ocsf_field": "vulnerabilities[0].cve.cvss[].severity",
+      "ocsf_type": "string_t",
+      "transform": "converted"
+    },
+    {
+      "area": "Package Vulnerability",
+      "inspector_field": "inspectorScoreDetails.adjustedCvss.score",
+      "ocsf_field": "vulnerabilities[0].cve.cvss[].adjusted_score",
+      "ocsf_type": "float_t",
+      "transform": "direct"
+    },
+    {
+      "area": "Package Vulnerability",
+      "inspector_field": "inspectorScoreDetails.adjustedCvss.scoringVector",
+      "ocsf_field": "vulnerabilities[0].cve.cvss[].adjusted_vector_string",
+      "ocsf_type": "string_t",
+      "transform": "converted"
+    },
+    {
+      "area": "Package Vulnerability",
+      "inspector_field": "inspectorScoreDetails.adjustedCvss.adjustments[].metric",
+      "ocsf_field": "vulnerabilities[0].cve.cvss[].adjusted_metric_list[].cvss_metric",
+      "ocsf_type": "string_t",
+      "transform": "direct"
+    },
+    {
+      "area": "Package Vulnerability",
+      "inspector_field": "inspectorScoreDetails.adjustedCvss.adjustments[].reason",
+      "ocsf_field": "vulnerabilities[0].cve.cvss[].adjusted_metric_list[].update_reason",
+      "ocsf_type": "string_t",
+      "transform": "direct"
+    },
+    {
+      "area": "Package Vulnerability",
+      "inspector_field": "epss.score",
+      "ocsf_field": "vulnerabilities[0].cve.epss.score",
+      "ocsf_type": "string_t",
+      "transform": "converted"
+    },
+    {
+      "area": "Package Vulnerability",
+      "inspector_field": "exploitabilityDetails.lastKnownExploitAt",
+      "ocsf_field": "vulnerabilities[0].exploit_last_seen_time",
+      "ocsf_type": "timestamp_t",
+      "transform": "direct"
+    },
+    {
+      "area": "Package Vulnerability",
+      "inspector_field": "exploitAvailable",
+      "ocsf_field": "vulnerabilities[0].is_exploit_available",
+      "ocsf_type": "boolean_t",
+      "transform": "converted"
+    },
+    {
+      "area": "Package Vulnerability",
+      "inspector_field": "fixAvailable",
+      "ocsf_field": "vulnerabilities[0].is_fix_available",
+      "ocsf_type": "boolean_t",
+      "transform": "converted"
+    },
+    {
+      "area": "Package Vulnerability",
+      "inspector_field": "fixAvailable",
+      "ocsf_field": "vulnerabilities[0].fix_coverage_id",
+      "ocsf_type": "integer_t",
+      "transform": "converted"
+    },
+    {
+      "area": "Package Vulnerability",
+      "inspector_field": "fixAvailable",
+      "ocsf_field": "vulnerabilities[0].fix_coverage",
+      "ocsf_type": "string_t",
+      "transform": "converted"
+    },
+    {
+      "area": "Package Vulnerability",
+      "inspector_field": "packageVulnerabilityDetails.relatedVulnerabilities[]",
+      "ocsf_field": "vulnerabilities[0].related_vulnerabilities[]",
+      "ocsf_type": "string_t",
+      "transform": "direct"
+    },
+    {
+      "area": "Package Vulnerability",
+      "inspector_field": "packageVulnerabilityDetails.referenceUrls[]",
+      "ocsf_field": "vulnerabilities[0].references[]",
+      "ocsf_type": "string_t",
+      "transform": "direct"
+    },
+    {
+      "area": "Code Vulnerability",
+      "inspector_field": "codeVulnerabilityDetails.cwes[]",
+      "ocsf_field": "vulnerabilities[].cwe.uid",
+      "ocsf_type": "string_t",
+      "transform": "direct"
+    },
+    {
+      "area": "Code Vulnerability",
+      "inspector_field": "codeVulnerabilityDetails.detectorId",
+      "ocsf_field": "vulnerabilities[0].advisory.uid",
+      "ocsf_type": "string_t",
+      "transform": "direct"
+    },
+    {
+      "area": "Code Vulnerability",
+      "inspector_field": "description",
+      "ocsf_field": "vulnerabilities[].desc",
+      "ocsf_type": "string_t",
+      "transform": "direct"
+    },
+    {
+      "area": "Code Vulnerability",
+      "inspector_field": "codeVulnerabilityDetails.referenceUrls[]",
+      "ocsf_field": "vulnerabilities[].references[]",
+      "ocsf_type": "string_t",
+      "transform": "direct"
+    },
+    {
+      "area": "Code Vulnerability",
+      "inspector_field": "codeVulnerabilityDetails.filePath.startLine",
+      "ocsf_field": "vulnerabilities[].affected_code[0].start_line",
+      "ocsf_type": "integer_t",
+      "transform": "direct"
+    },
+    {
+      "area": "Code Vulnerability",
+      "inspector_field": "codeVulnerabilityDetails.filePath.endLine",
+      "ocsf_field": "vulnerabilities[].affected_code[0].end_line",
+      "ocsf_type": "integer_t",
+      "transform": "direct"
+    },
+    {
+      "area": "Code Vulnerability",
+      "inspector_field": "codeVulnerabilityDetails.filePath.fileName",
+      "ocsf_field": "vulnerabilities[].affected_code[0].file.name",
+      "ocsf_type": "file_name_t",
+      "transform": "direct"
+    },
+    {
+      "area": "Code Vulnerability",
+      "inspector_field": "codeVulnerabilityDetails.filePath.filePath",
+      "ocsf_field": "vulnerabilities[].affected_code[0].file.path",
+      "ocsf_type": "file_path_t",
+      "transform": "direct"
+    },
+    {
+      "area": "Code Vulnerability",
+      "inspector_field": "remediation.recommendation.text",
+      "ocsf_field": "vulnerabilities[].affected_code[0].remediation.desc",
+      "ocsf_type": "string_t",
+      "transform": "direct"
+    }
+  ]
+}
